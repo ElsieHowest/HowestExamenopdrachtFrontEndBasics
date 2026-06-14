@@ -221,17 +221,19 @@ Shop
     display   : block;
 }
 
-.card-list .card-item h3, 
-.card-list .card-item p {
+.card-list .card-item h3 {
     color     : rgb(47, 67, 83);
     font-size : 1rem;
     padding   : 0;
     text-align: center;
 }
 
-
-
-
+.card-list .card-item p {
+    color     : rgb(47, 67, 83);
+    font-size : 0.9rem;
+    padding   : 5px;
+    text-align: center;
+}
 
 /*
 ==========
