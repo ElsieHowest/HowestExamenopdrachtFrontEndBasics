@@ -15,9 +15,27 @@ body {
 }
 
 /*Stijl voor header*/
-#header {
+.header {
     margin     : 0 auto;
     align-items: center;
+    background-color: rgb(47, 67, 83);
+    padding: 10px 0;
+}
+
+/*Style logo*/
+.logo-header {
+    display       : flex;
+    flex-direction: column;
+    /*Logo boven navigatie*/
+    align-items   : center;
+}
+
+/*Style header logo*/
+.logo {
+    width           : 90px;
+    height          : auto;
+    background-color: transparent;
+    padding         : 10px;
 }
 
 /*
@@ -37,29 +55,7 @@ p {
     font-size  : 1rem;
 }
 
-/*
-=========
-Style logo
-=========
-*/
-.logo-header {
-    display       : flex;
-    flex-direction: column;
-    /*Logo boven navigatie*/
-    align-items   : center;
-}
 
-/*
-==========
-Style header logo
-==========
-*/
-#salty-cheeks-logo {
-    width           : 100px;
-    height          : auto;
-    background-color: transparent;
-    padding         : 15px;
-}
 
 /*
 ==========
@@ -71,57 +67,54 @@ main .shop{
     margin: 1.5rem;
 }
 
-/*
-==========
-Navigation
-==========
-*/
-.main-nav {
-    font-family: "Open Sans", sans-serif;
-    width      : 100%;
-}
-
-.main-nav li {
-    width : 150px;
-    height: 50px;
-}
-
-.main-nav ul {
+/*Navigation*/
+/*Style of navbar*/
+.navbar {
     font-family    : "Open Sans", sans-serif;
+    width          : 85%;
+    padding        : 35px;
+    margin         : auto;
     display        : flex;
-    flex-wrap      : wrap;
-    justify-content: center;
     align-items    : center;
-    gap            : 25px;
-    list-style     : none;
-    margin         : 0;
-    padding        : 14px 32px
+    justify-content: space-between;
 }
 
-.main-nav li a {
-    list-style                : none;
-    text-decoration           : none;
-    width                     : 100%;
-    height                    : 50px;
-    background-color          : rgb(47, 67, 83);
-    color                     : white;
-    display                   : flex;
-    justify-content           : center;
-    align-items               : center;
-    text-align                : center;
-    border-top-left-radius    : 10px;
-    border-bottom-right-radius: 10px;
-    box-sizing                : border-box;
-    cursor                    : pointer;
+.navbar li {
+    width : 150px;
+    height: 30px;
 }
 
-.main-nav li a:hover {
-    background-color: rgb(34, 49, 61);
-    color           : white;
-    border-radius   : 15px;
-    cursor: pointer;
+.navbar ul li {
+    list-style: none;
+    display   : inline-block;
+    /*Elementen staan naast elkaar*/
+    margin    : 0 20px;
+    position  : relative;
 }
 
+.navbar ul li a {
+    text-decoration: none;
+    color          : #fff;
+}
+
+.navbar ul li::after {
+    content    : '';
+    height     : 2px;
+    width      : 0;
+    /*De lijn is nog niet zichtbaar*/
+    background : #fff;
+    position   : absolute;
+    left       : 0;
+    /*De lijn start vanaf links*/
+    bottom     : -0.5px;
+    /*Opmerking: een punt gebruiken, geen komma*/
+    transition : width 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 72px;
+    /*De lijn is zichtbaar bij hover/*/
+}
 
 
 /*
@@ -653,7 +646,7 @@ Mediaqueries
         padding-top: 20px;
     }
 
-    #navigation ul {
+    .navbar ul {
         display       : flex;
         flex-direction: column;
         gap           : 25px;
@@ -675,7 +668,7 @@ Mediaqueries
 2) Smartphone
 */
 @media (max-width: 767px) {
-    #navigation ul {
+    .navbar ul {
         display       : flex;
         flex-direction: column;
         align-items   : center;
