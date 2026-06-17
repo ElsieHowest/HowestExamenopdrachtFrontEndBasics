@@ -1,8 +1,4 @@
-/*
-=========
-General style
-=========
-*/
+/*General style*/
 * {
     box-sizing: border-box;
 }
@@ -15,16 +11,30 @@ body {
 }
 
 /*Stijl voor header*/
-#header {
+.header {
     margin     : 0 auto;
     align-items: center;
+    background-color: rgb(47, 67, 83);
+    padding: 10px 0;
 }
 
-/*
-==========
-titelstijlen
-==========
-*/
+/*Style logo*/
+.logo-header {
+    display       : flex;
+    flex-direction: column;
+    /*Logo boven navigatie*/
+    align-items   : center;
+}
+
+/*Style header logo*/
+.logo {
+    width           : 90px;
+    height          : auto;
+    background-color: transparent;
+    padding         : 10px;
+}
+
+/*titelstijlen*/
 h1,
 h2 {
     font-family: "Open Sans", sans-serif;
@@ -39,11 +49,7 @@ p {
     font-size  : 1rem;
 }
 
-/*
-=========
-Style logo
-=========
-*/
+/*Stijl voor logo*/
 .logo-header {
     display       : flex;
     flex-direction: column;
@@ -51,16 +57,53 @@ Style logo
     align-items   : center;
 }
 
-/*
-==========
-Style header logo
-==========
-*/
-#salty-cheeks-logo {
-    width           : 100px;
-    height          : auto;
-    background-color: transparent;
-    padding         : 15px;
+/*Navigation*/
+/*Style of navbar*/
+.navbar {
+    font-family    : "Open Sans", sans-serif;
+    width          : 85%;
+    padding        : 35px;
+    margin         : auto;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+}
+
+.navbar li {
+    width : 150px;
+    height: 30px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display   : inline-block;
+    /*Elementen staan naast elkaar*/
+    margin    : 0 20px;
+    position  : relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color          : #fff;
+}
+
+.navbar ul li::after {
+    content    : '';
+    height     : 2px;
+    width      : 0;
+    /*De lijn is nog niet zichtbaar*/
+    background : #fff;
+    position   : absolute;
+    left       : 0;
+    /*De lijn start vanaf links*/
+    bottom     : -0.5px;
+    /*Opmerking: een punt gebruiken, geen komma*/
+    transition : width 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 72px;
+    /*De lijn is zichtbaar bij hover/*/
 }
 
 /*
@@ -70,6 +113,43 @@ Style main
 */
 main {
     margin: 1.5rem;
+}
+
+/*1) navigatie main*/
+.mainnavbar {
+    font-family: "Open Sans", sans-serif;
+    width      : 100%;
+}
+
+.mainnavbar ul {
+    list-style     : none;
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: center;
+    gap            : 20px;
+    padding        : 0;
+}
+
+.mainnavbar li a {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    text-decoration: none;
+    padding        : 14px 28px;
+    border-radius  : 20px;
+    background     : rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border         : 1px solid rgba(255, 255, 255, 0.3);
+    color          : rgb(47, 67, 83);
+    font-family    : "Open Sans", sans-serif;
+    font-weight    : 600;
+    transition     : 0.3s;
+}
+
+.mainnavbar a:hover {
+    text-decoration: none;
+    background     : #fff;
+    border         : 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /*

@@ -1,8 +1,4 @@
-/*
-=========
-General style
-=========
-*/
+/*General style*/
 * {
     box-sizing: border-box;
 }
@@ -14,11 +10,77 @@ body {
     width           : 100%;
 }
 
-
 /*Stijl voor header*/
-#header {
+.header {
     margin     : 0 auto;
     align-items: center;
+    background-color: rgb(47, 67, 83);
+    padding: 10px 0;
+}
+
+/*Style logo*/
+.logo-header {
+    display       : flex;
+    flex-direction: column;
+    /*Logo boven navigatie*/
+    align-items   : center;
+}
+
+/*Style header logo*/
+.logo {
+    width           : 90px;
+    height          : auto;
+    background-color: transparent;
+    padding         : 10px;
+}
+
+/*Navigation*/
+/*Style of navbar*/
+.navbar {
+    font-family    : "Open Sans", sans-serif;
+    width          : 85%;
+    padding        : 35px;
+    margin         : auto;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+}
+
+.navbar li {
+    width : 150px;
+    height: 30px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display   : inline-block;
+    /*Elementen staan naast elkaar*/
+    margin    : 0 20px;
+    position  : relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color          : #fff;
+}
+
+.navbar ul li::after {
+    content    : '';
+    height     : 2px;
+    width      : 0;
+    /*De lijn is nog niet zichtbaar*/
+    background : #fff;
+    position   : absolute;
+    left       : 0;
+    /*De lijn start vanaf links*/
+    bottom     : -0.5px;
+    /*Opmerking: een punt gebruiken, geen komma*/
+    transition : width 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 72px;
+    /*De lijn is zichtbaar bij hover/*/
 }
 
 /*

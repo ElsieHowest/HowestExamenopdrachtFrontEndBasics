@@ -25,19 +25,21 @@
 
 <body>
     <!--Header-->
-    <header>
-        <!--Images van logo Salty Cheeks-->
-        <div class="logo-header">
-            <p>
-                <img id="salty-cheeks-logo" src="Images/Brand/Logo.png" title="Salty Cheeks logo" alt="2 seahores">
-            </p>
+    <header class="header">
+        <!--Add to cart-->
+        <div class="cart">
+            🛒 <span id="cart-count">0</span>
         </div>
-
         <!--Navigation-->
-        <nav id="navigation">
+        <nav class="navbar">
+            <!--Images van logo Salty Cheeks-->
+            <div class="logo-header">
+                <img class="logo" src="Images/Brand/Logo-seahorse.png" title="Salty Cheeks logo with seahorse"
+                    alt="Salty Cheeks logo with seahorse">
+            </div>
             <ul>
                 <!--Home-->
-                <li><a href="Index.html">Home</a></li>
+                <li><a href="Index.html" class="current">Home</a></li>
                 <!--Navigate to surfshop-->
                 <li><a href="Shop.html">Surfshop</a></li>
                 <!--Activiteiten-->
@@ -52,7 +54,7 @@
     <!--Main-->
     <main>
         <!--Navigation-->
-        <nav class="main-nav">
+        <nav class="mainnavbar">
             <ul>
                 <li>
                     <a href="Surfboards.html">Surf</a>
@@ -63,7 +65,9 @@
                 <li>
                     <a href="Surfskate.html">Surfskate</a>
                 </li>
-                <li>Must haves</li>
+                <li>
+                    <a href="Musthaves.html">Must haves</a>
+                </li>
             </ul>
         </nav>
 
