@@ -1,65 +1,27 @@
-/*
-=========
-General style
-=========
-*/
+/*General style*/
 * {
     box-sizing: border-box;
+}
+
+html{
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
     background-color: #fcf7ea;
     margin          : 0;
     padding         : 0;
-    width           : 100%;
 }
 
-
-/*Stijl voor header*/
-#header {
-    margin          : 0 auto;
-    align-items     : center;
-    background-color: #2f4353;
-    padding-bottom  : 30px;
-}
-
-.hero {
-    padding: 50px 20px;
-    margin-top: 0;
-    margin-left: 20px;
-}
-
-.hero h1 {
-    font-size     : 3rem;
-    margin        : 10px 0;
-    letter-spacing: 2px;
-    color         : #ffffff;
-}
-
-.hero p {
-    font-size  : 1rem;
-    margin     : 5px 0;
-    color      : #ffffff;
-    font-family: "Playfair Display", serif;
-    font-style : italic;
+/*Titelstijlen*/
+h1 {
+    color      : rgb(47, 67, 83);
+    font-family: "Open Sans", sans-serif;
+    font-size  : 2rem;
 
 }
 
-.hero .tagline {
-    font-family: "Playfair Display", serif;
-    font-style : italic;
-    font-size  : 1.2rem;
-    color      : #ffffff;
-    display    : block;
-}
-
-
-/*
-==========
-titelstijlen
-==========
-*/
-h1,
 h2,
 h3 {
     font-family: "Open Sans", sans-serif;
@@ -67,35 +29,8 @@ h3 {
     font-size  : 2rem;
 }
 
-h1 {
-    font-size: 2.5rem;
-}
-
-h2 {
-    font-size: 2rem;
-}
-
-aside h3 {
-    font-family: "Open Sans", sans-serif;
-    color      : rgb(208, 129, 75);
-    font-size  : 1.2em;
-}
-
-
-.footer-distributed .footer-center h2,
-.footer-distributed .footer-right h2 {
-    font-family: "Playfair display", sans-serif;
-}
-
-
-.chat .head-text-chat h2 {
-    color : white;
-    height: 100px;
-}
-
-.chat .head-text-chat h3 {
-    color : white;
-    height: 100px;
+h3 {
+    font-size: 1rem;
 }
 
 p {
@@ -105,75 +40,202 @@ p {
     color      : #333;
 }
 
-/*
-==========
-Navigatie
-==========
-*/
-#navigation {
-    font-family: "Open Sans", sans-serif;
-    width      : 100%;
-    padding: 12px;
+/*Style of header*/
+/*Style of banner*/
+.banner {
+    width : 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.85)),
+        url("../Images/Brand/banner/banner.jpg");
+    background-size    : cover;
+    /*Achtergrond vult de banner*/
+    background-position: center
+        /*De afbeelding wordt gecentreerd*/
+    ;
 }
 
-#navigation li {
-    width : 150px;
-    height: 50px;
+/*Style of logo*/
+.logo {
+    width : 90px;
+    cursor: pointer;
+    /*De gebruiker kan op het logo klikken*/
 }
 
-#navigation ul {
+/*Style of navbar*/
+.navbar {
     font-family    : "Open Sans", sans-serif;
+    width          : 85%;
+    padding        : 35px;
+    margin         : auto;
     display        : flex;
-    flex-wrap      : wrap;
+    align-items    : center;
+    justify-content: space-between;
+}
+
+.navbar li {
+    width : 150px;
+    height: 30px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display   : inline-block;
+    /*Elementen staan naast elkaar*/
+    margin    : 0 20px;
+    position  : relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color          : #fff;
+}
+
+.navbar ul li::after {
+    content    : '';
+    height     : 2px;
+    width      : 0;
+    /*De lijn is nog niet zichtbaar*/
+    background : #fff;
+    position   : absolute;
+    left       : 0;
+    /*De lijn start vanaf links*/
+    bottom     : -0.5px;
+    /*Opmerking: een punt gebruiken, geen komma*/
+    transition : width 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 72px;
+    /*De lijn is zichtbaar bij hover/*/
+}
+
+/*Style of catch*/
+.catch {
+    font-size      : 20px;
+    line-height    : 35px;
+    font-weight    : bold;
+    height         : 35px;
+    text-align     : left;
+    /*Tekst wordt links uitgelijnd*/
+    display        : flex;
     justify-content: center;
     align-items    : center;
-    gap            : 25px;
-    list-style     : none;
-    margin         : 0;
-    padding        : 14px 32px
+    overflow: hidden;
 }
 
-#navigation li a {
-    list-style                : none;
-    text-decoration           : none;
-    width                     : 100%;
-    height                    : 50px;
-    background-color          : rgb(47, 67, 83);
-    color                     : white;
-    display                   : flex;
-    justify-content           : center;
-    align-items               : center;
-    text-align                : center;
-    border-top-left-radius    : 10px;
-    border-bottom-right-radius: 10px;
-    box-sizing                : border-box;
-    cursor                    : pointer;
+.catch p {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    line-height: 35px;
+    white-space: nowrap;
 }
 
-#navigation li a:hover {
-    background-color: rgb(34, 49, 61);
-    color           : white;
-    border-radius   : 15px;
-    cursor          : pointer;
+/*Style of slider*/
+.slider {
+    color      : #ffff;
+    margin-left: 18px;
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    position: relative;
 }
 
-/*
-==========
-Style header logo
-==========
-*/
-#salty-cheeks-logo {
-    width           : 100px;
-    height          : auto;
-    background-color: transparent;
-    padding         : 15px;
+/*Animatietie toevoegen*/
+.slider-track {
+    animation: slider 14s linear infinite;
 }
 
-/*
-==========
-Style main
-==========
-*/
+.slider-track div {
+    height: 35px;
+    line-height: 35px;
+    white-space: nowrap;
+}
+
+/*Add keyframes*/
+@keyframes slider {
+ 0%, 14% {
+        margin-top: 0px;
+    }
+    16.66%, 30.66% {
+        margin-top: -35px;
+    }
+    33.33%, 47.33% {
+        margin-top: -70px;
+    }
+    50%, 64% {
+        margin-top: -105px;
+    }
+    66.66%, 80.66% {
+        margin-top: -140px;
+    }
+    83.33%, 97.33% {
+        margin-top: -175px;
+    }
+    100% {
+        margin-top: 0px; 
+    }
+}
+
+/*Style of text in banner*/
+.content {
+    padding    : 50px 20px;
+    margin-top : 0;
+    margin-left: 35px;
+    width      : 100%;
+    position   : absolute;
+    top        : 30%;
+    text-align : center;
+    color      : #ffffff;
+    font-family: "Playfair Display", serif;
+}
+
+.content h1 {
+    font-size     : 3rem;
+    margin        : 10px 0;
+    color         : #ffffff;
+    letter-spacing: 2px;
+
+}
+
+.content p {
+    font-size  : 1rem;
+    margin     : 15px 0;
+    font-weight: 100;
+    font-style : italic;
+    line-height: 25px;
+    color      : #ffffff;
+}
+
+.content .tagline {
+    font-family: "Playfair Display", serif;
+    font-style : italic;
+    font-size  : 1.2rem;
+    display    : block;
+}
+
+button {
+    padding            : 15px 25px;
+    margin             : 20px;
+    font-size          : 16px;
+    letter-spacing     : 1px;
+    border             : 1px solid #ffffff;
+    color              : #ffff;
+    cursor             : pointer;
+    background         : linear-gradient(to right, transparent 50%, rgb(208, 129, 75) 50%);
+    background-size    : 200%;
+    background-position: left;
+    transition         : background-position 0.5s;
+
+}
+
+button:hover {
+    background-position: right;
+    border-color       : rgb(208, 129, 75);
+    color              : #ffff;
+}
+
+/*Style of main*/
+/*General style of main*/
 main .about {
     margin: 1.5rem;
 }
@@ -182,44 +244,11 @@ main .about {
 1)about
 */
 .about {
-    display              : grid;
-    grid-template-columns: 2fr 1fr;
-    /*twee kolommen*/
-    gap                  : 20px;
-    width                : 100%;
-    padding              : 5px;
+    width  : 100%;
+    padding: 5px;
 }
 
-.about-img {
-    display        : flex;
-    justify-content: center;
-    align-items    : center;
-}
-
-
-.about-img img {
-    display      : block;
-    width        : 220px;
-    height       : 320px;
-    border-radius: 15px;
-    margin       : 5px auto;
-    padding      : 0;
-    transition   : transform 0.4s ease;
-}
-
-.about-img img:hover {
-    transform: scale(1.03);
-}
-
-.about-img a {
-    display: inline-block;
-}
-
-/*
-=====
-Aside
-=====
-*/
+/*Aside*/
 aside {
     text-align      : center;
     margin          : 40px auto;
@@ -227,6 +256,12 @@ aside {
     background-color: #f3eae1;
     max-width       : 800px;
     border-radius   : 15px;
+}
+
+aside h3 {
+    font-family: "Open Sans", sans-serif;
+    color      : rgb(208, 129, 75);
+    font-size  : 1.2em;
 }
 
 aside a {
@@ -243,464 +278,459 @@ aside a {
 
 aside a:hover {
     background-color: #ffff;
-    color:  rgb(47, 67, 83);
-    border: 1px solid #fff;
-    cursor: pointer;
+    color           : rgb(47, 67, 83);
+    border          : 1px solid #fff;
+    cursor          : pointer;
 }
 
-    /*
-==========
-Chatbox
-=========
+/*Chatbox*/
+.chat {
+    padding         : 1.5rem;
+    margin          : 1.5em;
+    position        : fixed;
+    right           : 15px;
+    height          : 550px;
+    bottom          : 85px;
+    max-width       : 450px;
+    background-color: #ffffff;
+    color           : rgb(47, 67, 83);
+    border-radius   : 15px;
+    box-shadow      : 0px 15px 20px rgb(0, 0, 0, 0.1);
+    opacity         : 0;
+    transition      : all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.chat .head-text-chat h2 {
+    color : white;
+    height: 100px;
+}
+
+.chat .head-text-chat h3 {
+    color : white;
+    height: 100px;
+}
+
+.chat .head-text-chat {
+    font-family    : "Open Sans", sans-serif;
+    background     : #2f3e46;
+    color          : #fff;
+    line-height    : 45px;
+    height         : 85px;
+    margin         : 10px auto;
+    padding        : 5px 5px;
+    border-radius  : 15px 15px 0 0;
+    font-weight    : 400;
+    font-size      : 18px;
+    display        : flex;
+    justify-content: center;
+    text-align     : center;
+}
+
+.chat .chat-box {
+    padding: 10px;
+    width  : 100%;
+}
+
+.chat-box .describe-text {
+    color      : #555;
+    text-align : center;
+    font-size  : 17px;
+    font-weight: 500;
+    height     : 20px;
+}
+
+.chat-box form {
+    padding: 10px 12px;
+    margin : 20px 0;
+}
+
+.chat-box form .field {
+    height    : 50px;
+    width     : 100%;
+    margin-top: 20px;
+}
+
+.chat-box form .field:last-child {
+    margin-bottom: 15px;
+}
+
+form .field input,
+form .field button,
+form .field textarea {
+    width        : 100%;
+    height       : 100%;
+    padding-left : 20px;
+    border       : 1px solid lightgrey;
+    outline      : none;
+    border-radius: 25px;
+    font-size    : 16px;
+}
+
+form .field input::placeholder,
+form .field textarea::placeholder {
+    color     : silver;
+    transition: all 0.3s ease;
+}
+
+form .field input:focus {
+    border-color: rgb(208, 129, 75);
+}
+
+form .field input:focus::placeholder,
+form .textarea textarea:focus::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chat-box form .textarea {
+    height: 80px;
+    width : 100%;
+}
+
+.chat-box form .field textarea {
+    height       : 100%;
+    width        : 100%;
+    border-radius: 50px;
+    border       : 1px solid lightgrey;
+    resize       : none;
+    padding      : 15px 20px;
+    font-size    : 16px;
+}
+
+.chat-box form .field textarea:focus::placeholder {
+    border-color: rgb(208, 129, 75);
+}
+
+/*Style button chatbox*/
+.chat-box form button {
+    font-family  : "Open Sans", sans-serif;
+    border       : none;
+    border-radius: 15px;
+    outline      : none;
+    cursor       : pointer;
+    background   : rgb(47, 67, 83);
+    color        : #fff;
+    height       : 35px;
+    width        : 100%;
+    margin       : 12px auto;
+    padding      : 5px;
+    transition   : all 0.3s ease;
+}
+
+.chat-box form button:hover {
+    background : rgb(208, 129, 75);
+    font-weight: bold;
+}
+
+
+.chat-box form button:active {
+    transform: scale(0.97);
+}
+
+/*Icon chatbox*/
+#click {
+    display: none;
+}
+
+label {
+    position        : fixed;
+    right           : 30px;
+    bottom          : 20px;
+    height          : 55px;
+    width           : 55px;
+    background-color: #fff;
+    color           : #2f3e46;
+    text-align      : center;
+    line-height     : 55px;
+    border-radius   : 50px;
+    font-size       : 30px;
+    cursor          : pointer;
+}
+
+/*Stijl voor icoon chatbox*/
+label span {
+    position  : absolute;
+    top       : 50%;
+    left      : 50%;
+    transform : translate(-50%, -50%);
+    transition: all 0.5s ease;
+}
+
+/*Start state of chat button*/
+Label span#chat-icon {
+    opacity: 1;
+}
+
+label span#close-icon {
+    opacity: 0;
+}
+
+#click:checked~label span#chat-icon {
+    opacity  : 0;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+#click:checked~label span#close-icon {
+    opacity  : 1;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+#click:checked~.chat {
+    opacity: 1;
+    bottom : 85px;
+}
+
+
+/*Stijl voor footer*/
+
+/*
+1) General
 */
-    .chat {
-        padding         : 1.5rem;
-        margin          : 1.5em;
-        position        : fixed;
-        right           : 15px;
-        height          : 550px;
-        bottom          : 85px;
-        max-width       : 450px;
-        background-color: #ffffff;
-        color           : rgb(47, 67, 83);
-        border-radius   : 15px;
-        box-shadow      : 0px 15px 20px rgb(0, 0, 0, 0.1);
-        opacity         : 0;
-        transition      : all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+.footer-distributed {
+    display         : flex;
+    flex-wrap       : nowrap;
+    background-color: rgb(47, 67, 83);
+    width           : 100%;
+    /*Volledige footer heeft dezelfde background color*/
+    margin-top      : 10px;
+    padding         : 50px 50px 60px 50px;
+    bottom          : 0;
+    box-sizing      : border-box;
+    height          : 450px;
+}
+
+
+.footer-distributed .footer-center h2,
+.footer-distributed .footer-right h2 {
+    font-family: "Playfair display", sans-serif;
+}
+
+/*
+2) Titelstijlen footer
+*/
+.footer-distributed h2,
+/*Opmerking: komma niet vergeten*/
+.footer-distributed h3 {
+    font-size: 16px;
+    color    : white;
+}
+
+.footer-distributed h2 {
+    margin : 5px;
+    padding: 5px;
+}
+
+.footer-distributed h3,
+/*Opmerking: komma niet vergeten*/
+.footer-distributed p {
+    margin : 10px;
+    padding: 5px;
+}
+
+.footer-distributed .footer-center p,
+.footer-distributed .footer-right p {
+    font-size     : 12px;
+    display       : inline-block;
+    color         : #fff;
+    vertical-align: middle;
+}
+
+
+/*
+3) Logo seahorse footer
+*/
+.logo-footer #seahorse {
+    height     : 135px;
+    width      : auto;
+    align-items: center;
+    margin     : 5px auto;
+}
+
+/*
+4) Stjl voor navigatie in footer
+*/
+.footer-nav {
+    display       : flex;
+    flex-direction: column;
+    margin        : 5px;
+    padding       : 5px;
+    gap           : 5px;
+}
+
+.footer-nav a {
+    display        : block;
+    min-width      : 80px;
+    padding        : 5px 10px;
+    font-size      : 12px;
+    color          : #fff;
+    text-decoration: none;
+    transition     : background-color 0.2s, color 0.2s;
+    /*Opmerking    : subtiel hover-effect */
+
+}
+
+.footer-nav a:hover {
+    font-weight: bold;
+
+}
+
+/*
+5) Onderdelen footer
+*/
+/*
+5.1) Style footer left
+*/
+.footer-distributed .footer-left {
+    width : 20%;
+    margin: 20px 0 12px 0;
+}
+
+.footer-distributed .footer-left a {
+    display        : inline-block;
+    line-height    : 1.8;
+    text-decoration: none;
+    color          : #fff;
+}
+
+/*
+5.2) Style footer center
+*/
+.footer-distributed .footer-center {
+    width      : 45%;
+    font-size  : 12px;
+    font-weight: normal;
+    margin     : 5px;
+    box-sizing : border-box;
+}
+
+/*
+5.3) footer right
+*/
+.footer-distributed .footer-right {
+    width     : 35%;
+    padding   : 0 10px;
+    box-sizing: border-box;
+}
+
+/*
+5.4) e-mailform footer right
+*/
+.footer-distributed .footer-right form {
+    display       : flex;
+    flex-direction: column;
+    /*Input en button staan onder elkaar*/
+    gap           : 5px;
+    margin-top    : 10px;
+}
+
+.footer-distributed .footer-right form input {
+    border-radius: 20px;
+    height       : 35px;
+    width        : 100%;
+    padding      : 0 12px;
+    font-size    : 10px;
+    border       : none;
+    box-sizing   : border-box;
+}
+
+.footer-distributed .footer-right form #button {
+    border-radius   : 20px;
+    height          : 35px;
+    width           : 100%;
+    cursor          : pointer;
+    border          : none;
+    background-color: #fff;
+    color           : rgb(47, 67, 83);
+    font-size       : 12px;
+    font-weight     : bold;
+    transition      : background-color 0.2s, color 0.2s;
+    /* subtiel hover-effect */
+}
+
+.footer-distributed .footer-right form #button:hover {
+    background-color: rgb(47, 67, 83);
+    color           : #fff;
+    border          : 1px solid #fff;
+}
+
+/*
+6) Stijl copyright
+*/
+.end .copy {
+    font-size       : 0.5em;
+    text-align      : left;
+    line-height     : 1;
+    margin          : 0;
+    padding         : 12px;
+    background-color: rgb(47, 67, 83);
+    color           : white;
+    width           : 100%;
+    /*Volledige footer heeft dezelfde background color*/
+}
+
+/*Mediaqueries*/
+/*
+1) Tablet
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    footer {
+        position: static;
     }
 
-    .chat .head-text-chat {
-        font-family    : "Open Sans", sans-serif;
-        background     : #2f3e46;
-        color          : #fff;
-        line-height    : 45px;
-        height         : 85px;
-        margin         : 10px auto;
-        padding        : 5px 5px;
-        border-radius  : 15px 15px 0 0;
-        font-weight    : 400;
-        font-size      : 18px;
-        display        : flex;
-        justify-content: center;
-        text-align     : center;
+    header {
+        padding-top: 20px;
     }
 
-    .chat .chat-box {
-        padding: 10px;
-        width  : 100%;
+    .navbar ul {
+        display       : flex;
+        flex-direction: column;
+        gap           : 25px;
+        list-style    : none;
+        margin        : 0;
+        padding       : 14px 32px;
     }
 
-    .chat-box .describe-text {
-        color      : #555;
-        text-align : center;
-        font-size  : 17px;
-        font-weight: 500;
-        height     : 20px;
+    aside {
+        display: none;
     }
+}
 
-    .chat-box form {
-        padding: 10px 12px;
-        margin : 20px 0;
-    }
-
-    .chat-box form .field {
-        height    : 50px;
-        width     : 100%;
-        margin-top: 20px;
-    }
-
-    .chat-box form .field:last-child {
-        margin-bottom: 15px;
-    }
-
-    form .field input,
-    form .field button,
-    form .field textarea {
-        width        : 100%;
-        height       : 100%;
-        padding-left : 20px;
-        border       : 1px solid lightgrey;
-        outline      : none;
-        border-radius: 25px;
-        font-size    : 16px;
-    }
-
-    form .field input::placeholder,
-    form .field textarea::placeholder {
-        color     : silver;
-        transition: all 0.3s ease;
-    }
-
-    form .field input:focus {
-        border-color: rgb(208, 129, 75);
-    }
-
-    form .field input:focus::placeholder,
-    form .textarea textarea:focus::placeholder {
-        color: rgba(255, 255, 255, 0.6);
-    }
-
-    .chat-box form .textarea {
-        height: 80px;
-        width : 100%;
-    }
-
-    .chat-box form .field textarea {
-        height       : 100%;
-        width        : 100%;
-        border-radius: 50px;
-        border       : 1px solid lightgrey;
-        resize       : none;
-        padding      : 15px 20px;
-        font-size    : 16px;
-    }
-
-    .chat-box form .field textarea:focus::placeholder {
-        border-color: rgb(208, 129, 75);
-    }
-
-    /*Style button chatbox*/
-    .chat-box form button {
-        font-family  : "Open Sans", sans-serif;
-        border       : none;
-        border-radius: 15px;
-        outline      : none;
-        cursor       : pointer;
-        background   : rgb(47, 67, 83);
-        color        : #fff;
-        height       : 35px;
-        width        : 100%;
-        margin       : 12px auto;
-        padding      : 5px;
-        transition   : all 0.3s ease;
-    }
-
-    .chat-box form button:hover {
-        background : rgb(208, 129, 75);
-        font-weight: bold;
-    }
-
-
-    .chat-box form button:active {
-        transform: scale(0.97);
-    }
-
-    /*Icon chatbox*/
-    #click {
+/*
+2) Smartphone
+*/
+@media (max-width: 767px) {
+    .logo {
         display: none;
     }
 
-    label {
-        position        : fixed;
-        right           : 30px;
-        bottom          : 20px;
-        height          : 55px;
-        width           : 55px;
-        background-color: #fff;
-        color           : #2f3e46;
-        text-align      : center;
-        line-height     : 55px;
-        border-radius   : 50px;
-        font-size       : 30px;
-        cursor          : pointer;
+    .navbar ul {
+        width  : 100%;
+        display: inline-block;
+        margin : 0;
+        padding: 0;
     }
 
-    /*Stijl voor icoon chatbox*/
-    label span {
-        position  : absolute;
-        top       : 50%;
-        left      : 50%;
-        transform : translate(-50%, -50%);
-        transition: all 0.5s ease;
+    #chatbox-right {
+        display: none;
     }
 
-    /*Start state of chat button*/
-    Label span#chat-icon {
-        opacity: 1;
-    }
-
-    label span#close-icon {
-        opacity: 0;
-    }
-
-    #click:checked~label span#chat-icon {
-        opacity  : 0;
-        transform: translate(-50%, -50%) rotate(180deg);
-    }
-
-    #click:checked~label span#close-icon {
-        opacity  : 1;
-        transform: translate(-50%, -50%) rotate(180deg);
-    }
-
-    #click:checked~.chat {
-        opacity: 1;
-        bottom : 85px;
-    }
-
-
-    /*
-==========
-Stijl voor footer
-==========
-*/
-
-    /*
-1) General
-*/
     .footer-distributed {
-        display         : flex;
-        flex-wrap       : nowrap;
-        background-color: rgb(47, 67, 83);
-        width           : 100%;
-        /*Volledige footer heeft dezelfde background color*/
-        margin-top      : 10px;
-        padding         : 50px 50px 60px 50px;
-        bottom          : 0;
-        box-sizing      : border-box;
-        height          : 450px;
+        display: none;
     }
 
-    /*
-2) Titelstijlen footer
-*/
-    .footer-distributed h2,
-    /*Opmerking: komma niet vergeten*/
-    .footer-distributed h3 {
-        font-size: 16px;
-        color    : white;
+    .end {
+        display: none;
     }
+}
 
-    .footer-distributed h2 {
-        margin : 5px;
-        padding: 5px;
-    }
-
-    .footer-distributed h3,
-    /*Opmerking: komma niet vergeten*/
-    .footer-distributed p {
-        margin : 10px;
-        padding: 5px;
-    }
-
-    .footer-distributed .footer-center p,
-    .footer-distributed .footer-right p {
-        font-size     : 12px;
-        display       : inline-block;
-        color         : #fff;
-        vertical-align: middle;
-    }
-
-
-    /*
-3) Logo seahorse footer
-*/
-    .logo-footer #seahorse {
-        height     : 135px;
-        width      : auto;
-        align-items: center;
-        margin     : 5px auto;
-    }
-
-    /*
-4) Stjl voor navigatie in footer
-*/
-    .footer-nav {
-        display       : flex;
-        flex-direction: column;
-        margin        : 5px;
-        padding       : 5px;
-        gap           : 5px;
-    }
-
-    .footer-nav a {
-        display        : block;
-        min-width      : 80px;
-        padding        : 5px 10px;
-        font-size      : 12px;
-        color          : #fff;
-        text-decoration: none;
-        transition     : background-color 0.2s, color 0.2s;
-        /*Opmerking    : subtiel hover-effect */
-
-    }
-
-    .footer-nav a:hover {
-        font-weight: bold;
-
-    }
-
-    /*
-5) Onderdelen footer
-*/
-    /*
-5.1) Style footer left
-*/
-    .footer-distributed .footer-left {
-        width : 20%;
-        margin: 20px 0 12px 0;
-    }
-
-    .footer-distributed .footer-left a {
-        display        : inline-block;
-        line-height    : 1.8;
-        text-decoration: none;
-        color          : #fff;
-    }
-
-    /*
-5.2) Style footer center
-*/
-    .footer-distributed .footer-center {
-        width      : 45%;
-        font-size  : 12px;
-        font-weight: normal;
-        margin     : 5px;
-        box-sizing : border-box;
-    }
-
-    /*
-5.3) footer right
-*/
-    .footer-distributed .footer-right {
-        width     : 35%;
-        padding   : 0 10px;
-        box-sizing: border-box;
-    }
-
-    /*
-5.4) e-mailform footer right
-*/
-    .footer-distributed .footer-right form {
-        display       : flex;
-        flex-direction: column;
-        /*Input en button staan onder elkaar*/
-        gap           : 5px;
-        margin-top    : 10px;
-    }
-
-    .footer-distributed .footer-right form input {
-        border-radius: 20px;
-        height       : 35px;
-        width        : 100%;
-        padding      : 0 12px;
-        font-size    : 10px;
-        border       : none;
-        box-sizing   : border-box;
-    }
-
-    .footer-distributed .footer-right form #button {
-        border-radius   : 20px;
-        height          : 35px;
-        width           : 100%;
-        cursor          : pointer;
-        border          : none;
-        background-color: #fff;
-        color           : rgb(47, 67, 83);
-        font-size       : 12px;
-        font-weight     : bold;
-        transition      : background-color 0.2s, color 0.2s;
-        /* subtiel hover-effect */
-    }
-
-    .footer-distributed .footer-right form #button:hover {
-        background-color: rgb(47, 67, 83);
-        color           : #fff;
-        border          : 1px solid #fff;
-    }
-
-    /*
-6) Stijl copyright
-*/
-    .end .copy {
-        font-size       : 0.5em;
-        text-align      : left;
-        line-height     : 1;
-        margin          : 0;
-        padding         : 12px;
-        background-color: rgb(47, 67, 83);
-        color           : white;
-        width           : 100%;
-        /*Volledige footer heeft dezelfde background color*/
-    }
-
-    /*
-==========
-Mediaqueries
-==========
-*/
-
-    /*
-1) Tablet
-*/
-    @media (min-width: 768px) and (max-width: 1024px) {
-        footer {
-            position: static;
-        }
-
-        header {
-            padding-top: 20px;
-        }
-
-        #navigation ul {
-            display       : flex;
-            flex-direction: column;
-            gap           : 25px;
-            list-style    : none;
-            margin        : 0;
-            padding       : 14px 32px;
-        }
-
-        aside {
-            display: none;
-        }
-    }
-
-    /*
-2) Smartphone
-*/
-    @media (max-width: 767px) {
-        #navigation ul {
-            display       : flex;
-            flex-direction: column;
-            align-items   : center;
-        }
-
-        #chatbox-right {
-            display: none;
-        }
-
-        .footer-distributed {
-            display: none;
-        }
-
-        .end {
-            display: none;
-        }
-    }
-
-    /*
+/*
 3) Printversie
 */
-    @media print {
+@media print {
 
-        header,
-        footer,
-        aside {
-            display: none
-        }
+    header,
+    footer,
+    aside {
+        display: none
     }
-
-    /*
-.footer-distributed .footer-center i{
-    background-color: rgb(47, 67, 83);
-    color           : white;
-    font-size: 12px;
-    width: 38px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 20px;
-    margin: 10px 15px;
-    vertical-align: center;
 }
-*/
+
