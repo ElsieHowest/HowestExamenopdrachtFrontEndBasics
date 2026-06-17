@@ -3,6 +3,12 @@
     box-sizing: border-box;
 }
 
+
+html{
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background-color: #fcf7ea;
     margin          : 0;
@@ -12,10 +18,10 @@ body {
 
 /*Stijl voor header*/
 .header {
-    margin     : 0 auto;
-    align-items: center;
+    margin          : 0 auto;
+    align-items     : center;
     background-color: rgb(47, 67, 83);
-    padding: 10px 0;
+    padding         : 10px 0;
 }
 
 /*Style logo*/
@@ -34,10 +40,7 @@ body {
     padding         : 10px;
 }
 
-/*
-==========
-titelstijlen
-==========
+/*Titelstijlen
 */
 h1,
 h2 {
@@ -53,13 +56,9 @@ p {
 
 
 
-/*
-==========
-Style main
-==========
-*/
-main .intro, 
-main .shop{
+/*Style of main*/
+main .intro,
+main .shop {
     margin: 1.5rem;
 }
 
@@ -112,52 +111,61 @@ main .shop{
     /*De lijn is zichtbaar bij hover/*/
 }
 
-
-/*
-1) navigatie main
-*/
-
-.sub-nav {
-    font-family: "Open Sans", sans-serif;
-    width      : 100%;
+/*Style of searchbar*/
+form {
+    flex-shrink: 0;
 }
 
-.sub-nav ul {
-    list-style     : none;
-    display        : flex;
-    flex-wrap      : wrap;
-    justify-content: center;
-    gap            : 20px;
-    padding        : 0;
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
 }
 
-.sub-nav li a {
-    text-decoration: none;
-    padding        : 14px 28px;
-    border-radius  : 20px;
-    background     : rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(10px);
-    border         : 1px solid rgba(255, 255, 255, 0.3);
-    color          : rgb(47, 67, 83);
-    font-family    : "Open Sans", sans-serif;
-    font-weight    : 600;
-    transition     : 0.3s;
+.search {
+    width        : max-content;
+    display      : flex;
+    align-items  : center;
+    padding      : 14px;
+    border-radius: 28px;
+    background   : #f4efe6;
+    transition: box-shadow 0.25s;
 }
 
-.sub-nav a:hover {
-    text-decoration: none;
-    transform      : translateY(-4px);
-    background     : #fff;
-    width          : 50px;
-    height         : 100px;
-    border         : 1px solid rgba(255, 255, 255, 0.3);
+/*The user gives focus*/
+.search:focus-within{
+box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 }
 
-/*
-==========
-Shop
-==========
-*/
+.search-input {
+    font-size    : 16px;
+    font-family  : "Open Sans", sans-serif;
+    color        : rgb(47, 67, 83);
+    margin-left  : 14px;
+    border-radius: 28px;
+    outline      : none;
+    border       : none;
+    background   : transparent;
+    width        : 300px;
+}
+
+/*Style of placeholder text*/
+.search-input::placeholder,
+.search-icon {
+    color: rgb(47, 67, 83);
+}
+
+/*Style of icons*/
+.icons .material-symbols-outlined{
+    display: inline-block;
+    margin: 25px;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    color: rgb(47, 67, 83);
+}
+/*Shop*/
 
 .shop {
     display    : inline-block;
@@ -182,15 +190,18 @@ Shop
 .card-list .card-item {
     background     : #fff;
     border-radius  : 15px;
-    border: 1px solid transparent;
+    border         : 1px solid transparent;
     list-style     : none;
     text-decoration: none;
     cursor         : pointer;
     overflow       : hidden;
     transition     :
-        border-color 0.5s ease, /*Kleur van border veranderd op hover*/
-        transform 0.3s ease, /*animatie CSS op hover*/
-        box-shadow 0.3s ease; /*Schaduw veranderd op hover*/
+        border-color 0.5s ease,
+        /*Kleur van border veranderd op hover*/
+        transform 0.3s ease,
+        /*animatie CSS op hover*/
+        box-shadow 0.3s ease;
+    /*Schaduw veranderd op hover*/
 }
 
 .card-list .card-item:hover {
