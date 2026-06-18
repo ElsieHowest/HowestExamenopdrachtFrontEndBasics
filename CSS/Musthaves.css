@@ -100,7 +100,67 @@ p {
 
 /*Style main*/
 main {
-    margin: 1.5rem;
+    max-width     : 1100px;
+    margin        : 0 auto;
+    padding       : 60px 20px;
+    display       : flex;
+    flex-direction: column;
+    gap           : 5px;
+}
+
+/*Style of searchbar*/
+form {
+    flex-shrink: 0;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.search {
+    width        : max-content;
+    display      : flex;
+    align-items  : center;
+    padding      : 14px;
+    border-radius: 28px;
+    background   : #f4efe6;
+    transition: box-shadow 0.25s;
+}
+
+/*The user gives focus*/
+.search:focus-within{
+box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
+}
+
+.search-input {
+    font-size    : 16px;
+    font-family  : "Open Sans", sans-serif;
+    color        : rgb(47, 67, 83);
+    margin-left  : 14px;
+    border-radius: 28px;
+    outline      : none;
+    border       : none;
+    background   : transparent;
+    width        : 300px;
+}
+
+/*Style of placeholder text*/
+.search-input::placeholder,
+.search-icon {
+    color: rgb(47, 67, 83);
+}
+
+/*Style of icons*/
+.icons .material-symbols-outlined{
+    display: inline-block;
+    margin: 25px;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    color: rgb(47, 67, 83);
 }
 
 /*
@@ -142,21 +202,13 @@ main {
     border         : 1px solid rgba(255, 255, 255, 0.3);
 }
 
-
-
-
 /*Style of title */
 .title{
     margin: 5px;
     padding: 0.2rem;
 }
 
-/*
-==========
-Shop
-==========
-*/
-
+/*Shop*/
 .container {
     display    : inline-block;
     font-family: "Open Sans", sans-serif;
@@ -164,9 +216,7 @@ Shop
     width      : 100%;
 }
 
-/*
-1) style of card items
-*/
+/*1) style of card items*/
 
 .card-list {
     display              : grid;
@@ -201,9 +251,7 @@ Shop
     transform : translateY(-5px);
 }
 
-/*
-2) Image of cards
-*/
+/*2) Image of cards*/
 .card-list .card-item img {
     width     : 100%;
     height    : 300px;
@@ -271,11 +319,7 @@ Shop
 }
 
 
-/*
-==========
-Chatbox
-=========
-*/
+/*Chatbox*/
 
 /*1) Titelstijlen chatbox*/
 .chat .head-text-chat h2 {
@@ -443,7 +487,7 @@ label {
     cursor          : pointer;
 }
 
-/*Stijl voor icoon chatbox*/
+/*7) Stijl voor icons chatbox*/
 label span {
     position  : absolute;
     top       : 50%;
@@ -478,15 +522,9 @@ label span#close-icon {
     bottom : 85px;
 }
 
-/*
-==========
-Stijl voor footer
-==========
-*/
+/*Stijl voor footer*/
 
-/*
-1) General
-*/
+/*1) General*/
 .footer-distributed {
     display         : flex;
     flex-wrap       : nowrap;
@@ -500,9 +538,7 @@ Stijl voor footer
     min-height          : 450px;
 }
 
-/*
-2) Titelstijlen footer
-*/
+/*2) Titelstijlen footer*/
 .footer-distributed h2,
 /*Opmerking: komma niet vergeten*/
 .footer-distributed h3 {
@@ -536,9 +572,7 @@ Stijl voor footer
 }
 
 
-/*
-3) Logo seahorse footer
-*/
+/*3) Logo seahorse footer*/
 .logo-footer #seahorse {
     height     : 135px;
     width      : auto;
@@ -546,9 +580,7 @@ Stijl voor footer
     margin     : 5px auto;
 }
 
-/*
-4) Stjl voor navigatie in footer
-*/
+/*4) Stjl voor navigatie in footer*/
 .footer-nav {
     display       : flex;
     flex-direction: column;
@@ -574,12 +606,8 @@ Stijl voor footer
 
 }
 
-/*
-5) Onderdelen footer
-*/
-/*
-5.1) Style footer left
-*/
+/*5) Onderdelen footer*/
+/*5.1) Style footer left*/
 .footer-distributed .footer-left {
     width : 20%;
     margin: 20px 0 12px 0;
@@ -592,9 +620,7 @@ Stijl voor footer
     color          : #fff;
 }
 
-/*
-5.2) Style footer center
-*/
+/*5.2) Style footer center*/
 .footer-distributed .footer-center {
     width      : 45%;
     font-size  : 12px;
@@ -603,18 +629,14 @@ Stijl voor footer
     box-sizing : border-box;
 }
 
-/*
-5.3) footer right
-*/
+/*5.3) footer right*/
 .footer-distributed .footer-right {
     width     : 35%;
     padding   : 0 10px;
     box-sizing: border-box;
 }
 
-/*
-5.4) e-mailform footer right
-*/
+/*5.4) e-mailform footer right*/
 .footer-distributed .footer-right form {
     display       : flex;
     flex-direction: column;
@@ -653,9 +675,7 @@ Stijl voor footer
     border          : 1px solid #fff;
 }
 
-/*
-6) Stijl copyright
-*/
+/*6) Stijl copyright*/
 .end .copy {
     font-size       : 0.5em;
     text-align      : left;
@@ -668,15 +688,9 @@ Stijl voor footer
     /*Volledige footer heeft dezelfde background color*/
 }
 
-/*
-==========
-Mediaqueries
-==========
-*/
+/*Mediaqueries*/
 
-/*
-1) Tablet
-*/
+/*1) Tablet*/
 @media (min-width: 768px) and (max-width: 1024px) {
     footer {
         position: static;
@@ -700,9 +714,7 @@ Mediaqueries
     }
 }
 
-/*
-2) Smartphone
-*/
+/*2) Smartphone*/
 @media (max-width: 767px) {
     #navigation ul {
         display       : flex;

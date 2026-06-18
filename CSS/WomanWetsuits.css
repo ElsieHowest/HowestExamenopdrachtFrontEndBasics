@@ -112,7 +112,67 @@ Style main
 ==========
 */
 main {
-    margin: 1.5rem;
+    max-width     : 1100px;
+    margin        : 0 auto;
+    padding       : 60px 20px;
+    display       : flex;
+    flex-direction: column;
+    gap           : 5px;
+}
+
+/*Style of searchbar*/
+form {
+    flex-shrink: 0;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.search {
+    width        : max-content;
+    display      : flex;
+    align-items  : center;
+    padding      : 14px;
+    border-radius: 28px;
+    background   : #f4efe6;
+    transition: box-shadow 0.25s;
+}
+
+/*The user gives focus*/
+.search:focus-within{
+box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
+}
+
+.search-input {
+    font-size    : 16px;
+    font-family  : "Open Sans", sans-serif;
+    color        : rgb(47, 67, 83);
+    margin-left  : 14px;
+    border-radius: 28px;
+    outline      : none;
+    border       : none;
+    background   : transparent;
+    width        : 300px;
+}
+
+/*Style of placeholder text*/
+.search-input::placeholder,
+.search-icon {
+    color: rgb(47, 67, 83);
+}
+
+/*Style of icons*/
+.icons .material-symbols-outlined{
+    display: inline-block;
+    margin: 25px;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    color: rgb(47, 67, 83);
 }
 
 /*1) navigatie main*/
@@ -151,6 +211,7 @@ main {
     background     : #fff;
     border         : 1px solid rgba(255, 255, 255, 0.3);
 }
+
 
 /*
 ==========

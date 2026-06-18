@@ -8,29 +8,14 @@ body {
     margin          : 0;
     padding         : 0;
     width           : 100%;
-
 }
 
 /*Stijl voor header*/
-#header {
-    margin     : 0 auto;
-    align-items: center;
-    padding    : 20px 0;
-}
-
-/*titelstijlen*/
-h1,
-h2 {
-    font-family: "Open Sans", sans-serif;
-    color      : rgb(208, 129, 75);
-    font-size  : 2rem;
-}
-
-h3,
-p {
-    font-family: "Open Sans", sans-serif;
-    color      : rgb(47, 67, 83);
-    font-size  : 1rem;
+.header {
+    margin          : 0 auto;
+    align-items     : center;
+    background-color: rgb(47, 67, 83);
+    padding         : 10px 0;
 }
 
 /*Style logo*/
@@ -42,62 +27,293 @@ p {
 }
 
 /*Style header logo*/
-#salty-cheeks-logo {
-    width           : 100px;
+.logo {
+    width           : 90px;
     height          : auto;
     background-color: transparent;
-    padding         : 15px;
+    padding         : 10px;
+}
+
+/*Navigation*/
+/*Style of navbar*/
+.navbar {
+    font-family    : "Open Sans", sans-serif;
+    width          : 85%;
+    padding        : 35px;
+    margin         : auto;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+}
+
+.navbar li {
+    width : 150px;
+    height: 30px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display   : inline-block;
+    /*Elementen staan naast elkaar*/
+    margin    : 0 20px;
+    position  : relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color          : #fff;
+}
+
+.navbar ul li::after {
+    content    : '';
+    height     : 2px;
+    width      : 0;
+    /*De lijn is nog niet zichtbaar*/
+    background : #fff;
+    position   : absolute;
+    left       : 0;
+    /*De lijn start vanaf links*/
+    bottom     : -0.5px;
+    /*Opmerking: een punt gebruiken, geen komma*/
+    transition : width 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 72px;
+    /*De lijn is zichtbaar bij hover/*/
+}
+
+/*
+==========
+titelstijlen
+==========
+*/
+h1,
+h2 {
+    font-family: "Open Sans", sans-serif;
+    color      : rgb(208, 129, 75);
+    font-size  : 2rem;
+}
+
+h3 {
+    font-family: "Open Sans", sans-serif;
+    color      : rgb(47, 67, 83);
+    font-size  : 1.8rem;
+}
+
+h4 {
+    font-family: "Open Sans", sans-serif;
+    color      : rgb(47, 67, 83);
+    font-size  : 1rem;
+}
+
+
+p {
+    font-family: "Open Sans", sans-serif;
+    font-size  : 0.8rem;
+}
+
+/*Style of header*/
+/*Style of banner*/
+.banner {
+    width : 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.85)),
+        url("../Images/Brand/banner/banner.jpg");
+    background-size    : cover;
+    /*Achtergrond vult de banner*/
+    background-position: center
+        /*De afbeelding wordt gecentreerd*/
+    ;
+}
+
+/*Style of logo*/
+.logo {
+    width : 90px;
+    cursor: pointer;
+    /*De gebruiker kan op het logo klikken*/
+}
+
+/*Style of navbar*/
+.navbar {
+    font-family    : "Open Sans", sans-serif;
+    width          : 85%;
+    padding        : 35px;
+    margin         : auto;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+}
+
+.navbar li {
+    width : 150px;
+    height: 30px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display   : inline-block;
+    /*Elementen staan naast elkaar*/
+    margin    : 0 20px;
+    position  : relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color          : #fff;
+}
+
+.navbar ul li::after {
+    content    : '';
+    height     : 2px;
+    width      : 0;
+    /*De lijn is nog niet zichtbaar*/
+    background : #fff;
+    position   : absolute;
+    left       : 0;
+    /*De lijn start vanaf links*/
+    bottom     : -0.5px;
+    /*Opmerking: een punt gebruiken, geen komma*/
+    transition : width 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 72px;
+    /*De lijn is zichtbaar bij hover/*/
 }
 
 /*Style main*/
 main {
-    margin: 1em;
+    max-width     : 1100px;
+    margin        : 0 auto;
+    padding       : 60px 20px;
+    display       : flex;
+    flex-direction: column;
+    gap           : 5px;
 }
 
-/*Style of main navigation*/
-.main-nav {
+/*Style of searchbar*/
+form {
+    flex-shrink: 0;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.search {
+    width        : max-content;
+    display      : flex;
+    align-items  : center;
+    padding      : 14px;
+    border-radius: 28px;
+    background   : #f4efe6;
+    transition: box-shadow 0.25s;
+}
+
+/*The user gives focus*/
+.search:focus-within{
+box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
+}
+
+.search-input {
+    font-size    : 16px;
+    font-family  : "Open Sans", sans-serif;
+    color        : rgb(47, 67, 83);
+    margin-left  : 14px;
+    border-radius: 28px;
+    outline      : none;
+    border       : none;
+    background   : transparent;
+    width        : 300px;
+}
+
+/*Style of placeholder text*/
+.search-input::placeholder,
+.search-icon {
+    color: rgb(47, 67, 83);
+}
+
+/*Style of icons*/
+.icons .material-symbols-outlined{
+    display: inline-block;
+    margin: 25px;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    color: rgb(47, 67, 83);
+}
+
+/*Shop*/
+.shop {
+    display    : inline-block;
     font-family: "Open Sans", sans-serif;
+    font-size  : 11px;
     width      : 100%;
 }
 
-.main-nav li {
-    width : 150px;
-    height: 50px;
+/*
+1) style of card items
+*/
+
+.card-list {
+    display              : grid;
+    grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+    max-width            : 1250px;
+    margin               : 10px auto;
+    padding              : 20px;
+    gap                  : 20px;
 }
 
-.main-nav ul {
-    font-family    : "Open Sans", sans-serif;
-    display        : flex;
-    flex-wrap      : wrap;
-    justify-content: center;
-    align-items    : center;
-    gap            : 25px;
+.card-list .card-item {
+    background     : #fff;
+    border-radius  : 15px;
+    border         : 1px solid transparent;
     list-style     : none;
-    margin         : 0;
-    padding        : 14px 32px
+    text-decoration: none;
+    cursor         : pointer;
+    overflow       : hidden;
+    transition     :
+        border-color 0.5s ease,
+        /*Kleur van border veranderd op hover*/
+        transform 0.3s ease,
+        /*animatie CSS op hover*/
+        box-shadow 0.3s ease;
+    /*Schaduw veranderd op hover*/
 }
 
-.main-nav ul li a {
-    list-style                : none;
-    text-decoration           : none;
-    width                     : 100%;
-    height                    : 50px;
-    background-color          : rgb(47, 67, 83);
-    color                     : white;
-    display                   : flex;
-    justify-content           : center;
-    align-items               : center;
-    text-align                : center;
-    border-top-left-radius    : 10px;
-    border-bottom-right-radius: 10px;
-    box-sizing                : border-box;
-    cursor                    : pointer;
+.card-list .card-item:hover {
+    border-color: 2px solid rgb(47, 67, 83);
+    box-shadow  : 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
-.main-nav li a:hover {
-    background-color: rgb(34, 49, 61);
-    color           : white;
-    border-radius   : 15px;
+/*
+2) Image of cards
+*/
+.card-list .card-item img {
+    width     : 100%;
+    height    : 300px;
+    /*Alle afbeeldingen dezelfde hoogte*/
+    object-fit: cover;
+    /*Past de afbeelding telkens aan*/
+    display   : block;
+}
+
+.card-list .card-item h3 {
+    color     : rgb(47, 67, 83);
+    font-size : 1rem;
+    padding   : 0;
+    text-align: center;
+}
+
+.card-list .card-item p {
+    color     : rgb(47, 67, 83);
+    font-size : 0.9rem;
+    padding   : 5px;
+    text-align: center;
 }
 
 /*Style voor de contactpagina*/

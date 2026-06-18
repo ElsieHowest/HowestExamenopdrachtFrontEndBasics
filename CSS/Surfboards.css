@@ -103,6 +103,15 @@ p {
 Style main
 ==========
 */
+main {
+    max-width     : 1100px;
+    margin        : 0 auto;
+    padding       : 60px 20px;
+    display       : flex;
+    flex-direction: column;
+    gap           : 5px;
+}
+
 main .intro,
 main .shop {
     margin: 1.5rem;
