@@ -29,23 +29,59 @@
     <!--Header-->
     <header class="header">
         <section class="banner">
-
-            <!--Navigation-->
             <nav class="navbar">
                 <img src="Images/Brand/Logo-seahorse.png" class="logo" title="Logo salty cheeks, seahorse"
                     alt="Logo salty cheeks, seahorse">
+
                 <ul>
-                    <!--Home-->
+                    <!--Index-->
                     <li><a href="Index.html" class="current">Home</a></li>
-                    <!--Navigate to surfshop-->
-                    <li><a href="Shop.html">Surfshop</a></li>
-                    <!--Activiteiten-->
+                    <!--Dropdown-->
+                    <li class="dropdown">
+                        <!--Surfshop-->
+                        <a href="Shop.html">Surfshop &#9662;</a>
+
+                        <ul class="submenu">
+                            <!--Surfboards-->
+                            <li><a href="Surfboards.html">Surfboards</a></li>
+                            <!--Surfskate-->
+                            <li><a href="Surfskate.html">Surfskates</a></li>
+                            <!--Wetsuit-->
+                            <li class="dropdown-sub">
+                                <a href="Wetsuits.html">Wetsuits &#9662;</a>
+                                <ul class="submenu">
+                                    <!--Woman wetsuits-->
+                                    <li><a href="WomanWetsuits.html">Woman wetsuits</a></li>
+                                    <!--Men wetsuits-->
+                                    <li><a href="MenWetsuits.html">Men wetsuits</a></li>
+                                </ul>
+                                </li>
+                            <!--Musthaves-->
+                            <li class="dropdown-sub">
+                                <a href="Musthaves.html">Must haves &#9662;</a>
+                                <ul class="submenu">
+                                    <li><a href="Surfboots.html">Surfboots</a></li>
+                                    <li><a href="Surfgloves.html">Surfgloves</a></li>
+                                    <li><a href="Surfcaps.html">Surfcaps</a></li>
+                                    <li><a href="Fins.html">Fins</a></li>
+                                    <li><a href="Leash.html">Leash</a></li>
+                                    <li><a href="Boardbags.html">Boardbag</a></li>
+                                    <li><a href="Poncho.html">Poncho</a></li>
+                                    <li><a href="Other.html">Other must haves</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
                     <li><a href="Activities.html">Salt sessions</a></li>
-                    <!--Navigate to contact-->
+
                     <li><a href="Contact.html">Find us</a></li>
+
                     <li><a href="Partners.html">Partners</a></li>
                 </ul>
             </nav>
+
+
 
             <div class="content">
                 <span class="tagline">
@@ -71,10 +107,9 @@
     </header>
 
     <!--Main-->
-    <main class="introduction">
+    <main>
         <!--About us-->
         <section class="about">
-            <!--Describe-->
             <div class="about-text">
                 <h2>About us</h2>
                 <article>
@@ -98,8 +133,50 @@
                     </p>
                 </article>
             </div>
-        </section>
 
+            <!--What brings you here?-->
+            <div class="category-section">
+                <h2>What brings you here?</h2>
+                <div class="shop">
+                    <div class="card-list">
+                        <a href="Surfboards.html" class="card-item">
+                            <img src="Images/Index/Surfshop-Boards.jpg" alt="Image of surfboards"
+                                title="image of surfboards">
+                            <h3>Surfboards</h3>
+                            <p>Built for waves, progress and pure ocean time.</p>
+                        </a>
+
+                        <a href="Wetsuits.html" class="card-item">
+                            <img src="Images/Index/Wetsuits.jpg" alt="Blue wetsuits with bird"
+                                title="Blue wetsuit with bird">
+                            <h3>Wetsuits</h3>
+                            <p>Simple, functional and made for epic surf sessions.</p>
+                        </a>
+
+                        <a href="Surfskate.html" class="card-item">
+                            <img src="Images/Index/Surfshop-surfskate.jpg" alt="Image of surfskates"
+                                title="Image of surfskates">
+                            <h3>Surfskate</h3>
+                            <p>Flow on land, feel it in the water.</p>
+                        </a>
+
+                        <a href="Musthaves.html" class="card-item">
+                            <img src="Images/Index/Surfshop-accessories.jpg" alt="surfer with surfboard and leash"
+                                title="Surfer with surfboard and leash">
+                            <h3>Must haves</h3>
+                            <p>Everything you need. Nothing you don’t.</p>
+                        </a>
+
+                        <a href="Activities.html" class="card-item">
+                            <img src="Images/Index/Surfclub-activities.jpg" alt="Surfing never alone within bar"
+                                title="Surfing never alone within bar">
+                            <h3>Activities</h3>
+                            <p>Never surf alone — join the fun on and off the water.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!--Support of seahorse project-->
         <aside>
             <h3>“Our surfclub isn’t just a vibe — it’s a reminder.”</h3>
@@ -113,6 +190,9 @@
                 <a href="https://projectseahorse.org/" target="_blank">Learn more about seahorse conservation</a>
             </p>
         </aside>
+
+
+
 
 
 
