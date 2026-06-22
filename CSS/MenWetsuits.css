@@ -62,8 +62,8 @@ p {
 }
 
 .navbar li {
-    width : 150px;
-    height: 30px;
+    width : auto;
+    height: auto;
 }
 
 .navbar ul li {
@@ -94,8 +94,94 @@ p {
 }
 
 .navbar ul li:hover::after {
-    width: 72px;
+    width: 50px;
     /*De lijn is zichtbaar bij hover/*/
+}
+
+/*Style of submenu*/
+.submenu{
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    list-style: none;
+    z-index: 1000;
+    top: 100%;        
+    left: 0;          
+    padding: 0;       
+    margin: 0;
+    font-size: 14px;    
+}
+
+/* De items BINNEN het submenu */
+.navbar .submenu li {
+    width: auto;      
+    height: auto;     
+    margin: 0;        
+    padding: 8px 0;   
+    display: block;   /* Zorgt dat ze netjes onder elkaar blijven staan */
+}
+
+/* De witte hover-lijn wordt niet getoond wordt onder de submenu-items */
+.navbar .submenu li::after {
+    display: none;
+}
+
+.navbar ul li.dropdown {
+    position: relative;
+}
+
+/* Submenu wordt zichtbaar als je op de 'dropdown' li hoovert */
+.navbar ul li.dropdown:hover .submenu {
+    display: block;
+    top: 100%; 
+    left: 5px;
+    margin: 0px;
+    padding: 10px 20px;               
+    border-radius: 12px;
+    background-color: rgba(35, 50, 64, 0.95);
+}
+
+/* De items in het submenu staan onder elkaar */
+.submenu li {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 10px 15px;
+}
+
+.submenu li a {
+    display: block;
+    width: 100%;
+}
+
+.submenu li::after {
+    display: none;
+}
+
+/*Stijl of dropdown-sub*/
+.navbar .submenu li.dropdown-sub {
+    position: relative;
+}
+
+.navbar ul .submenu li.dropdown-sub {
+    position: relative;
+}
+
+/* 2. Dwing het diepere submenu naar rechts met een specifiekere selector */
+.navbar ul .submenu li.dropdown-sub .submenu {
+    display: none;
+    position: absolute;
+    top: 0 !important;   
+    left: 100% !important;  
+    margin: 0;
+    padding: 10px 20px;
+    background-color: rgba(31, 44, 56, 0.98);
+    border-radius: 12px;
+}
+
+/*Hover */
+.navbar ul .submenu li.dropdown-sub:hover > .submenu {
+    display: block;
 }
 
 /*Style main*/

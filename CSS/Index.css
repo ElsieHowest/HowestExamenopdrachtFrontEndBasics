@@ -61,6 +61,7 @@ p {
     /*De gebruiker kan op het logo klikken*/
 }
 
+/*Navigation*/
 /*Style of navbar*/
 .navbar {
     font-family    : "Open Sans", sans-serif;
@@ -101,7 +102,7 @@ p {
     /*De lijn start vanaf links*/
     bottom     : -0.5px;
     /*Opmerking: een punt gebruiken, geen komma*/
-    transition : width 0.5s;
+    transition : width 0.5s ease;
 }
 
 .navbar ul li:hover::after {
@@ -113,7 +114,7 @@ p {
 .submenu{
     display: none;
     position: absolute;
-    min-width: 160px;
+    min-width: 200px;
     list-style: none;
     z-index: 1000;
     top: 100%;        
@@ -125,9 +126,9 @@ p {
 
 /* De items BINNEN het submenu */
 .navbar .submenu li {
-    width: auto;      
+    width: 120px;      
     height: auto;     
-    margin: 0;        
+    margin: 5px;        
     padding: 8px 0;   
     display: block;   /* Zorgt dat ze netjes onder elkaar blijven staan */
 }
@@ -155,14 +156,14 @@ p {
 /* De items in het submenu staan onder elkaar */
 .submenu li {
     display: block;
-    width: 100%;
+    width: auto;
     height: auto;
     padding: 10px 15px;
 }
 
 .submenu li a {
     display: block;
-    width: 100%;
+    width: auto;
 }
 
 .submenu li::after {
@@ -174,7 +175,6 @@ p {
     position: relative;
 }
 
-
 .navbar ul .submenu li.dropdown-sub {
     position: relative;
 }
@@ -183,11 +183,11 @@ p {
 .navbar ul .submenu li.dropdown-sub .submenu {
     display: none;
     position: absolute;
-    top: 0 !important;   
-    left: 100% !important;  
+    top: 0;
+    left: 100%;
     margin: 0;
     padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(0, 0, 0, 0.90);
     border-radius: 12px;
 }
 
@@ -195,6 +195,7 @@ p {
 .navbar ul .submenu li.dropdown-sub:hover > .submenu {
     display: block;
 }
+
 
 /*Style of catch*/
 .catch {

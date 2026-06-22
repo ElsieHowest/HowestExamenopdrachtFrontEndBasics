@@ -23,31 +23,59 @@
 </head>
 
 <body>
-    <!--Header-->
+     <!--Header-->
     <header class="header">
-        <!--Add to cart-->
-        <div class="cart">
-            🛒 <span id="cart-count">0</span>
-        </div>
-        <!--Navigation-->
-        <nav class="navbar">
-            <!--Images van logo Salty Cheeks-->
-            <div class="logo-header">
-                <img class="logo" src="Images/Brand/Logo-seahorse.png" title="Salty Cheeks logo with seahorse"
-                    alt="Salty Cheeks logo with seahorse">
-            </div>
-            <ul>
-                <!--Home-->
-                <li><a href="Index.html" class="current">Home</a></li>
-                <!--Navigate to surfshop-->
-                <li><a href="Shop.html">Surfshop</a></li>
-                <!--Activiteiten-->
-                <li><a href="Activities.html">Salt sessions</a></li>
-                <!--Navigate to contact-->
-                <li><a href="Contact.html">Find us</a></li>
-                <li><a href="Partners.html">Partners</a></li>
-            </ul>
-        </nav>
+        <section class="banner">
+            <nav class="navbar">
+                <img src="Images/Brand/Logo-seahorse.png" class="logo" title="Logo salty cheeks, seahorse"
+                    alt="Logo salty cheeks, seahorse">
+                <ul>
+                    <!--Index-->
+                    <li><a href="Index.html" class="current">Home</a></li>
+                    <!--Dropdown-->
+                    <li class="dropdown">
+                        <!--Surfshop-->
+                        <a href="Shop.html">Surfshop &#9662;</a>
+
+                        <ul class="submenu">
+                            <!--Surfboards-->
+                            <li><a href="Surfboards.html">Surfboards</a></li>
+                            <!--Surfskate-->
+                            <li><a href="Surfskate.html">Surfskates</a></li>
+                            <!--Wetsuit-->
+                            <li class="dropdown-sub">
+                                <a href="Wetsuits.html">Wetsuits &#9662;</a>
+                                <ul class="submenu">
+                                    <!--Woman wetsuits-->
+                                    <li><a href="WomanWetsuits.html">Woman wetsuits</a></li>
+                                    <!--Men wetsuits-->
+                                    <li><a href="MenWetsuits.html">Men wetsuits</a></li>
+                                </ul>
+                                </li>
+                            <!--Musthaves-->
+                            <li class="dropdown-sub">
+                                <a href="Musthaves.html">Must haves &#9662;</a>
+                                <ul class="submenu">
+                                    <li><a href="Surfboots.html">Surfboots</a></li>
+                                    <li><a href="Surfgloves.html">Surfgloves</a></li>
+                                    <li><a href="Surfcaps.html">Surfcaps</a></li>
+                                    <li><a href="Fins.html">Fins</a></li>
+                                    <li><a href="Leash.html">Leash</a></li>
+                                    <li><a href="Boardbags.html">Boardbag</a></li>
+                                    <li><a href="Poncho.html">Poncho</a></li>
+                                    <li><a href="Other.html">Other must haves</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a href="Activities.html">Salt sessions</a></li>
+
+                    <li><a href="Contact.html">Find us</a></li>
+
+                    <li><a href="Partners.html">Partners</a></li>
+                </ul>
+            </nav>
     </header>
 
     <!--Main-->
@@ -123,15 +151,12 @@
                         <h4>Men</h4>
                         <p>Performance wetsuits built for warmth, flexibility and durability.</p>
                     </div>
-
                 </a>
-
             </div>
         </section>
 
         <!--Wetsuit guide-->
         <section class="wetsuit-guide">
-
             <p>
                 The right wetsuit thickness depends on the water temperature, season and your cold tolerance.
                 Thicker wetsuits provide more warmth, while thinner suits offer more flexibility.
@@ -183,20 +208,13 @@
                 Some surfers wear swimwear under their wetsuit, while others prefer nothing underneath
                 for a more natural fit and extra comfort.
             </p>
-
             <p>
                 The best choice depends on personal preference, water temperature and the fit of your wetsuit.
             </p>
         </section>
-
     </main>
 
-
-    <!--
-    ==========
-    Footer
-    ==========
-    -->
+    <!--Footer-->
     <footer class="footer-distributed">
         <!--Linker deel van de footer-->
         <div class="footer-left">
@@ -239,15 +257,7 @@
                     <button id="button" type="submit">Subscribe</button>
                 </form>
             </section>
-
-            <!--
-            <h3>Let's keep you posted</h3>
-            <div class="footer-icons">
-            <button style="font-size:24px"><i class="fa fa-headphones"></i></button>
-            </div>
-            -->
         </div>
-
     </footer>
 
     <!--Copyright-->
@@ -258,5 +268,4 @@
     </section>
 
 </body>
-
 </html>
