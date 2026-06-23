@@ -1,4 +1,87 @@
- <!--Other musthaves-->
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <!--Meta-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Link CSS-->
+    <link rel="stylesheet" href="CSS/other.css">
+    <!--Link fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <!--Link icons-->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!--Title-->
+    <title>Surfshop</title>
+</head>
+
+<body>
+    <!--Header-->
+    <header class="header">
+        <section class="banner">
+            <nav class="navbar">
+                <img src="Images/Brand/Logo-seahorse.png" class="logo" title="Logo salty cheeks, seahorse"
+                    alt="Logo salty cheeks, seahorse">
+                <ul>
+                    <!--Index-->
+                    <li><a href="Index.html" class="current">Home</a></li>
+                    <!--Dropdown-->
+                    <li class="dropdown">
+                        <!--Surfshop-->
+                        <a href="Shop.html">Surfshop &#9662;</a>
+
+                        <ul class="submenu">
+                            <!--Surfboards-->
+                            <li><a href="Surfboards.html">Surfboards</a></li>
+                            <!--Surfskate-->
+                            <li><a href="Surfskate.html">Surfskates</a></li>
+                            <!--Wetsuit-->
+                            <li class="dropdown-sub">
+                                <a href="Wetsuits.html">Wetsuits &#9662;</a>
+                                <ul class="submenu">
+                                    <!--Woman wetsuits-->
+                                    <li><a href="WomanWetsuits.html">Woman wetsuits</a></li>
+                                    <!--Men wetsuits-->
+                                    <li><a href="MenWetsuits.html">Men wetsuits</a></li>
+                                </ul>
+                            </li>
+                            <!--Musthaves-->
+                            <li class="dropdown-sub">
+                                <a href="Musthaves.html">Must haves &#9662;</a>
+                                <ul class="submenu">
+                                    <li><a href="Surfboots.html">Surfboots</a></li>
+                                    <li><a href="Surfgloves.html">Surfgloves</a></li>
+                                    <li><a href="Surfcaps.html">Surfcaps</a></li>
+                                    <li><a href="Fins.html">Fins</a></li>
+                                    <li><a href="Leash.html">Leash</a></li>
+                                    <li><a href="Boardbags.html">Boardbag</a></li>
+                                    <li><a href="Poncho.html">Poncho</a></li>
+                                    <li><a href="Wax.html">Wax</a></li>
+                                    <li><a href="Other.html">Other must haves</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a href="Activities.html">Salt sessions</a></li>
+
+                    <li><a href="Contact.html">Find us</a></li>
+
+                    <li><a href="Partners.html">Partners</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <main>
+        <!--Other musthaves-->
         <section class="container">
             <div class="card-list">
                 <!--Wetsuit tote bag Srface-->
@@ -161,3 +244,108 @@
                 </a>
             </div>
         </section>
+
+        <!--Chatbox-->
+        <section id="chatbox-right">
+            <input type="checkbox" id="click">
+            <label for="click">
+                <span id="chat-icon" class="material-symbols-outlined">chat</span>
+                <span id="close-icon" class="material-symbols-outlined">close</span>
+            </label>
+            <div class="chat">
+                <!--Header of chatbox-->
+                <div class="head-text-chat">
+                    <h3>Quick question? - Let's chat!</h3>
+                </div>
+                <!--Chatbox-->
+                <div class="chat-box">
+                    <!--Text of chatbox-->
+                    <div class="describe-text">
+                        <p>
+                            Please fill out the form below to start chatting.
+                        </p>
+                        <!--Form in chatbox-->
+                        <form action="#">
+                            <!--Field one: name-->
+                            <div class="field">
+                                <input type="text" placeholder="Your name" aria-label="Your name" required>
+                            </div>
+                            <!--Field two: email-->
+                            <div class="field">
+                                <input type="email" placeholder="Your email adress" aria-label="Your email adress"
+                                    required>
+                            </div>
+                            <!--Field three: textfield-->
+                            <div class="field">
+                                <textarea id="comment" name="comment" placeholder="Your message" required>
+                                </textarea>
+                            </div>
+                            <button type="submit">Start chat</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!--Footer-->
+    <footer class="footer-distributed">
+        <!--Linker deel van de footer-->
+        <div class="footer-left">
+            <div class="brand">
+                <p class="logo-footer">
+                    <img id="seahorse" src="Images/Brand/Logo-seahorse.png" title="Seahorse logo" alt="1 seahorse">
+                </p>
+            </div>
+            <p class="footer-nav">
+                <a href="Index.html">Home</a>
+                <a href="Shop">Surfshop</a>
+                <a href="Activities.html">Activities</a>
+                <a href="Contact.html">Find us</a>
+            </p>
+        </div>
+
+        <!--Middelste deel van de footer-->
+        <div class="footer-center">
+            <!--Big statement-->
+            <h2>Ride, protect & respect</h2>
+
+
+            <p class="words">
+                These three words define who we are. A surf community built on waves, freedom
+                and a deep respect for the ocean. We don’t just enjoy the sea — we take care
+                of it, so future generations can do the same.
+            </p>
+        </div>
+
+        <!--Rechter deel van footer-->
+        <div class="footer-right">
+            <!--Call to action-->
+            <section>
+                <h2>Join the Salty Cheeks community</h2>
+                <p>
+                    A place where surfers, beach lovers and friends come together to enjoy the ocean.
+                </p>
+
+                <form>
+                    <input type="email" placeholder="Enter your email address" aria-label="Your email adress" required>
+                    <button id="button" type="submit">Subscribe</button>
+                </form>
+            </section>
+        </div>
+
+    </footer>
+
+    <!--Copyright-->
+    <section class="end">
+        <p class="copy">&copy;<b>Mostrey Elsie - WFB@Howest - </b>
+            Dit is een virtuele oefenfirma. Informatie, transacties en goederen op deze website
+            zijn fictief en hebben louter educatieve doeleinden</p>
+    </section>
+
+</body>
+
+</html>

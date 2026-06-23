@@ -271,7 +271,9 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
     width      : 100%;
 }
 
-/*1) style of card items*/
+/*
+1) style of card items
+*/
 
 .card-list {
     display              : grid;
@@ -304,7 +306,9 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
     box-shadow  : 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
-/*2) Image of cards*/
+/*
+2) Image of cards
+*/
 .card-list .card-item img {
     width     : 100%;
     height    : 300px;
@@ -525,6 +529,7 @@ label span#close-icon {
     transform: translate(-50%, -50%) rotate(180deg);
 }
 
+
 #click:checked~.chat {
     opacity: 1;
     bottom : 85px;
@@ -698,9 +703,7 @@ label span#close-icon {
 
 /*Mediaqueries*/
 
-/*
-1) Tablet
-*/
+/*1) Tablet*/
 @media (min-width: 768px) and (max-width: 1024px) {
     footer {
         position: static;
@@ -728,9 +731,7 @@ label span#close-icon {
     }
 }
 
-/*
-2) Smartphone
-*/
+/*2) Smartphone*/
 @media (max-width: 767px) {
     .navbar ul {
         display       : flex;
