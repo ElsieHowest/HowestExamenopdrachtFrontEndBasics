@@ -12,10 +12,10 @@ body {
 
 /*Stijl voor header*/
 .header {
-    margin     : 0 auto;
-    align-items: center;
+    margin          : 0 auto;
+    align-items     : center;
     background-color: rgb(47, 67, 83);
-    padding: 10px 0;
+    padding         : 10px 0;
 }
 
 /*Style logo*/
@@ -45,6 +45,7 @@ h2 {
 p {
     font-family: "Open Sans", sans-serif;
     font-size  : 1rem;
+    color      : rgba(35, 50, 64, 0.95);
 }
 
 /*Navigation*/
@@ -97,26 +98,27 @@ p {
 }
 
 /*Style of submenu*/
-.submenu{
-    display: none;
-    position: absolute;
-    min-width: 160px;
+.submenu {
+    display   : none;
+    position  : absolute;
+    min-width : 160px;
     list-style: none;
-    z-index: 1000;
-    top: 100%;        
-    left: 0;          
-    padding: 0;       
-    margin: 0;
-    font-size: 14px;    
+    z-index   : 1000;
+    top       : 100%;
+    left      : 0;
+    padding   : 0;
+    margin    : 0;
+    font-size : 14px;
 }
 
 /* De items BINNEN het submenu */
 .navbar .submenu li {
-    width: auto;      
-    height: auto;     
-    margin: 0;        
-    padding: 8px 0;   
-    display: block;   /* Zorgt dat ze netjes onder elkaar blijven staan */
+    width  : auto;
+    height : auto;
+    margin : 0;
+    padding: 8px 0;
+    display: block;
+    /* Zorgt dat ze netjes onder elkaar blijven staan */
 }
 
 /* De witte hover-lijn wordt niet getoond wordt onder de submenu-items */
@@ -130,26 +132,26 @@ p {
 
 /* Submenu wordt zichtbaar als je op de 'dropdown' li hoovert */
 .navbar ul li.dropdown:hover .submenu {
-    display: block;
-    top: 100%; 
-    left: 5px;
-    margin: 0px;
-    padding: 10px 20px;               
-    border-radius: 12px;
+    display         : block;
+    top             : 100%;
+    left            : 5px;
+    margin          : 0px;
+    padding         : 10px 20px;
+    border-radius   : 12px;
     background-color: rgba(35, 50, 64, 0.95);
 }
 
 /* De items in het submenu staan onder elkaar */
 .submenu li {
     display: block;
-    width: 100%;
-    height: auto;
+    width  : 100%;
+    height : auto;
     padding: 10px 15px;
 }
 
 .submenu li a {
     display: block;
-    width: 100%;
+    width  : 100%;
 }
 
 .submenu li::after {
@@ -167,18 +169,18 @@ p {
 
 /* 2. Dwing het diepere submenu naar rechts met een specifiekere selector */
 .navbar ul .submenu li.dropdown-sub .submenu {
-    display: none;
-    position: absolute;
-    top: 0 !important;   
-    left: 100% !important;  
-    margin: 0;
-    padding: 10px 20px;
+    display         : none;
+    position        : absolute;
+    top             : 0 !important;
+    left            : 100% !important;
+    margin          : 0;
+    padding         : 10px 20px;
     background-color: rgba(31, 44, 56, 0.98);
-    border-radius: 12px;
+    border-radius   : 12px;
 }
 
 /*Hover */
-.navbar ul .submenu li.dropdown-sub:hover > .submenu {
+.navbar ul .submenu li.dropdown-sub:hover>.submenu {
     display: block;
 }
 
@@ -243,10 +245,10 @@ form {
 }
 
 .bar {
-    display: flex;
-    align-items: center;
+    display        : flex;
+    align-items    : center;
     justify-content: flex-end;
-    gap: 15px;
+    gap            : 15px;
 }
 
 .search {
@@ -256,12 +258,12 @@ form {
     padding      : 14px;
     border-radius: 28px;
     background   : #f4efe6;
-    transition: box-shadow 0.25s;
+    transition   : box-shadow 0.25s;
 }
 
 /*The user gives focus*/
-.search:focus-within{
-box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
+.search:focus-within {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 }
 
 .search-input {
@@ -283,23 +285,16 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 }
 
 /*Style of icons*/
-.icons .material-symbols-outlined{
-    display: inline-block;
-    margin: 25px;
+.icons .material-symbols-outlined {
+    display    : inline-block;
+    margin     : 25px;
     align-items: center;
-    gap: 16px;
-    cursor: pointer;
-    color: rgb(47, 67, 83);
+    gap        : 16px;
+    cursor     : pointer;
+    color      : rgb(47, 67, 83);
 }
 
-
-
-
-/*
-==========
-Shop
-==========
-*/
+/*Shop*/
 
 .surfboardshop {
     display    : inline-block;
@@ -311,7 +306,6 @@ Shop
 /*
 1) style of card items
 */
-
 .card-list {
     display              : grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -327,7 +321,9 @@ Shop
     border         : 1px solid transparent;
     list-style     : none;
     text-decoration: none;
-    padding: 15px;
+    text-align     : center;
+    /*Knoppen staan in het midden*/
+    padding        : 15px;
     cursor         : pointer;
     overflow       : hidden;
     transition     :
@@ -366,20 +362,41 @@ Shop
 }
 
 .card-list .card-item p:last-child {
-    font-size : 12px;
-    color     :  rgb(208, 129, 75);
+    font-size  : 12px;
+    color      : rgba(35, 50, 64, 0.95);
     font-weight: bold;
-    margin-top: 5px;
+    margin-top : 5px;
 }
 
+/*Style of buttons*/
+.card-list .card-item button {
+    display         : inline-block;
+    margin          : 5px;
+    color           : #ffffff;
+    background-color: rgb(47, 67, 83);
+    border          : none;
+    border-radius   : 20px;
+    height          : 35px;
+    width           : 100px;
+    cursor          : pointer;
+    transition      :
+        background-color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
 
+.card-list .card-item button:hover {
+    font-weight: bold;
+    transform       : translateY(-2px);
+    box-shadow      : 0 6px 12px rgba(0, 0, 0, 0.15);
+}
 
-/*
-==========
-Chatbox
-=========
-*/
+.card-list .card-item button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
 
+/*Chatbox*/
 /*1) Titelstijlen chatbox*/
 .chat .head-text-chat h2 {
     color : white;
@@ -581,15 +598,9 @@ label span#close-icon {
     bottom : 85px;
 }
 
-/*
-==========
-Stijl voor footer
-==========
-*/
+/*Stijl voor footer*/
 
-/*
-1) General
-*/
+/*1) General*/
 .footer-distributed {
     display         : flex;
     flex-wrap       : nowrap;
@@ -603,9 +614,7 @@ Stijl voor footer
     height          : 450px;
 }
 
-/*
-2) Titelstijlen footer
-*/
+/*2) Titelstijlen footer*/
 .footer-distributed h2,
 /*Opmerking: komma niet vergeten*/
 .footer-distributed h3 {
@@ -639,9 +648,7 @@ Stijl voor footer
 }
 
 
-/*
-3) Logo seahorse footer
-*/
+/*3) Logo seahorse footer*/
 .logo-footer #seahorse {
     height     : 135px;
     width      : auto;
@@ -649,9 +656,7 @@ Stijl voor footer
     margin     : 5px auto;
 }
 
-/*
-4) Stjl voor navigatie in footer
-*/
+/*4) Stjl voor navigatie in footer*/
 .footer-nav {
     display       : flex;
     flex-direction: column;
@@ -677,12 +682,8 @@ Stijl voor footer
 
 }
 
-/*
-5) Onderdelen footer
-*/
-/*
-5.1) Style footer left
-*/
+/*5) Onderdelen footer*/
+/*5.1) Style footer left*/
 .footer-distributed .footer-left {
     width : 20%;
     margin: 20px 0 12px 0;
@@ -695,9 +696,7 @@ Stijl voor footer
     color          : #fff;
 }
 
-/*
-5.2) Style footer center
-*/
+/*5.2) Style footer center*/
 .footer-distributed .footer-center {
     width      : 45%;
     font-size  : 12px;
@@ -706,18 +705,14 @@ Stijl voor footer
     box-sizing : border-box;
 }
 
-/*
-5.3) footer right
-*/
+/*5.3) footer right*/
 .footer-distributed .footer-right {
     width     : 35%;
     padding   : 0 10px;
     box-sizing: border-box;
 }
 
-/*
-5.4) e-mailform footer right
-*/
+/*5.4) e-mailform footer right*/
 .footer-distributed .footer-right form {
     display       : flex;
     flex-direction: column;
@@ -756,9 +751,7 @@ Stijl voor footer
     border          : 1px solid #fff;
 }
 
-/*
-6) Stijl copyright
-*/
+/*6) Stijl copyright*/
 .end .copy {
     font-size       : 0.5em;
     text-align      : left;
@@ -771,15 +764,9 @@ Stijl voor footer
     /*Volledige footer heeft dezelfde background color*/
 }
 
-/*
-==========
-Mediaqueries
-==========
-*/
+/*Mediaqueries*/
 
-/*
-1) Tablet
-*/
+/*1) Tablet*/
 @media (min-width: 768px) and (max-width: 1024px) {
     footer {
         position: static;
@@ -803,9 +790,7 @@ Mediaqueries
     }
 }
 
-/*
-2) Smartphone
-*/
+/*2) Smartphone*/
 @media (max-width: 767px) {
     #navigation ul {
         display       : flex;
