@@ -12,10 +12,10 @@ body {
 
 /*Stijl voor header*/
 .header {
-    margin     : 0 auto;
-    align-items: center;
+    margin          : 0 auto;
+    align-items     : center;
     background-color: rgb(47, 67, 83);
-    padding: 10px 0;
+    padding         : 10px 0;
 }
 
 /*Style logo*/
@@ -33,18 +33,68 @@ body {
     background-color: transparent;
     padding         : 10px;
 }
+
 /*Titelstijlen*/
-h1,
-h2 {
+h1 {
+    color      : rgb(47, 67, 83);
+    font-family: "Open Sans", sans-serif;
+    font-size  : 2rem;
+
+}
+
+h2,
+h3 {
     font-family: "Open Sans", sans-serif;
     color      : rgb(208, 129, 75);
     font-size  : 2rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    font-size  : 1rem;
+    line-height: 1.5;
+    color      : #333;
+}
+
+/*Style of aside*/
+aside {
+    text-align      : left;
+    margin          : 40px auto;
+    padding         : 25px 30px;
+    background-color: #f3eae1;
+    width           : 320px;
+    /*Opmerking     : vast breedt voor float*/
+    border-radius   : 15px;
 }
 
 aside h3 {
     font-family: "Open Sans", sans-serif;
     color      : rgb(208, 129, 75);
     font-size  : 1.2em;
+    margin     : 0;
+}
+
+/*Automatisch tellen van even en oneven aside*/
+/*Oneven asides (1e, 3e, 5e...) floaten links, gebruik van klassen niet nodig*/
+aside:nth-of-type(odd) {
+    float       : left;
+    margin-right: 30px;
+}
+
+/*Even asides (2e, 4e, 6e...) floaten rechts, gebruik ban klassen niet nodig*/
+aside:nth-of-type(even) {
+    float      : right;
+    margin-left: 30px;
+}
+
+section::after {
+    content: "";
+    display: block;
+    clear  : both;
 }
 
 /*Navigation*/
@@ -57,6 +107,7 @@ aside h3 {
     display        : flex;
     align-items    : center;
     justify-content: space-between;
+
 }
 
 .navbar li {
@@ -88,7 +139,7 @@ aside h3 {
     /*De lijn start vanaf links*/
     bottom     : -0.5px;
     /*Opmerking: een punt gebruiken, geen komma*/
-    transition : width 0.5s;
+    transition : width 0.5s ease;
 }
 
 .navbar ul li:hover::after {
@@ -97,26 +148,27 @@ aside h3 {
 }
 
 /*Style of submenu*/
-.submenu{
-    display: none;
-    position: absolute;
-    min-width: 160px;
+.submenu {
+    display   : none;
+    position  : absolute;
+    min-width : 160px;
     list-style: none;
-    z-index: 1000;
-    top: 100%;        
-    left: 0;          
-    padding: 0;       
-    margin: 0;
-    font-size: 14px;    
+    z-index   : 1000;
+    top       : 100%;
+    left      : 0;
+    padding   : 0;
+    margin    : 0;
+    font-size : 14px;
 }
 
 /* De items BINNEN het submenu */
 .navbar .submenu li {
-    width: auto;      
-    height: auto;     
-    margin: 0;        
-    padding: 8px 0;   
-    display: block;   /* Zorgt dat ze netjes onder elkaar blijven staan */
+    width  : auto;
+    height : auto;
+    margin : 0;
+    padding: 8px 0;
+    display: block;
+    /* Zorgt dat ze netjes onder elkaar blijven staan */
 }
 
 /* De witte hover-lijn wordt niet getoond wordt onder de submenu-items */
@@ -130,26 +182,26 @@ aside h3 {
 
 /* Submenu wordt zichtbaar als je op de 'dropdown' li hoovert */
 .navbar ul li.dropdown:hover .submenu {
-    display: block;
-    top: 100%; 
-    left: 5px;
-    margin: 0px;
-    padding: 10px 20px;               
-    border-radius: 12px;
+    display         : block;
+    top             : 100%;
+    left            : 5px;
+    margin          : 0px;
+    padding         : 10px 20px;
+    border-radius   : 12px;
     background-color: rgba(35, 50, 64, 0.95);
 }
 
 /* De items in het submenu staan onder elkaar */
 .submenu li {
     display: block;
-    width: 100%;
-    height: auto;
+    width  : 100%;
+    height : auto;
     padding: 10px 15px;
 }
 
 .submenu li a {
     display: block;
-    width: 100%;
+    width  : 100%;
 }
 
 .submenu li::after {
@@ -167,18 +219,18 @@ aside h3 {
 
 /* 2. Dwing het diepere submenu naar rechts met een specifiekere selector */
 .navbar ul .submenu li.dropdown-sub .submenu {
-    display: none;
-    position: absolute;
-    top: 0 !important;   
-    left: 100% !important;  
-    margin: 0;
-    padding: 10px 20px;
+    display         : none;
+    position        : absolute;
+    top             : 0 !important;
+    left            : 100% !important;
+    margin          : 0;
+    padding         : 10px 20px;
     background-color: rgba(31, 44, 56, 0.98);
-    border-radius: 12px;
+    border-radius   : 12px;
 }
 
 /*Hover */
-.navbar ul .submenu li.dropdown-sub:hover > .submenu {
+.navbar ul .submenu li.dropdown-sub:hover>.submenu {
     display: block;
 }
 
@@ -190,7 +242,7 @@ main {
     display       : flex;
     flex-direction: column;
     gap           : 0.5rem;
-    /*Opmerking: gebruik een punt, in plaats van een komma*/
+    /*Opmerking   : gebruik een punt, in plaats van een komma*/
 }
 
 /*Style of searchbar*/
@@ -199,10 +251,10 @@ form {
 }
 
 .bar {
-    display: flex;
-    align-items: center;
+    display        : flex;
+    align-items    : center;
     justify-content: flex-end;
-    gap: 15px;
+    gap            : 15px;
 }
 
 .search {
@@ -212,12 +264,12 @@ form {
     padding      : 14px;
     border-radius: 28px;
     background   : #f4efe6;
-    transition: box-shadow 0.25s;
+    transition   : box-shadow 0.25s;
 }
 
 /*The user gives focus*/
-.search:focus-within{
-box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
+.search:focus-within {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 }
 
 .search-input {
@@ -239,35 +291,30 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 }
 
 /*Style of icons*/
-.icons .material-symbols-outlined{
-    display: inline-block;
-    margin: 25px;
+.icons .material-symbols-outlined {
+    display    : inline-block;
+    margin     : 25px;
     align-items: center;
-    gap: 16px;
-    cursor: pointer;
-    color: rgb(47, 67, 83);
+    gap        : 16px;
+    cursor     : pointer;
+    color      : rgb(47, 67, 83);
 }
 
-/*
-==========
-Brands
-==========
-*/
+/*Brands*/
 
-.container{
-        max-width: 1200px;
-    margin: 0 auto;
+.container {
+    max-width: 1200px;
+    margin   : 0 auto;
 }
 
 .brand {
-    font-size  : 11px;
-    width      : auto;
+    font-size: 11px;
+    width    : auto;
 }
 
 .brand-grid {
-    display              : grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap                  : 2rem;
+    width: 100%;
+    gap  : 2rem;
 }
 
 .brand-content {
@@ -299,103 +346,68 @@ Brands
     object-fit: contain;
 }
 
-
-
 /*
-==========
-Footer
-=========
+1) style of card items
 */
-.footer-distributed .footer-center h2,
-.footer-distributed .footer-right h2 {
-    font-family: "Playfair display", sans-serif;
+.card-list {
+    display              : grid;
+    grid-template-columns: repeat(3, 1fr);
+    /*Opmerking          : altijd drie kolommen op groot scherm*/
+    max-width            : 1150px;
+    margin               : 10px auto;
+    padding              : 20px;
+    gap                  : 20px;
+    justify-content      : center;
+    /*Opmerking          : de kolommen worden gecentreerd binnen de container*/
 }
 
-
-.chat .head-text-chat h2 {
-    color : white;
-    height: 100px;
-}
-
-.chat .head-text-chat h3 {
-    color : white;
-    height: 100px;
-}
-
-p {
-    font-family: "Open Sans", sans-serif;
-    font-size  : 1rem;
-}
-
-/*Stijl voor logo*/
-.logo-header {
-    display       : flex;
-    flex-direction: column;
-    /*Logo boven navigatie*/
-    align-items   : center;
-}
-
-/*
-==========
-Navigatie
-==========
-*/
-#navigation {
-    font-family: "Open Sans", sans-serif;
-    width      : 100%;
-}
-
-#navigation li {
-    width : 150px;
-    height: 50px;
-}
-
-#navigation ul {
-    font-family    : "Open Sans", sans-serif;
-    display        : flex;
-    flex-wrap      : wrap;
-    justify-content: center;
-    align-items    : center;
-    gap            : 25px;
+.card-list .card-item {
+    background     : #fff;
+    border-radius  : 15px;
+    border         : 1px solid transparent;
     list-style     : none;
-    margin         : 0;
-    padding        : 14px 32px
+    text-decoration: none;
+    cursor         : pointer;
+    overflow       : hidden;
+    transition     :
+        border-color 0.5s ease,
+        /*Kleur van border veranderd op hover*/
+        transform 0.3s ease,
+        /*animatie CSS op hover*/
+        box-shadow 0.3s ease;
+    /*Schaduw veranderd op hover*/
 }
 
-#navigation li a {
-    list-style                : none;
-    text-decoration           : none;
-    width                     : 100%;
-    height                    : 50px;
-    background-color          : rgb(47, 67, 83);
-    color                     : white;
-    display                   : flex;
-    justify-content           : center;
-    align-items               : center;
-    text-align                : center;
-    border-top-left-radius    : 10px;
-    border-bottom-right-radius: 10px;
-    box-sizing                : border-box;
-    cursor                    : pointer;
-}
-
-#navigation li a:hover {
-    background-color: rgb(34, 49, 61);
-    color           : white;
-    border-radius   : 15px;
-    cursor: pointer;
+.card-list .card-item:hover {
+    border-color: 2px solid rgb(47, 67, 83);
+    box-shadow  : 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
 /*
-==========
-Style header logo
-==========
+2) Image of cards
 */
-#salty-cheeks-logo {
-    width           : 100px;
-    height          : auto;
-    background-color: transparent;
-    padding         : 15px;
+.card-list .card-item img.brand-image {
+    aspect-ratio    : auto;
+    /*Opmerking     : geen geforceerde verhoudingen*/
+    width           : 100%;
+    height          : 300px;
+    aspect-ratio    : 4 / 3;
+    object-fit      : contain;
+    background-color: #ffffff;
+}
+
+.card-list .card-item h3 {
+    color     : rgb(47, 67, 83);
+    font-size : 1rem;
+    padding   : 0;
+    text-align: center;
+}
+
+.card-list .card-item p {
+    color     : rgb(47, 67, 83);
+    font-size : 0.9rem;
+    padding   : 5px;
+    text-align: center;
 }
 
 
@@ -432,6 +444,7 @@ Chatbox
     transition      : all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
+
 .chat .head-text-chat {
     font-family    : "Open Sans", sans-serif;
     background     : #2f3e46;
@@ -446,6 +459,16 @@ Chatbox
     display        : flex;
     justify-content: center;
     text-align     : center;
+}
+
+.chat .head-text-chat h2 {
+    color : white;
+    height: 100px;
+}
+
+.chat .head-text-chat h3 {
+    color : white;
+    height: 100px;
 }
 
 .chat .chat-box {
@@ -602,15 +625,9 @@ label span#close-icon {
 }
 
 
-/*
-==========
-Stijl voor footer
-==========
-*/
+/*Stijl voor footer*/
 
-/*
-1) General
-*/
+/*1) General*/
 .footer-distributed {
     display         : flex;
     flex-wrap       : nowrap;
@@ -624,19 +641,23 @@ Stijl voor footer
     height          : 450px;
 }
 
-/*
-2) Titelstijlen footer
-*/
-.footer-distributed h2,
-/*Opmerking: komma niet vergeten*/
-.footer-distributed h3 {
-    font-size: 16px;
-    color    : white;
+/*2) Titelstijlen footer*/
+
+.footer-distributed .footer-center h2,
+.footer-distributed .footer-right h2 {
+    font-family: "Playfair display", sans-serif;
 }
 
 .footer-distributed h2 {
     margin : 5px;
     padding: 5px;
+}
+
+.footer-distributed h2,
+/*Opmerking: komma niet vergeten*/
+.footer-distributed h3 {
+    font-size: 16px;
+    color    : white;
 }
 
 .footer-distributed h3,
@@ -655,9 +676,7 @@ Stijl voor footer
 }
 
 
-/*
-3) Logo seahorse footer
-*/
+/*3) Logo seahorse footer*/
 .logo-footer #seahorse {
     height     : 135px;
     width      : auto;
@@ -665,9 +684,7 @@ Stijl voor footer
     margin     : 5px auto;
 }
 
-/*
-4) Stjl voor navigatie in footer
-*/
+/*4) Stjl voor navigatie in footer*/
 .footer-nav {
     display       : flex;
     flex-direction: column;
@@ -693,12 +710,8 @@ Stijl voor footer
 
 }
 
-/*
-5) Onderdelen footer
-*/
-/*
-5.1) Style footer left
-*/
+/*5) Onderdelen footer*/
+/*5.1) Style footer left*/
 .footer-distributed .footer-left {
     width : 20%;
     margin: 20px 0 12px 0;
@@ -711,9 +724,7 @@ Stijl voor footer
     color          : #fff;
 }
 
-/*
-5.2) Style footer center
-*/
+/*5.2) Style footer center*/
 .footer-distributed .footer-center {
     width      : 45%;
     font-size  : 12px;
@@ -722,18 +733,14 @@ Stijl voor footer
     box-sizing : border-box;
 }
 
-/*
-5.3) footer right
-*/
+/*5.3) footer right*/
 .footer-distributed .footer-right {
     width     : 35%;
     padding   : 0 10px;
     box-sizing: border-box;
 }
 
-/*
-5.4) e-mailform footer right
-*/
+/*5.4) e-mailform footer right*/
 .footer-distributed .footer-right form {
     display       : flex;
     flex-direction: column;
@@ -772,9 +779,7 @@ Stijl voor footer
     border          : 1px solid #fff;
 }
 
-/*
-6) Stijl copyright
-*/
+/*6) Stijl copyright*/
 .end .copy {
     font-size       : 0.5em;
     text-align      : left;
@@ -787,15 +792,9 @@ Stijl voor footer
     /*Volledige footer heeft dezelfde background color*/
 }
 
-/*
-==========
-Mediaqueries
-==========
-*/
+/*Mediaqueries*/
 
-/*
-1) Tablet
-*/
+/*1) Tablet*/
 @media (min-width: 768px) and (max-width: 1024px) {
     footer {
         position: static;
@@ -814,16 +813,23 @@ Mediaqueries
         padding       : 14px 32px;
     }
 
+    .card-list {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 kolommen op tablet */
+    }
 }
 
-/*
-2) Smartphone
-*/
+/*2) Smartphone*/
 @media (max-width: 767px) {
     #navigation ul {
         display       : flex;
         flex-direction: column;
         align-items   : center;
+    }
+
+    .card-list {
+        grid-template-columns: 1fr;
+        /* 1 kolom op smartphone */
     }
 
     #chatbox-right {
@@ -839,9 +845,7 @@ Mediaqueries
     }
 }
 
-/*
-3) Printversie
-*/
+/*3) Printversie*/
 @media print {
 
     header,
