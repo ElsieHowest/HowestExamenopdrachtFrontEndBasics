@@ -75,7 +75,7 @@ body {
     /*De lijn start vanaf links*/
     bottom     : -0.5px;
     /*Opmerking: een punt gebruiken, geen komma*/
-    transition : width 0.5s;
+    transition : width 0.5s ease;
 }
 
 .navbar ul li:hover::after {
@@ -201,54 +201,6 @@ p {
     width : 90px;
     cursor: pointer;
     /*De gebruiker kan op het logo klikken*/
-}
-
-/*Style of navbar*/
-.navbar {
-    font-family    : "Open Sans", sans-serif;
-    width          : 85%;
-    padding        : 35px;
-    margin         : auto;
-    display        : flex;
-    align-items    : center;
-    justify-content: space-between;
-}
-
-.navbar li {
-    width : 150px;
-    height: 30px;
-}
-
-.navbar ul li {
-    list-style: none;
-    display   : inline-block;
-    /*Elementen staan naast elkaar*/
-    margin    : 0 20px;
-    position  : relative;
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    color          : #fff;
-}
-
-.navbar ul li::after {
-    content    : '';
-    height     : 2px;
-    width      : 0;
-    /*De lijn is nog niet zichtbaar*/
-    background : #fff;
-    position   : absolute;
-    left       : 0;
-    /*De lijn start vanaf links*/
-    bottom     : -0.5px;
-    /*Opmerking: een punt gebruiken, geen komma*/
-    transition : width 0.5s;
-}
-
-.navbar ul li:hover::after {
-    width: 72px;
-    /*De lijn is zichtbaar bij hover/*/
 }
 
 /*Style main*/
