@@ -392,13 +392,7 @@ Navigation
     border         : 1px solid rgba(255, 255, 255, 0.3);
 }
 
-
-/*
-==========
-Shop
-==========
-*/
-
+/*Shop*/
 .container {
     display    : inline-block;
     font-family: "Open Sans", sans-serif;
@@ -409,7 +403,6 @@ Shop
 /*
 1) style of card items
 */
-
 .card-list {
     display              : grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -417,19 +410,20 @@ Shop
     margin               : 10px auto;
     padding              : 20px;
     gap                  : 20px;
-    background-color     : transparent;
 }
 
 .card-list .card-item {
-    background-color: #ffffff;
-    border-radius   : 15px;
-    border          : 1px solid transparent;
-    list-style      : none;
-    text-decoration : none;
-    cursor          : pointer;
-    padding         : 15px;
-    overflow        : hidden;
-    transition      :
+    background     : #fff;
+    border-radius  : 15px;
+    border         : 1px solid transparent;
+    list-style     : none;
+    text-decoration: none;
+    text-align     : center;
+    /*Knoppen staan in het midden*/
+    padding        : 15px;
+    cursor         : pointer;
+    overflow       : hidden;
+    transition     :
         border-color 0.5s ease,
         /*Kleur van border veranderd op hover*/
         transform 0.3s ease,
@@ -439,13 +433,12 @@ Shop
 }
 
 .card-list .card-item:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
-    transform : translateY(-5px);
+    border-color: 2px solid rgb(47, 67, 83);
+    box-shadow  : 0 10px 20px rgba(0, 0, 0, 0.12);
+    transform   : translateY(-5px);
 }
 
-/*
-2) Image of cards
-*/
+/*2) Image of cards*/
 .card-list .card-item img {
     width     : 100%;
     height    : 300px;
@@ -455,34 +448,7 @@ Shop
     display   : block;
 }
 
-/* Styling voor de tekst binnen de content breakdown */
-.card-list .card-item .content {
-    padding: 5px;
-}
-
-.card-list .card-item .content h3 {
-    color: rgb(208, 129, 75); /* Oranje/bruine kleur voor de titel */
-    font-size: 1rem;
-    margin: 5px 0;
-    text-align: center;
-}
-
-.card-list .card-item .content p {
-    color: rgb(47, 67, 83); /* Blauw/grijze kleur voor de prijs */
-    font-size: 0.9rem;
-    text-align: center;
-    margin: 2px 0;
-}
-
-/* De allerlaatste beschrijving moet weer de oranje/dikke tekst worden */
-.card-list .card-item .content p:last-child {
-    font-size: 12px;
-    color: rgb(47, 67, 83); /* Blauw/grijze kleur voor de prijs */
-    font-weight: bold;
-    margin-top: 5px;
-}
-
-/*3) hover effect images*/
+/*Hover effect images*/
 .card-item .wrapper {
     position: relative;
     width   : 100%;
@@ -510,6 +476,49 @@ Shop
 
 .card-item:hover .image-back {
     opacity: 1;
+}
+
+.card-list .card-item h3,
+.card-list .card-item p {
+    color     : rgb(47, 67, 83);
+    font-size : 1rem;
+    padding   : 0;
+    text-align: center;
+}
+
+.card-list .card-item p:last-child {
+    font-size  : 12px;
+    color      : rgba(35, 50, 64, 0.95);
+    font-weight: bold;
+    margin-top : 5px;
+}
+
+/*Style of buttons*/
+.card-list .card-item button {
+    display         : inline-block;
+    margin          : 5px;
+    color           : #ffffff;
+    background-color: rgb(47, 67, 83);
+    border          : none;
+    border-radius   : 20px;
+    height          : 35px;
+    width           : 100px;
+    cursor          : pointer;
+    transition      :
+        background-color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+.card-list .card-item button:hover {
+    font-weight: bold;
+    transform       : translateY(-2px);
+    box-shadow      : 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-list .card-item button:active {
+    transform: translateY(0);
+    box-shadow: none;
 }
 
 
