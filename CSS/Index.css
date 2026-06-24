@@ -301,7 +301,7 @@ p {
     display    : block;
 }
 
-button {
+.button-content {
     padding            : 15px 25px;
     margin             : 20px;
     font-size          : 16px;
@@ -316,7 +316,7 @@ button {
 
 }
 
-button:hover {
+.button-content:hover {
     background-position: right;
     border-color       : rgb(208, 129, 75);
     color              : #ffff;
@@ -325,14 +325,13 @@ button:hover {
 /*Style of main*/
 /*General style of main*/
 main .about {
-    margin: 1.5rem;
+    margin: 2rem;
 }
 
 /*
 1)about
 */
 .about {
-    width  : 100%;
     padding: 5px;
 }
 
@@ -382,14 +381,16 @@ aside a:hover {
 /*
 1) style of card items
 */
-
 .card-list {
     display              : grid;
-    grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
-    max-width            : 1350px;
+    grid-template-columns: repeat(3, 1fr);
+    /*Opmerking: altijd drie kolommen op groot scherm*/
+    max-width            : 1150px;
     margin               : 10px auto;
     padding              : 20px;
     gap                  : 20px;
+     justify-content: center;
+      /*Opmerking: de kolommen worden gecentreerd binnen de container*/
 }
 
 .card-list .card-item {
@@ -419,8 +420,9 @@ aside a:hover {
 */
 .card-list .card-item img {
     width     : 100%;
-    height    : 300px;
-    /*Alle afbeeldingen dezelfde hoogte*/
+    max-height: 300px;
+    aspect-ratio: 4 / 3;   
+    /*Opmerking: Bepaling van de gewenste verhouding tussen breedte en hoogte*/
     object-fit: cover;
     /*Past de afbeelding telkens aan*/
     display   : block;
@@ -639,9 +641,7 @@ label span#close-icon {
 
 /*Stijl voor footer*/
 
-/*
-1) General
-*/
+/*1) General*/
 .footer-distributed {
     display         : flex;
     flex-wrap       : nowrap;
@@ -661,9 +661,7 @@ label span#close-icon {
     font-family: "Playfair display", sans-serif;
 }
 
-/*
-2) Titelstijlen footer
-*/
+/*2) Titelstijlen footer*/
 .footer-distributed h2,
 /*Opmerking: komma niet vergeten*/
 .footer-distributed h3 {
@@ -692,9 +690,7 @@ label span#close-icon {
 }
 
 
-/*
-3) Logo seahorse footer
-*/
+/*3) Logo seahorse footer*/
 .logo-footer #seahorse {
     height     : 135px;
     width      : auto;
@@ -702,9 +698,7 @@ label span#close-icon {
     margin     : 5px auto;
 }
 
-/*
-4) Stjl voor navigatie in footer
-*/
+/*4) Stjl voor navigatie in footer*/
 .footer-nav {
     display       : flex;
     flex-direction: column;
@@ -730,12 +724,8 @@ label span#close-icon {
 
 }
 
-/*
-5) Onderdelen footer
-*/
-/*
-5.1) Style footer left
-*/
+/*5) Onderdelen footer*/
+/*5.1) Style footer left*/
 .footer-distributed .footer-left {
     width : 20%;
     margin: 20px 0 12px 0;
@@ -748,9 +738,7 @@ label span#close-icon {
     color          : #fff;
 }
 
-/*
-5.2) Style footer center
-*/
+/*5.2) Style footer center*/
 .footer-distributed .footer-center {
     width      : 45%;
     font-size  : 12px;
@@ -759,18 +747,14 @@ label span#close-icon {
     box-sizing : border-box;
 }
 
-/*
-5.3) footer right
-*/
+/*5.3) footer right*/
 .footer-distributed .footer-right {
     width     : 35%;
     padding   : 0 10px;
     box-sizing: border-box;
 }
 
-/*
-5.4) e-mailform footer right
-*/
+/*5.4) e-mailform footer right*/
 .footer-distributed .footer-right form {
     display       : flex;
     flex-direction: column;
@@ -784,18 +768,19 @@ label span#close-icon {
     height       : 35px;
     width        : 100%;
     padding      : 0 12px;
-    font-size    : 10px;
+    font-size    : 12px;
     border       : none;
     box-sizing   : border-box;
 }
 
-.footer-distributed .footer-right form #button {
+.footer-distributed .footer-right form .button-footer {
     border-radius   : 20px;
     height          : 35px;
     width           : 100%;
     cursor          : pointer;
     border          : none;
     background-color: #fff;
+    background-image: none;   /* verwijdert de gradient van de algemene button-stijl */
     color           : rgb(47, 67, 83);
     font-size       : 12px;
     font-weight     : bold;
@@ -803,15 +788,14 @@ label span#close-icon {
     /* subtiel hover-effect */
 }
 
-.footer-distributed .footer-right form #button:hover {
+.footer-distributed .footer-right form .button-footer:hover {
     background-color: rgb(47, 67, 83);
+    background-image: none;   /* verwijdert de gradient van de algemene button-stijl */
     color           : #fff;
     border          : 1px solid #fff;
 }
 
-/*
-6) Stijl copyright
-*/
+/*6) Stijl copyright*/
 .end .copy {
     font-size       : 0.5em;
     text-align      : left;
@@ -821,13 +805,11 @@ label span#close-icon {
     background-color: rgb(47, 67, 83);
     color           : white;
     width           : 100%;
-    /*Volledige footer heeft dezelfde background color*/
+    /*Volledige footer heeft dezelfde stijl*/
 }
 
 /*Mediaqueries*/
-/*
-1) Tablet
-*/
+/*1) Tablet*/
 @media (min-width: 768px) and (max-width: 1024px) {
     header {
         padding-top: 20px;
@@ -846,6 +828,10 @@ label span#close-icon {
         display: block;
     }
 
+    .card-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolommen op tablet */
+    }
+
     aside {
         display: none;
     }
@@ -855,9 +841,7 @@ label span#close-icon {
     }
 }
 
-/*
-2) Smartphone
-*/
+/*2) Smartphone*/
 @media (max-width: 767px) {
     .logo {
         display: none;
@@ -868,6 +852,10 @@ label span#close-icon {
         display: inline-block;
         margin : 0;
         padding: 0;
+    }
+
+     .card-list {
+        grid-template-columns: 1fr; /* 1 kolom op smartphone */
     }
 
     #chatbox-right {
@@ -883,9 +871,7 @@ label span#close-icon {
     }
 }
 
-/*
-3) Printversie
-*/
+/*3) Printversie*/
 @media print {
 
     header,
