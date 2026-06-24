@@ -256,12 +256,12 @@ main button::before {
     width     : 0%;
     background: rgb(47, 67, 83);
     transition: width 0.4s ease;
-    z-index   : 0;
+    z-index   : -1;
     /*Animatie achter de tekst*/
 }
 
-main button:hover {
-    color: white;
+main button:hover{
+    color: #ffffff;
 }
 
 main button:hover::before {
