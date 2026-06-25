@@ -300,9 +300,8 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
     border         : 1px solid rgba(255, 255, 255, 0.3);
 }
 
-
 /*Shop*/
-.shop {
+.container {
     display    : inline-block;
     font-family: "Open Sans", sans-serif;
     font-size  : 11px;
@@ -312,10 +311,9 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 /*
 1) style of card items
 */
-
 .card-list {
     display              : grid;
-    grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     max-width            : 1250px;
     margin               : 10px auto;
     padding              : 20px;
@@ -328,6 +326,9 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
     border         : 1px solid transparent;
     list-style     : none;
     text-decoration: none;
+    text-align     : center;
+    /*Knoppen staan in het midden*/
+    padding        : 15px;
     cursor         : pointer;
     overflow       : hidden;
     transition     :
@@ -342,33 +343,94 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 .card-list .card-item:hover {
     border-color: 2px solid rgb(47, 67, 83);
     box-shadow  : 0 10px 20px rgba(0, 0, 0, 0.12);
+    transform   : translateY(-5px);
 }
 
-/*
-2) Image of cards
-*/
+/*2) Image of cards*/
 .card-list .card-item img {
     width     : 100%;
     height    : 300px;
     /*Alle afbeeldingen dezelfde hoogte*/
-    object-fit: cover;
+    object-fit: contain;
     /*Past de afbeelding telkens aan*/
     display   : block;
 }
 
-.card-list .card-item h3 {
+/*Hover effect images*/
+.card-item .wrapper {
+    position: relative;
+    width   : 100%;
+    overflow: hidden;
+}
+
+.card-item img {
+    width     : 100%;
+    display   : block;
+    transition: opacity 0.4s ease;
+}
+
+/* tweede image bovenop eerste */
+.card-item .image-back {
+    position: absolute;
+    top     : 0;
+    left    : 0;
+    opacity : 0;
+}
+
+/* hover effect */
+.card-item:hover .image-front {
+    opacity: 0;
+}
+
+.card-item:hover .image-back {
+    opacity: 1;
+}
+
+
+.card-list .card-item h3,
+.card-list .card-item p {
     color     : rgb(47, 67, 83);
     font-size : 1rem;
     padding   : 0;
     text-align: center;
 }
 
-.card-list .card-item p {
-    color     : rgb(47, 67, 83);
-    font-size : 0.9rem;
-    padding   : 5px;
-    text-align: center;
+.card-list .card-item p:last-child {
+    font-size  : 12px;
+    color      : rgba(35, 50, 64, 0.95);
+    font-weight: bold;
+    margin-top : 5px;
 }
+
+/*Style of buttons*/
+.card-list .card-item button {
+    display         : inline-block;
+    margin          : 5px;
+    color           : #ffffff;
+    background-color: rgb(47, 67, 83);
+    border          : none;
+    border-radius   : 20px;
+    height          : 35px;
+    width           : 100px;
+    cursor          : pointer;
+    transition      :
+        background-color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+.card-list .card-item button:hover {
+    font-weight: bold;
+    transform       : translateY(-2px);
+    box-shadow      : 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-list .card-item button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+
 
 /*Chatbox*/
 
