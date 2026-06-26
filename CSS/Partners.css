@@ -63,10 +63,10 @@ p {
 /*Style of aside*/
 aside {
     text-align      : left;
-    margin          : 40px auto;
+    margin          : 30px auto;
     padding         : 25px 30px;
     background-color: #f3eae1;
-    width           : 320px;
+    max-width       : 320px;
     /*Opmerking     : vast breedt voor float*/
     border-radius   : 15px;
 }
@@ -383,9 +383,7 @@ form {
     box-shadow  : 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
-/*
-2) Image of cards
-*/
+/*2) Image of cards*/
 .card-list .card-item img.brand-image {
     aspect-ratio    : auto;
     /*Opmerking     : geen geforceerde verhoudingen*/
@@ -410,24 +408,12 @@ form {
     text-align: center;
 }
 
-
-
-
-
-/*
-==========
-Style main
-==========
-*/
+/*Style main*/
 main {
     margin: 3rem;
 }
 
-/*
-==========
-Chatbox
-=========
-*/
+/*Chatbox*/
 .chat {
     padding         : 1.5rem;
     margin          : 1.5em;
@@ -626,7 +612,6 @@ label span#close-icon {
 
 
 /*Stijl voor footer*/
-
 /*1) General*/
 .footer-distributed {
     display         : flex;
@@ -793,55 +778,198 @@ label span#close-icon {
 }
 
 /*Mediaqueries*/
-
 /*1) Tablet*/
 @media (min-width: 768px) and (max-width: 1024px) {
-    footer {
-        position: static;
-    }
-
     header {
         padding-top: 20px;
     }
 
-    #navigation ul {
+    .navbar ul {
         display       : flex;
         flex-direction: column;
-        gap           : 25px;
-        list-style    : none;
-        margin        : 0;
-        padding       : 14px 32px;
+        /* Zet de hoofditems recht onder elkaar */
+        align-items   : center;
+        gap           : 10px;
     }
+
+    /* Zorg dat het submenu eerst verborgen blijft binnen de mediaquery */
+    .submenu,
+    .navbar ul li.dropdown:hover .submenu,
+    .navbar ul .submenu li.dropdown-sub .submenu {
+        display: none !important;
+    }
+
+    h2 {
+
+        font-size: clamp(1.5rem, 3vw, 2rem);
+
+    }
+
+    p {
+
+        font-size: clamp(0.95rem, 2vw, 1rem);
+
+    }
+
 
     .card-list {
         grid-template-columns: repeat(2, 1fr);
         /* 2 kolommen op tablet */
     }
+
+    .card-item img {
+        height: 220px;
+    }
+
+    aside {
+        width: 320px; /* Vaste breedte herstellen voor het floaten */
+    }
+
+    /* Oneven asides floaten links */
+    aside:nth-of-type(odd) {
+        float       : left;
+        margin      : 10px 30px 20px 0;
+    }
+
+    /* Even asides floaten rechts */
+    aside:nth-of-type(even) {
+        float      : right;
+        margin     : 10px 0 20px 30px;
+    }
+
+
+    .footer-distributed {
+        flex-direction: column;
+        height        : auto;
+        gap           : 40px;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+
+        width     : 100%;
+        text-align: center;
+
+    }
 }
+
 
 /*2) Smartphone*/
 @media (max-width: 767px) {
-    #navigation ul {
-        display       : flex;
-        flex-direction: column;
-        align-items   : center;
+    .logo {
+        width: 80px;
     }
 
+    .navbar ul {
+        display       : flex;
+        flex-direction: column;
+        /* Zet de hoofditems recht onder elkaar */
+        align-items   : center;
+        gap           : 10px;
+    }
+
+    /* Zorg dat het submenu eerst verborgen blijft binnen de mediaquery */
+    .submenu,
+    .navbar ul li.dropdown:hover .submenu,
+    .navbar ul .submenu li.dropdown-sub .submenu {
+        display: none !important;
+    }
+
+    .bar {
+        flex-direction : column;
+        /* Zet de zoekbalk en de icoontjes onder elkaar */
+        align-items    : center;
+        /* Centreer ze netjes in het midden */
+        justify-content: center;
+        gap            : 10px;
+        /* Ruimte tussen de zoekbalk en de icoontjes */
+    }
+
+    .search-input {
+        width    : 100%;
+        /* Zorgt dat de zoekbalk mooi meeschaalt op mobiel */
+        max-width: 300px;
+    }
+
+    .icons .material-symbols-outlined {
+        margin: 10px 15px;
+        /* Iets minder marge rondom de icoontjes op mobiel */
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    p {
+        font-size: clamp(0.95rem, 2vw, 1rem);
+    }
+
+
     .card-list {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, 1fr);
         /* 1 kolom op smartphone */
     }
+
+    .card-item img {
+        height: 220px;
+    }
+
+    aside {
+        text-align      : left;
+        margin          : 30px auto;
+        /* Centreert de box op mobiel */
+        padding         : 25px 30px;
+        background-color: #f3eae1;
+        width           : 100%;
+        max-width       : 450px;
+        border-radius   : 15px;
+        float           : none;
+        /* Geen floats op mobiel */
+    }
+
+    aside h3 {
+        font-family: "Open Sans", sans-serif;
+        color      : rgb(208, 129, 75);
+        font-size  : 1.2em;
+        margin     : 0;
+    }
+
+    .footer-distributed {
+        flex-direction: column;
+        height        : auto;
+        gap           : 40px;
+    }
+
 
     #chatbox-right {
         display: none;
     }
 
     .footer-distributed {
-        display: none;
+        display         : flex;
+        flex-direction  : column;
+        flex-wrap       : nowrap;
+        justify-content : center;
+        /* Zorgt dat de kolommen als geheel gecentreerd worden */
+        align-items     : center;
+        /* Centreert de kolommen verticaal indien nodig */
+        background-color: rgb(47, 67, 83);
+        width           : 100%;
+        margin-top      : 10px;
+        padding         : 50px 50px 60px 50px;
+        bottom          : 0;
+        box-sizing      : border-box;
+        height          : auto;
+        /*De footer past zich automatisch aan*/
+        gap             : 30px;
     }
 
-    .end {
-        display: none;
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        width     : 100%;
+        text-align: center;
     }
 }
 

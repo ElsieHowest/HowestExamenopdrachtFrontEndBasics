@@ -922,6 +922,7 @@ label span#close-icon {
 
     aside h3 {
         font-size: 1rem;
+    }
 
         .footer-distributed {
             flex-direction: column;
@@ -938,7 +939,7 @@ label span#close-icon {
 
         }
     }
-}
+
 
 /*2) Smartphone*/
 @media (max-width: 767px) {
