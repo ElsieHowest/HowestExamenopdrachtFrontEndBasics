@@ -3,8 +3,8 @@
     box-sizing: border-box;
 }
 
-html{
-    width: 100%;
+html {
+    width     : 100%;
     overflow-x: hidden;
 }
 
@@ -111,26 +111,27 @@ p {
 }
 
 /*Style of submenu*/
-.submenu{
-    display: none;
-    position: absolute;
-    min-width: 200px;
+.submenu {
+    display   : none;
+    position  : absolute;
+    min-width : 200px;
     list-style: none;
-    z-index: 1000;
-    top: 100%;        
-    left: 0;          
-    padding: 0;       
-    margin: 0;
-    font-size: 14px;    
+    z-index   : 1000;
+    top       : 100%;
+    left      : 0;
+    padding   : 0;
+    margin    : 0;
+    font-size : 14px;
 }
 
 /* De items BINNEN het submenu */
 .navbar .submenu li {
-    width: 120px;      
-    height: auto;     
-    margin: 5px;        
-    padding: 8px 0;   
-    display: block;   /* Zorgt dat ze netjes onder elkaar blijven staan */
+    width  : 120px;
+    height : auto;
+    margin : 5px;
+    padding: 8px 0;
+    display: block;
+    /* Zorgt dat ze netjes onder elkaar blijven staan */
 }
 
 /* De witte hover-lijn wordt niet getoond wordt onder de submenu-items */
@@ -144,26 +145,26 @@ p {
 
 /* Submenu wordt zichtbaar als je op de 'dropdown' li hoovert */
 .navbar ul li.dropdown:hover .submenu {
-    display: block;
-    top: 100%; 
-    left: 5px;
-    margin: 0px;
-    padding: 10px 20px;               
-    border-radius: 12px;
+    display         : block;
+    top             : 100%;
+    left            : 5px;
+    margin          : 0px;
+    padding         : 10px 20px;
+    border-radius   : 12px;
     background-color: rgba(0, 0, 0, 0.90);
 }
 
 /* De items in het submenu staan onder elkaar */
 .submenu li {
     display: block;
-    width: auto;
-    height: auto;
+    width  : auto;
+    height : auto;
     padding: 10px 15px;
 }
 
 .submenu li a {
     display: block;
-    width: auto;
+    width  : auto;
 }
 
 .submenu li::after {
@@ -181,18 +182,18 @@ p {
 
 /* 2. Dwing het diepere submenu naar rechts met een specifiekere selector */
 .navbar ul .submenu li.dropdown-sub .submenu {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    margin: 0;
-    padding: 10px 20px;
+    display         : none;
+    position        : absolute;
+    top             : 0;
+    left            : 100%;
+    margin          : 0;
+    padding         : 10px 20px;
     background-color: rgba(0, 0, 0, 0.90);
-    border-radius: 12px;
+    border-radius   : 12px;
 }
 
 /*Hover */
-.navbar ul .submenu li.dropdown-sub:hover > .submenu {
+.navbar ul .submenu li.dropdown-sub:hover>.submenu {
     display: block;
 }
 
@@ -208,12 +209,12 @@ p {
     display        : flex;
     justify-content: center;
     align-items    : center;
-    overflow: hidden;
+    overflow       : hidden;
 }
 
 .catch p {
     font-family: "Open Sans", sans-serif;
-    margin: 0;
+    margin     : 0;
     line-height: 35px;
     white-space: nowrap;
 }
@@ -222,10 +223,10 @@ p {
 .slider {
     color      : #ffff;
     margin-left: 18px;
-    height: 35px;
+    height     : 35px;
     line-height: 35px;
-    overflow: hidden;
-    position: relative;
+    overflow   : hidden;
+    position   : relative;
 }
 
 /*Animatietie toevoegen*/
@@ -234,33 +235,46 @@ p {
 }
 
 .slider-track div {
-    height: 35px;
+    height     : 35px;
     line-height: 35px;
     white-space: nowrap;
 }
 
 /*Add keyframes*/
 @keyframes slider {
- 0%, 14% {
+
+    0%,
+    14% {
         margin-top: 0px;
     }
-    16.66%, 30.66% {
+
+    16.66%,
+    30.66% {
         margin-top: -35px;
     }
-    33.33%, 47.33% {
+
+    33.33%,
+    47.33% {
         margin-top: -70px;
     }
-    50%, 64% {
+
+    50%,
+    64% {
         margin-top: -105px;
     }
-    66.66%, 80.66% {
+
+    66.66%,
+    80.66% {
         margin-top: -140px;
     }
-    83.33%, 97.33% {
+
+    83.33%,
+    97.33% {
         margin-top: -175px;
     }
+
     100% {
-        margin-top: 0px; 
+        margin-top: 0px;
     }
 }
 
@@ -302,18 +316,21 @@ p {
 }
 
 .button-content {
+    display            : inline-block;
+    text-decoration    : none;
+    /* Verwijdert de standaard onderstreping van de link */
     padding            : 15px 25px;
     margin             : 20px;
     font-size          : 16px;
+    font-family        : "Playfair Display", serif;
     letter-spacing     : 1px;
     border             : 1px solid #ffffff;
-    color              : #ffff;
+    color              : #ffffff;
     cursor             : pointer;
     background         : linear-gradient(to right, transparent 50%, rgb(208, 129, 75) 50%);
     background-size    : 200%;
     background-position: left;
     transition         : background-position 0.5s;
-
 }
 
 .button-content:hover {
@@ -384,13 +401,13 @@ aside a:hover {
 .card-list {
     display              : grid;
     grid-template-columns: repeat(3, 1fr);
-    /*Opmerking: altijd drie kolommen op groot scherm*/
+    /*Opmerking          : altijd drie kolommen op groot scherm*/
     max-width            : 1150px;
     margin               : 10px auto;
     padding              : 20px;
     gap                  : 20px;
-     justify-content: center;
-      /*Opmerking: de kolommen worden gecentreerd binnen de container*/
+    justify-content      : center;
+    /*Opmerking          : de kolommen worden gecentreerd binnen de container*/
 }
 
 .card-list .card-item {
@@ -419,13 +436,13 @@ aside a:hover {
 2) Image of cards
 */
 .card-list .card-item img {
-    width     : 100%;
-    max-height: 300px;
-    aspect-ratio: 4 / 3;   
-    /*Opmerking: Bepaling van de gewenste verhouding tussen breedte en hoogte*/
-    object-fit: cover;
+    width       : 100%;
+    max-height  : 300px;
+    aspect-ratio: 4 / 3;
+    /*Opmerking : Bepaling van de gewenste verhouding tussen breedte en hoogte*/
+    object-fit  : cover;
     /*Past de afbeelding telkens aan*/
-    display   : block;
+    display     : block;
 }
 
 .card-list .card-item h3 {
@@ -780,7 +797,8 @@ label span#close-icon {
     cursor          : pointer;
     border          : none;
     background-color: #fff;
-    background-image: none;   /* verwijdert de gradient van de algemene button-stijl */
+    background-image: none;
+    /* verwijdert de gradient van de algemene button-stijl */
     color           : rgb(47, 67, 83);
     font-size       : 12px;
     font-weight     : bold;
@@ -790,7 +808,8 @@ label span#close-icon {
 
 .footer-distributed .footer-right form .button-footer:hover {
     background-color: rgb(47, 67, 83);
-    background-image: none;   /* verwijdert de gradient van de algemene button-stijl */
+    background-image: none;
+    /* verwijdert de gradient van de algemene button-stijl */
     color           : #fff;
     border          : 1px solid #fff;
 }
@@ -815,59 +834,262 @@ label span#close-icon {
         padding-top: 20px;
     }
 
-    .navbar ul {
-        display       : flex;
+    .navbar {
         flex-direction: column;
-        gap           : 25px;
-        list-style    : none;
-        margin        : 0;
-        padding       : 14px 32px;
+        gap           : 20px;
     }
 
-    .submenu{
-        display: block;
+    .navbar ul {
+        display        : flex;
+        flex-wrap      : wrap;
+        justify-content: center;
+        gap            : 20px;
     }
 
-    .card-list {
-        grid-template-columns: repeat(2, 1fr); /* 2 kolommen op tablet */
-    }
-
-    aside {
+    /*Submenu verborgen blijft binnen de mediaquery */
+    .submenu {
         display: none;
     }
 
-        footer {
-        position: static;
+    /* Toon het submenu pas zodra er over het dropdown-item gehoverd wordt */
+    .navbar ul li.dropdown:hover .submenu {
+        display: block;
+    }
+
+    .content h1 {
+
+        font-size: clamp(2rem, 6vw, 3.5rem);
+
+    }
+
+    h2 {
+
+        font-size: clamp(1.5rem, 3vw, 2rem);
+
+    }
+
+    p {
+
+        font-size: clamp(0.95rem, 2vw, 1rem);
+
+    }
+
+    .content .tagline {
+        font-family: "Playfair Display", serif;
+        font-style : italic;
+        font-size  : 1rem;
+        display    : block;
+    }
+
+    .button-content {
+        padding            : 10px 20px;
+        margin             : 15px;
+        font-size          : 14px;
+        letter-spacing     : 1px;
+        border             : 1px solid #ffffff;
+        color              : #ffff;
+        cursor             : pointer;
+        background         : linear-gradient(to right, transparent 50%, rgb(208, 129, 75) 50%);
+        background-size    : 200%;
+        background-position: left;
+        transition         : background-position 0.5s;
+
+    }
+
+    .button-content:hover {
+        background-position: right;
+        border-color       : rgb(208, 129, 75);
+        color              : #ffff;
+    }
+
+    .card-list {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 kolommen op tablet */
+    }
+
+    .card-item img {
+        height: 220px;
+    }
+
+    aside {
+        margin : 30px 15px;
+        padding: 20px;
+    }
+
+    aside h3 {
+        font-size: 1rem;
+
+        .footer-distributed {
+            flex-direction: column;
+            height        : auto;
+            gap           : 40px;
+        }
+
+        .footer-left,
+        .footer-center,
+        .footer-right {
+
+            width     : 100%;
+            text-align: center;
+
+        }
     }
 }
 
 /*2) Smartphone*/
 @media (max-width: 767px) {
+
+    /*De banner krijgt ruimte*/
+    .banner {
+        height        : auto;
+        min-height    : 100vh;
+        padding-bottom: 50px;
+        /* Ruimte aan de onderkant */
+    }
+
     .logo {
-        display: none;
+        width: 55px;
     }
 
     .navbar ul {
-        width  : 100%;
-        display: inline-block;
-        margin : 0;
-        padding: 0;
+        display       : flex;
+        flex-direction: column;
+        /* Zet de hoofditems recht onder elkaar */
+        align-items   : center;
+        gap           : 10px;
     }
 
-     .card-list {
-        grid-template-columns: 1fr; /* 1 kolom op smartphone */
+    /* Zorg dat het submenu eerst verborgen blijft binnen de mediaquery */
+    .submenu,
+    .navbar ul li.dropdown:hover .submenu,
+    .navbar ul .submenu li.dropdown-sub .submenu {
+        display: none !important;
+    }
+
+    .content {
+        position   : relative;
+        margin-top : 40px;
+        padding    : 20px 10px;
+        margin-left: 0;
+        width      : 100%;
+    }
+
+    .content h1 {
+        font-size: 2.2rem;
+    }
+
+    .content .tagline {
+        font-size: 0.9rem;
+    }
+
+    .content h1 {
+        font-size: clamp(2rem, 6vw, 3.5rem);
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    p {
+        font-size: clamp(0.95rem, 2vw, 1rem);
+    }
+
+    .catch {
+        font-size      : 20px;
+        line-height    : 35px;
+        font-weight    : bold;
+        height         : 35px;
+        flex-direction: column;
+        text-align     : center;
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        overflow       : hidden;
+    }
+
+    .content .tagline {
+        font-family: "Playfair Display", serif;
+        font-style : italic;
+        font-size  : 1rem;
+        display    : block;
+    }
+
+    .button-content {
+        padding            : 10px 20px;
+        margin             : 15px;
+        font-size          : 14px;
+        letter-spacing     : 1px;
+        border             : 1px solid #ffffff;
+        color              : #ffff;
+        cursor             : pointer;
+        background         : linear-gradient(to right, transparent 50%, rgb(208, 129, 75) 50%);
+        background-size    : 200%;
+        background-position: left;
+        transition         : background-position 0.5s;
+
+    }
+
+    .button-content:hover {
+        background-position: right;
+        border-color       : rgb(208, 129, 75);
+        color              : #ffff;
+    }
+
+    .about-text {
+        max-width: 850px;
+        margin   : auto;
+    }
+
+    .card-list {
+        grid-template-columns: 1fr;
+        /* 1 kolom op smartphone */
+    }
+
+    .card-item {
+        max-width: 420px;
+        margin   : auto;
     }
 
     #chatbox-right {
         display: none;
     }
 
-    .footer-distributed {
-        display: none;
+    aside {
+
+        margin : 30px 15px;
+        padding: 20px;
+
     }
 
-    .end {
-        display: none;
+    aside h3 {
+
+        font-size: 1rem;
+    }
+
+    .footer-distributed {
+        display         : flex;
+        flex-direction  : column;
+        flex-wrap       : nowrap;
+        justify-content : center;
+        /* Zorgt dat de kolommen als geheel gecentreerd worden */
+        align-items     : center;
+        /* Centreert de kolommen verticaal indien nodig */
+        background-color: rgb(47, 67, 83);
+        width           : 100%;
+        margin-top      : 10px;
+        padding         : 50px 50px 60px 50px;
+        bottom          : 0;
+        box-sizing      : border-box;
+        height          : auto;
+        /*De footer past zich automatisch aan*/
+        gap             : 30px;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        width     : 100%;
+        text-align: center;
     }
 }
 
@@ -880,4 +1102,3 @@ label span#close-icon {
         display: none
     }
 }
-
