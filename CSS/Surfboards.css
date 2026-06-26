@@ -414,12 +414,12 @@ form {
 
 .card-list .card-item button:hover {
     font-weight: bold;
-    transform       : translateY(-2px);
-    box-shadow      : 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform  : translateY(-2px);
+    box-shadow : 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .card-list .card-item button:active {
-    transform: translateY(0);
+    transform : translateY(0);
     box-shadow: none;
 }
 
@@ -898,6 +898,27 @@ label span#close-icon {
 
     p {
         font-size: clamp(0.95rem, 2vw, 1rem);
+    }
+
+    .mainnavbar ul {
+        display       : flex;
+        flex-direction: column;
+        /* Dit zet de links onder elkaar */
+        align-items   : center;
+        /* Centreert de knoppen */
+        gap           : 10px;
+        /* Ruimte tussen de knoppen */
+        padding       : 0;
+        list-style    : none;
+    }
+
+    .mainnavbar li a {
+        display        : block;
+        flex-direction : column;
+        align-items    : center;
+        text-decoration: none;
+        padding        : 10px 20px;
+        width          : 100%;
     }
 
     .card-list {
