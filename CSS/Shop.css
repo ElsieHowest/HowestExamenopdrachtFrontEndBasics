@@ -4,8 +4,8 @@
 }
 
 
-html{
-    width: 100%;
+html {
+    width     : 100%;
     overflow-x: hidden;
 }
 
@@ -49,7 +49,7 @@ h2 {
     font-size  : 2rem;
 }
 
-h1{
+h1 {
     text-align: center;
 }
 
@@ -123,26 +123,27 @@ main .shop {
 }
 
 /*Style of submenu*/
-.submenu{
-    display: none;
-    position: absolute;
-    min-width: 160px;
+.submenu {
+    display   : none;
+    position  : absolute;
+    min-width : 160px;
     list-style: none;
-    z-index: 1000;
-    top: 100%;        
-    left: 0;          
-    padding: 0;       
-    margin: 0;
-    font-size: 14px;    
+    z-index   : 1000;
+    top       : 100%;
+    left      : 0;
+    padding   : 0;
+    margin    : 0;
+    font-size : 14px;
 }
 
 /* De items BINNEN het submenu */
 .navbar .submenu li {
-    width: auto;      
-    height: auto;     
-    margin: 0;        
-    padding: 8px 0;   
-    display: block;   /* Zorgt dat ze netjes onder elkaar blijven staan */
+    width  : auto;
+    height : auto;
+    margin : 0;
+    padding: 8px 0;
+    display: block;
+    /* Zorgt dat ze netjes onder elkaar blijven staan */
 }
 
 /* De witte hover-lijn wordt niet getoond wordt onder de submenu-items */
@@ -156,26 +157,26 @@ main .shop {
 
 /* Submenu wordt zichtbaar als je op de 'dropdown' li hoovert */
 .navbar ul li.dropdown:hover .submenu {
-    display: block;
-    top: 100%; 
-    left: 5px;
-    margin: 0px;
-    padding: 10px 20px;               
-    border-radius: 12px;
+    display         : block;
+    top             : 100%;
+    left            : 5px;
+    margin          : 0px;
+    padding         : 10px 20px;
+    border-radius   : 12px;
     background-color: rgba(35, 50, 64, 0.95);
 }
 
 /* De items in het submenu staan onder elkaar */
 .submenu li {
     display: block;
-    width: 100%;
-    height: auto;
+    width  : 100%;
+    height : auto;
     padding: 10px 15px;
 }
 
 .submenu li a {
     display: block;
-    width: 100%;
+    width  : 100%;
 }
 
 .submenu li::after {
@@ -193,18 +194,18 @@ main .shop {
 
 /* 2. Dwing het diepere submenu naar rechts met een specifiekere selector */
 .navbar ul .submenu li.dropdown-sub .submenu {
-    display: none;
-    position: absolute;
-    top: 0 !important;   
-    left: 100% !important;  
-    margin: 0;
-    padding: 10px 20px;
+    display         : none;
+    position        : absolute;
+    top             : 0 !important;
+    left            : 100% !important;
+    margin          : 0;
+    padding         : 10px 20px;
     background-color: rgba(31, 44, 56, 0.98);
-    border-radius: 12px;
+    border-radius   : 12px;
 }
 
 /*Hover */
-.navbar ul .submenu li.dropdown-sub:hover > .submenu {
+.navbar ul .submenu li.dropdown-sub:hover>.submenu {
     display: block;
 }
 
@@ -214,10 +215,10 @@ form {
 }
 
 .bar {
-    display: flex;
-    align-items: center;
+    display        : flex;
+    align-items    : center;
     justify-content: flex-end;
-    gap: 15px;
+    gap            : 15px;
 }
 
 .search {
@@ -227,12 +228,12 @@ form {
     padding      : 14px;
     border-radius: 28px;
     background   : #f4efe6;
-    transition: box-shadow 0.25s;
+    transition   : box-shadow 0.25s;
 }
 
 /*The user gives focus*/
-.search:focus-within{
-box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
+.search:focus-within {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 }
 
 .search-input {
@@ -254,13 +255,13 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 }
 
 /*Style of icons*/
-.icons .material-symbols-outlined{
-    display: inline-block;
-    margin: 25px;
+.icons .material-symbols-outlined {
+    display    : inline-block;
+    margin     : 25px;
     align-items: center;
-    gap: 16px;
-    cursor: pointer;
-    color: rgb(47, 67, 83);
+    gap        : 16px;
+    cursor     : pointer;
+    color      : rgb(47, 67, 83);
 }
 
 /*Shop*/
@@ -697,15 +698,8 @@ label span#close-icon {
 }
 
 /*Mediaqueries*/
-
-/*
-1) Tablet
-*/
+/*1) Tablet*/
 @media (min-width: 768px) and (max-width: 1024px) {
-    footer {
-        position: static;
-    }
-
     header {
         padding-top: 20px;
     }
@@ -713,33 +707,126 @@ label span#close-icon {
     .navbar ul {
         display       : flex;
         flex-direction: column;
-        gap           : 25px;
-        list-style    : none;
-        margin        : 0;
-        padding       : 14px 32px;
-    }
-
-    aside {
-        display: none;
-    }
-
-    .card-list .card-item {
-        padding: 15px;
-    }
-}
-
-/*
-2) Smartphone
-*/
-@media (max-width: 767px) {
-    .navbar ul {
-        display       : flex;
-        flex-direction: column;
+        /* Zet de hoofditems recht onder elkaar */
         align-items   : center;
+        gap           : 10px;
+    }
+
+    /* Zorg dat het submenu eerst verborgen blijft binnen de mediaquery */
+    .submenu,
+    .navbar ul li.dropdown:hover .submenu,
+    .navbar ul .submenu li.dropdown-sub .submenu {
+        display: none !important;
+    }
+
+    h2 {
+
+        font-size: clamp(1.5rem, 3vw, 2rem);
+
+    }
+
+    p {
+
+        font-size: clamp(0.95rem, 2vw, 1rem);
+
     }
 
     .card-list {
-        margin: 0 auto;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 kolommen op tablet */
+    }
+
+    .card-item img {
+        height: 220px;
+    }
+
+    aside {
+        margin : 30px 15px;
+        padding: 20px;
+    }
+
+    aside h3 {
+        font-size: 1rem;
+
+        .footer-distributed {
+            flex-direction: column;
+            height        : auto;
+            gap           : 40px;
+        }
+
+        .footer-left,
+        .footer-center,
+        .footer-right {
+
+            width     : 100%;
+            text-align: center;
+
+        }
+    }
+}
+
+/*2) Smartphone*/
+@media (max-width: 767px) {
+
+
+    .logo {
+        width: 80px;
+    }
+
+    .navbar ul {
+        display       : flex;
+        flex-direction: column;
+        /* Zet de hoofditems recht onder elkaar */
+        align-items   : center;
+        gap           : 10px;
+    }
+
+    /* Zorg dat het submenu eerst verborgen blijft binnen de mediaquery */
+    .submenu,
+    .navbar ul li.dropdown:hover .submenu,
+    .navbar ul .submenu li.dropdown-sub .submenu {
+        display: none !important;
+    }
+
+    .bar {
+        flex-direction : column;
+        /* Zet de zoekbalk en de icoontjes onder elkaar */
+        align-items    : center;
+        /* Centreer ze netjes in het midden */
+        justify-content: center;
+        gap            : 10px;
+        /* Ruimte tussen de zoekbalk en de icoontjes */
+    }
+
+    .search-input {
+        width    : 100%;
+        /* Zorgt dat de zoekbalk mooi meeschaalt op mobiel */
+        max-width: 300px;
+    }
+
+    .icons .material-symbols-outlined {
+        margin: 10px 15px;
+        /* Iets minder marge rondom de icoontjes op mobiel */
+    }
+
+
+
+    h2 {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    p {
+        font-size: clamp(0.95rem, 2vw, 1rem);
+    }
+
+    .card-list {
+        grid-template-columns: 1fr;
+        /* 1 kolom op smartphone */
+    }
+
+    .card-item {
+        max-width: 420px;
+        margin   : auto;
     }
 
     #chatbox-right {
@@ -747,10 +834,38 @@ label span#close-icon {
     }
 
     .footer-distributed {
-        display: none;
+        display         : flex;
+        flex-direction  : column;
+        flex-wrap       : nowrap;
+        justify-content : center;
+        /* Zorgt dat de kolommen als geheel gecentreerd worden */
+        align-items     : center;
+        /* Centreert de kolommen verticaal indien nodig */
+        background-color: rgb(47, 67, 83);
+        width           : 100%;
+        margin-top      : 10px;
+        padding         : 50px 50px 60px 50px;
+        bottom          : 0;
+        box-sizing      : border-box;
+        height          : auto;
+        /*De footer past zich automatisch aan*/
+        gap             : 30px;
     }
 
-    .end {
-        display: none;
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        width     : 100%;
+        text-align: center;
+    }
+}
+
+/*3) Printversie*/
+@media print {
+
+    header,
+    footer,
+    aside {
+        display: none
     }
 }

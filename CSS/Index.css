@@ -834,6 +834,10 @@ label span#close-icon {
         padding-top: 20px;
     }
 
+    .logo {
+        width: 80px;
+    }
+
     .navbar {
         flex-direction: column;
         gap           : 20px;
@@ -948,7 +952,7 @@ label span#close-icon {
     }
 
     .logo {
-        width: 55px;
+        width: 80px;
     }
 
     .navbar ul {
@@ -999,7 +1003,7 @@ label span#close-icon {
         line-height    : 35px;
         font-weight    : bold;
         height         : 35px;
-        flex-direction: column;
+        flex-direction : column;
         text-align     : center;
         display        : flex;
         justify-content: center;
