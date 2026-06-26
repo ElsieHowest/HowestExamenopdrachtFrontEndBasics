@@ -615,7 +615,7 @@ label span#close-icon {
 
 /*Style of wetstuit table*/
 .wetsuit-guide {
-    margin-top: 2rem;
+    margin-top: 0.5rem;
 }
 
 .wetsuit-guide table {
@@ -646,7 +646,6 @@ label span#close-icon {
 .wetsuit-guide td {
     padding      : 1rem 1.2rem;
     border-bottom: 1px solid #eee;
-
     font-family: "Open Sans", sans-serif;
     color      : #555;
 }
@@ -662,6 +661,10 @@ label span#close-icon {
     transition      : 0.2s ease;
 }
 
+.under-wetsuit{
+    margin-bottom: 0.5rem;
+}
+
 /*Stijl voor footer*/
 /*1) General*/
 .footer-distributed {
@@ -669,8 +672,6 @@ label span#close-icon {
     flex-wrap       : nowrap;
     background-color: rgb(47, 67, 83);
     width           : 100%;
-    /*Volledige footer heeft dezelfde background color*/
-    margin-top      : 10px;
     padding         : 50px 50px 60px 50px;
     bottom          : 0;
     box-sizing      : border-box;
@@ -826,6 +827,7 @@ label span#close-icon {
     /*Volledige footer heeft dezelfde background color*/
 }
 
+
 /*Mediaqueries*/
 /*1) Tablet*/
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -833,106 +835,161 @@ label span#close-icon {
         padding-top: 20px;
     }
 
-    #navigation ul {
+    .navbar ul {
         display       : flex;
         flex-direction: column;
-        gap           : 25px;
-        list-style    : none;
-        margin        : 0;
-        padding       : 14px 32px;
+        /* Zet de hoofditems recht onder elkaar */
+        align-items   : center;
+        gap           : 10px;
     }
 
-    .category-container {
-        grid-template-columns: 1fr;
+    /* Zorg dat het submenu eerst verborgen blijft binnen de mediaquery */
+    .submenu,
+    .navbar ul li.dropdown:hover .submenu,
+    .navbar ul .submenu li.dropdown-sub .submenu {
+        display: none !important;
     }
 
-    /*Style of image*/
-    .category-img {
-        height     : 180px;
-        width      : 180px;
-        flex-shrink: 0;
+    h2 {
+
+        font-size: clamp(1.5rem, 3vw, 2rem);
+
     }
 
-    .category-img img {
-        width        : 100%;
-        height       : 100%;
-        object-fit   : cover;
-        border-radius: 15px;
+    p {
+
+        font-size: clamp(0.95rem, 2vw, 1rem);
+
     }
 
     .card-list {
         grid-template-columns: repeat(2, 1fr);
+        /* 2 kolommen op tablet */
     }
 
-    aside {
-        display: none;
+    .card-item img {
+        height: 220px;
     }
 
-    .wetsuit-guide {
-        overflow-x: auto;
+    .footer-distributed {
+        flex-direction: column;
+        height        : auto;
+        gap           : 40px;
     }
 
-    footer {
-        position: static;
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        width     : 100%;
+        text-align: center;
+
     }
 }
 
 /*2) Smartphone*/
 @media (max-width: 767px) {
+    .logo {
+        width: 80px;
+    }
 
-    #navigation ul,
-    .main-nav ul {
+    .navbar ul {
         display       : flex;
         flex-direction: column;
+        /* Zet de hoofditems recht onder elkaar */
         align-items   : center;
+        gap           : 10px;
     }
 
-    /* BRANDS */
-    .card-list {
-        grid-template-columns: 1fr;
-        padding              : 0;
+    /* Zorg dat het submenu eerst verborgen blijft binnen de mediaquery */
+    .submenu,
+    .navbar ul li.dropdown:hover .submenu,
+    .navbar ul .submenu li.dropdown-sub .submenu {
+        display: none !important;
     }
 
-    /* SHOP CATEGORIES */
-    .category-container {
-        grid-template-columns: 1fr;
+    .bar {
+        flex-direction : column;
+        /* Zet de zoekbalk en de icoontjes onder elkaar */
+        align-items    : center;
+        /* Centreer ze netjes in het midden */
+        justify-content: center;
+        gap            : 10px;
+        /* Ruimte tussen de zoekbalk en de icoontjes */
     }
 
-    .category-card {
+    .search-input {
+        width    : 100%;
+        /* Zorgt dat de zoekbalk mooi meeschaalt op mobiel */
+        max-width: 300px;
+    }
+
+    .icons .material-symbols-outlined {
+        margin: 10px 15px;
+        /* Iets minder marge rondom de icoontjes op mobiel */
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    p {
+        font-size: clamp(0.95rem, 2vw, 1rem);
+    }
+
+    .shop-categories .category-card{
         flex-direction: column;
-        text-align    : center;
+         align-items    : center;
+        /* Centreer ze netjes in het midden */
+        justify-content: center;
+        gap            : 5px;
+        /* Ruimte tussen de zoekbalk en de icoontjes */
     }
 
-    /*IMAGE*/
-    .category-img {
-        height     : 180px;
-        width      : 180px;
-        flex-shrink: 0;
+
+    .card-list {
+        grid-template-columns: repeat(1, 1fr);
+        /* 1 kolom op smartphone */
     }
 
-    .category-img img {
-        width        : 100%;
-        height       : 100%;
-        object-fit   : cover;
-        border-radius: 15px;
+    .card-item img {
+        height: 220px;
     }
 
-    #chatbox-right,
-    label {
-        display: none;
-    }
-
-    .wetsuit-guide {
-        overflow-x: auto;
-    }
-
-    /*Footer*/
     .footer-distributed {
+        flex-direction: column;
+        height        : auto;
+        gap           : 40px;
+    }
+
+
+    #chatbox-right {
         display: none;
     }
 
-    .end {
-        display: none;
+    .footer-distributed {
+        display         : flex;
+        flex-direction  : column;
+        flex-wrap       : nowrap;
+        justify-content : center;
+        /* Zorgt dat de kolommen als geheel gecentreerd worden */
+        align-items     : center;
+        /* Centreert de kolommen verticaal indien nodig */
+        background-color: rgb(47, 67, 83);
+        width           : 100%;
+        margin-top      : 10px;
+        padding         : 50px 50px 60px 50px;
+        bottom          : 0;
+        box-sizing      : border-box;
+        height          : auto;
+        /*De footer past zich automatisch aan*/
+        gap             : 30px;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        width     : 100%;
+        text-align: center;
     }
 }
 
