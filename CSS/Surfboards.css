@@ -569,7 +569,6 @@ form .textarea textarea:focus::placeholder {
     font-weight: bold;
 }
 
-
 .chat-box form button:active {
     transform: scale(0.97);
 }
@@ -623,14 +622,12 @@ label span#close-icon {
     transform: translate(-50%, -50%) rotate(180deg);
 }
 
-
 #click:checked~.chat {
     opacity: 1;
     bottom : 85px;
 }
 
 /*Stijl voor footer*/
-
 /*1) General*/
 .footer-distributed {
     display         : flex;
@@ -678,7 +675,6 @@ label span#close-icon {
     vertical-align: middle;
 }
 
-
 /*3) Logo seahorse footer*/
 .logo-footer #seahorse {
     height     : 135px;
@@ -710,7 +706,6 @@ label span#close-icon {
 
 .footer-nav a:hover {
     font-weight: bold;
-
 }
 
 /*5) Onderdelen footer*/
@@ -794,7 +789,6 @@ label span#close-icon {
     width           : 100%;
     /*Volledige footer heeft dezelfde background color*/
 }
-
 
 /*Mediaqueries*/
 /*1) Tablet*/

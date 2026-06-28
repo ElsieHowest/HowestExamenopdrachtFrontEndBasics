@@ -136,16 +136,15 @@ main .shop {
     font-size: 14px;    
 }
 
-/* De items BINNEN het submenu */
+/* De items van het submenu */
 .navbar .submenu li {
     width: auto;      
     height: auto;     
     margin: 0;        
     padding: 8px 0;   
-    display: block;   /* Zorgt dat ze netjes onder elkaar blijven staan */
+    display: block;  /*Items staan netjes onder elkaar*/
 }
 
-/* De witte hover-lijn wordt niet getoond wordt onder de submenu-items */
 .navbar .submenu li::after {
     display: none;
 }
@@ -191,7 +190,7 @@ main .shop {
     position: relative;
 }
 
-/* 2. Dwing het diepere submenu naar rechts met een specifiekere selector */
+/* 2. Dwing het diepere submenu naar rechts*/
 .navbar ul .submenu li.dropdown-sub .submenu {
     display: none;
     position: absolute;
@@ -308,9 +307,7 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
     width      : 100%;
 }
 
-/*
-1) style of card items
-*/
+/*1) style of card items*/
 .card-list {
     display: flex;
     flex-wrap: wrap;
@@ -629,14 +626,12 @@ label span#close-icon {
     transform: translate(-50%, -50%) rotate(180deg);
 }
 
-
 #click:checked~.chat {
     opacity: 1;
     bottom : 85px;
 }
 
 /*Stijl voor footer*/
-
 /*1) General*/
 .footer-distributed {
     display         : flex;

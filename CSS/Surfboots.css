@@ -3,7 +3,6 @@
     box-sizing: border-box;
 }
 
-
 html {
     width     : 100%;
     overflow-x: hidden;
@@ -192,7 +191,7 @@ main .shop {
     position: relative;
 }
 
-/* 2. Dwing het diepere submenu naar rechts met een specifiekere selector */
+/* 2. Dwing het diepere submenu naar rechts */
 .navbar ul .submenu li.dropdown-sub .submenu {
     display         : none;
     position        : absolute;
@@ -309,9 +308,7 @@ form {
     width      : 100%;
 }
 
-/*
-1) style of card items
-*/
+/*1) style of card items*/
 .card-list {
     display: flex;
     flex-wrap: wrap;
@@ -620,7 +617,6 @@ label span#close-icon {
 }
 
 /*Stijl voor footer*/
-
 /*1) General*/
 .footer-distributed {
     display         : flex;
@@ -700,7 +696,6 @@ label span#close-icon {
 
 .footer-nav a:hover {
     font-weight: bold;
-
 }
 
 /*5) Onderdelen footer*/
@@ -784,7 +779,6 @@ label span#close-icon {
     width           : 100%;
     /*Volledige footer heeft dezelfde background color*/
 }
-
 
 /*Mediaqueries*/
 /*1) Tablet*/

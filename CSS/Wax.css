@@ -40,8 +40,7 @@ body {
     padding         : 10px;
 }
 
-/*Titelstijlen
-*/
+/*Titelstijlen*/
 h1,
 h2 {
     font-family: "Open Sans", sans-serif;
@@ -142,8 +141,7 @@ main .shop {
     height : auto;
     margin : 0;
     padding: 8px 0;
-    display: block;
-    /* Zorgt dat ze netjes onder elkaar blijven staan */
+    display: block; /*Items staan netjes onder elkaar*/
 }
 
 /* De witte hover-lijn wordt niet getoond wordt onder de submenu-items */
@@ -192,7 +190,7 @@ main .shop {
     position: relative;
 }
 
-/* 2. Dwing het diepere submenu naar rechts met een specifiekere selector */
+/* 2. Dwing het diepere submenu naar rechts */
 .navbar ul .submenu li.dropdown-sub .submenu {
     display         : none;
     position        : absolute;
@@ -309,9 +307,7 @@ form {
     width      : 100%;
 }
 
-/*
-1) style of card items
-*/
+/*1) style of card items*/
 .card-list {
     display: flex;
     flex-wrap: wrap;
@@ -620,7 +616,6 @@ label span#close-icon {
 }
 
 /*Stijl voor footer*/
-
 /*1) General*/
 .footer-distributed {
     display         : flex;

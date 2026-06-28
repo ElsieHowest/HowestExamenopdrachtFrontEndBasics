@@ -3,7 +3,6 @@
     box-sizing: border-box;
 }
 
-
 html{
     width: 100%;
     overflow-x: hidden;
@@ -40,8 +39,7 @@ body {
     padding         : 10px;
 }
 
-/*Titelstijlen
-*/
+/*Titelstijlen*/
 h1,
 h2 {
     font-family: "Open Sans", sans-serif;
@@ -191,7 +189,7 @@ main .shop {
     position: relative;
 }
 
-/* 2. Dwing het diepere submenu naar rechts met een specifiekere selector */
+/* 2. Dwing het diepere submenu naar rechts */
 .navbar ul .submenu li.dropdown-sub .submenu {
     display: none;
     position: absolute;
@@ -308,9 +306,7 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
     width      : 100%;
 }
 
-/*
-1) style of card items
-*/
+/*1) style of card items*/
 .card-list {
     display: flex;
     flex-wrap: wrap;
@@ -390,7 +386,6 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
     opacity: 1;
 }
 
-
 .card-list .card-item h3,
 .card-list .card-item p {
     color     : rgb(47, 67, 83);
@@ -434,10 +429,7 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
     box-shadow: none;
 }
 
-
-
 /*Chatbox*/
-
 /*1) Titelstijlen chatbox*/
 .chat .head-text-chat h2 {
     color : white;
@@ -579,7 +571,6 @@ form .textarea textarea:focus::placeholder {
     font-weight: bold;
 }
 
-
 .chat-box form button:active {
     transform: scale(0.97);
 }
@@ -616,7 +607,6 @@ label span {
 /*Start state of chat button*/
 Label span#chat-icon {
     opacity: 1;
-
 }
 
 label span#close-icon {
@@ -640,7 +630,6 @@ label span#close-icon {
 }
 
 /*Stijl voor footer*/
-
 /*1) General*/
 .footer-distributed {
     display         : flex;
@@ -715,12 +704,10 @@ label span#close-icon {
     text-decoration: none;
     transition     : background-color 0.2s, color 0.2s;
     /*Opmerking    : subtiel hover-effect */
-
 }
 
 .footer-nav a:hover {
     font-weight: bold;
-
 }
 
 /*5) Onderdelen footer*/
@@ -804,7 +791,6 @@ label span#close-icon {
     width           : 100%;
     /*Volledige footer heeft dezelfde background color*/
 }
-
 
 /*Mediaqueries*/
 /*1) Tablet*/
@@ -914,7 +900,6 @@ label span#close-icon {
         font-size: clamp(0.95rem, 2vw, 1rem);
     }
 
-
     .card-list {
         grid-template-columns: repeat(1, 1fr);
         /* 1 kolom op smartphone */
@@ -929,7 +914,6 @@ label span#close-icon {
         height        : auto;
         gap           : 40px;
     }
-
 
     #chatbox-right {
         display: none;

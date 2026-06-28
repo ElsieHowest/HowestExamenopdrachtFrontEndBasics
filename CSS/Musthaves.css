@@ -250,9 +250,7 @@ form {
     color      : rgb(47, 67, 83);
 }
 
-/*
-1) navigatie main
-*/
+/*1) navigatie main*/
 .mainnavbar {
     font-family: "Open Sans", sans-serif;
     width      : 100%;
@@ -371,7 +369,6 @@ form {
     margin    : 2px 0;
 }
 
-/* De allerlaatste beschrijving moet weer de oranje/dikke tekst worden */
 .card-list .card-item .content p:last-child {
     font-size  : 12px;
     color      : rgb(47, 67, 83);
@@ -412,7 +409,6 @@ form {
 
 
 /*Chatbox*/
-
 /*1) Titelstijlen chatbox*/
 .chat .head-text-chat h2 {
     color : white;
@@ -615,7 +611,6 @@ label span#close-icon {
 }
 
 /*Stijl voor footer*/
-
 /*1) General*/
 .footer-distributed {
     display         : flex;
@@ -662,7 +657,6 @@ label span#close-icon {
     color         : #fff;
     vertical-align: middle;
 }
-
 
 /*3) Logo seahorse footer*/
 .logo-footer #seahorse {

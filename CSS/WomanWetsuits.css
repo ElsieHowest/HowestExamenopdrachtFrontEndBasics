@@ -176,7 +176,7 @@ p {
     position: relative;
 }
 
-/* 2. Dwing het diepere submenu naar rechts met een specifiekere selector */
+/* 2. Dwing het diepere submenu naar rechts */
 .navbar ul .submenu li.dropdown-sub .submenu {
     display         : none;
     position        : absolute;
@@ -296,21 +296,13 @@ form {
 }
 
 
-/*
-==========
-style of title 
-==========
-*/
+/*style of title */
 .title {
     margin : 5px;
     padding: 0.2rem;
 }
 
-/*
-==========
-Navigation
-==========
-*/
+/*Navigation*/
 .main-nav {
     font-family: "Open Sans", sans-serif;
     width      : 100%;
@@ -401,9 +393,7 @@ Navigation
     width      : 100%;
 }
 
-/*
-1) style of card items
-*/
+/*1) style of card items*/
 .card-list {
     display: flex;
     flex-wrap: wrap;
@@ -526,13 +516,7 @@ Navigation
     box-shadow: none;
 }
 
-
-/*
-==========
-Chatbox
-=========
-*/
-
+/*Chatbox*/
 /*1) Titelstijlen chatbox*/
 .chat .head-text-chat h2 {
     color : white;
@@ -674,7 +658,6 @@ form .textarea textarea:focus::placeholder {
     font-weight: bold;
 }
 
-
 .chat-box form button:active {
     transform: scale(0.97);
 }
@@ -734,15 +717,8 @@ label span#close-icon {
     bottom : 85px;
 }
 
-/*
-==========
-Stijl voor footer
-==========
-*/
-
-/*
-1) General
-*/
+/*Stijl voor footer*/
+/*1) General*/
 .footer-distributed {
     display         : flex;
     flex-wrap       : nowrap;
@@ -756,9 +732,7 @@ Stijl voor footer
     min-height      : 450px;
 }
 
-/*
-2) Titelstijlen footer
-*/
+/*2) Titelstijlen footer*/
 .footer-distributed h2,
 /*Opmerking: komma niet vergeten*/
 .footer-distributed h3 {
@@ -791,10 +765,7 @@ Stijl voor footer
     vertical-align: middle;
 }
 
-
-/*
-3) Logo seahorse footer
-*/
+/*3) Logo seahorse footer*/
 .logo-footer #seahorse {
     height     : 135px;
     width      : auto;
@@ -802,9 +773,7 @@ Stijl voor footer
     margin     : 5px auto;
 }
 
-/*
-4) Stjl voor navigatie in footer
-*/
+/*4) Stjl voor navigatie in footer*/
 .footer-nav {
     display       : flex;
     flex-direction: column;
@@ -827,15 +796,10 @@ Stijl voor footer
 
 .footer-nav a:hover {
     font-weight: bold;
-
 }
 
-/*
-5) Onderdelen footer
-*/
-/*
-5.1) Style footer left
-*/
+/*5) Onderdelen footer*/
+/*5.1) Style footer left*/
 .footer-distributed .footer-left {
     width : 20%;
     margin: 20px 0 12px 0;
@@ -848,9 +812,7 @@ Stijl voor footer
     color          : #fff;
 }
 
-/*
-5.2) Style footer center
-*/
+/*5.2) Style footer center*/
 .footer-distributed .footer-center {
     width      : 45%;
     font-size  : 12px;
@@ -859,18 +821,14 @@ Stijl voor footer
     box-sizing : border-box;
 }
 
-/*
-5.3) footer right
-*/
+/*5.3) footer right*/
 .footer-distributed .footer-right {
     width     : 35%;
     padding   : 0 10px;
     box-sizing: border-box;
 }
 
-/*
-5.4) e-mailform footer right
-*/
+/*5.4) e-mailform footer right*/
 .footer-distributed .footer-right form {
     display       : flex;
     flex-direction: column;
@@ -909,9 +867,7 @@ Stijl voor footer
     border          : 1px solid #fff;
 }
 
-/*
-6) Stijl copyright
-*/
+/*6) Stijl copyright*/
 .end .copy {
     font-size       : 0.5em;
     text-align      : left;
@@ -1018,7 +974,7 @@ Stijl voor footer
         gap           : 10px;
     }
 
-    /* Zorg dat het submenu eerst verborgen blijft binnen de mediaquery */
+    /* Het submenu blijft verborgen binnen de mediaquery */
     .submenu,
     .navbar ul li.dropdown:hover .submenu,
     .navbar ul .submenu li.dropdown-sub .submenu {
@@ -1027,23 +983,18 @@ Stijl voor footer
 
     .bar {
         flex-direction : column;
-        /* Zet de zoekbalk en de icoontjes onder elkaar */
         align-items    : center;
-        /* Centreer ze netjes in het midden */
         justify-content: center;
         gap            : 10px;
-        /* Ruimte tussen de zoekbalk en de icoontjes */
     }
 
     .search-input {
         width    : 100%;
-        /* Zorgt dat de zoekbalk mooi meeschaalt op mobiel */
         max-width: 300px;
     }
 
     .icons .material-symbols-outlined {
         margin: 10px 15px;
-        /* Iets minder marge rondom de icoontjes op mobiel */
     }
 
     h2 {
@@ -1080,9 +1031,7 @@ Stijl voor footer
         flex-direction  : column;
         flex-wrap       : nowrap;
         justify-content : center;
-        /* Zorgt dat de kolommen als geheel gecentreerd worden */
         align-items     : center;
-        /* Centreert de kolommen verticaal indien nodig */
         background-color: rgb(47, 67, 83);
         width           : 100%;
         margin-top      : 10px;

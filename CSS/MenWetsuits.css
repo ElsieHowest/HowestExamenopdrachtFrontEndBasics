@@ -167,7 +167,7 @@ p {
     position: relative;
 }
 
-/* 2. Dwing het diepere submenu naar rechts met een specifiekere selector */
+/* 2. Dwing het diepere submenu naar rechts*/
 .navbar ul .submenu li.dropdown-sub .submenu {
     display: none;
     position: absolute;
@@ -301,9 +301,7 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
     width      : 100%;
 }
 
-/*
-1) style of card items
-*/
+/*1) style of card items*/
 .card-list {
     display: flex;
     flex-wrap: wrap;
@@ -426,11 +424,7 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
     box-shadow: none;
 }
 
-/*
-==========
-Chatbox
-=========
-*/
+/*Chatbox*/
 
 /*1) Titelstijlen chatbox*/
 .chat .head-text-chat h2 {
@@ -633,15 +627,9 @@ label span#close-icon {
     bottom : 85px;
 }
 
-/*
-==========
-Stijl voor footer
-==========
-*/
+/*Stijl voor footer*/
 
-/*
-1) General
-*/
+/*1) General*/
 .footer-distributed {
     display         : flex;
     flex-wrap       : nowrap;
@@ -655,9 +643,7 @@ Stijl voor footer
     min-height          : 450px;
 }
 
-/*
-2) Titelstijlen footer
-*/
+/*2) Titelstijlen footer*/
 .footer-distributed h2,
 /*Opmerking: komma niet vergeten*/
 .footer-distributed h3 {
@@ -691,9 +677,7 @@ Stijl voor footer
 }
 
 
-/*
-3) Logo seahorse footer
-*/
+/*3) Logo seahorse footer*/
 .logo-footer #seahorse {
     height     : 135px;
     width      : auto;
@@ -701,9 +685,7 @@ Stijl voor footer
     margin     : 5px auto;
 }
 
-/*
-4) Stjl voor navigatie in footer
-*/
+/*4) Stjl voor navigatie in footer*/
 .footer-nav {
     display       : flex;
     flex-direction: column;
@@ -729,12 +711,8 @@ Stijl voor footer
 
 }
 
-/*
-5) Onderdelen footer
-*/
-/*
-5.1) Style footer left
-*/
+/*5) Onderdelen footer*/
+/*5.1) Style footer left*/
 .footer-distributed .footer-left {
     width : 20%;
     margin: 20px 0 12px 0;
@@ -747,9 +725,7 @@ Stijl voor footer
     color          : #fff;
 }
 
-/*
-5.2) Style footer center
-*/
+/*5.2) Style footer center*/
 .footer-distributed .footer-center {
     width      : 45%;
     font-size  : 12px;
@@ -758,18 +734,14 @@ Stijl voor footer
     box-sizing : border-box;
 }
 
-/*
-5.3) footer right
-*/
+/*5.3) footer right*/
 .footer-distributed .footer-right {
     width     : 35%;
     padding   : 0 10px;
     box-sizing: border-box;
 }
 
-/*
-5.4) e-mailform footer right
-*/
+/*5.4) e-mailform footer right*/
 .footer-distributed .footer-right form {
     display       : flex;
     flex-direction: column;
@@ -808,9 +780,7 @@ Stijl voor footer
     border          : 1px solid #fff;
 }
 
-/*
-6) Stijl copyright
-*/
+/*6) Stijl copyright*/
 .end .copy {
     font-size       : 0.5em;
     text-align      : left;
