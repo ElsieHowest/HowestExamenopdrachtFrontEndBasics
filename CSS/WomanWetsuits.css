@@ -12,10 +12,10 @@ body {
 
 /*Stijl voor header*/
 .header {
-    margin     : 0 auto;
-    align-items: center;
+    margin          : 0 auto;
+    align-items     : center;
     background-color: rgb(47, 67, 83);
-    padding: 10px 0;
+    padding         : 10px 0;
 }
 
 /*Style logo*/
@@ -45,7 +45,7 @@ h2 {
 h3,
 p {
     font-family: "Open Sans", sans-serif;
-    color: rgb(47, 67, 83);
+    color      : rgb(47, 67, 83);
     font-size  : 1rem;
 }
 
@@ -107,26 +107,27 @@ p {
 }
 
 /*Style of submenu*/
-.submenu{
-    display: none;
-    position: absolute;
-    min-width: 160px;
+.submenu {
+    display   : none;
+    position  : absolute;
+    min-width : 160px;
     list-style: none;
-    z-index: 1000;
-    top: 100%;        
-    left: 0;          
-    padding: 0;       
-    margin: 0;
-    font-size: 14px;    
+    z-index   : 1000;
+    top       : 100%;
+    left      : 0;
+    padding   : 0;
+    margin    : 0;
+    font-size : 14px;
 }
 
 /* De items BINNEN het submenu */
 .navbar .submenu li {
-    width: auto;      
-    height: auto;     
-    margin: 0;        
-    padding: 8px 0;   
-    display: block;   /* Zorgt dat ze netjes onder elkaar blijven staan */
+    width  : auto;
+    height : auto;
+    margin : 0;
+    padding: 8px 0;
+    display: block;
+    /* Zorgt dat ze netjes onder elkaar blijven staan */
 }
 
 /* De witte hover-lijn wordt niet getoond wordt onder de submenu-items */
@@ -140,26 +141,26 @@ p {
 
 /* Submenu wordt zichtbaar als je op de 'dropdown' li hoovert */
 .navbar ul li.dropdown:hover .submenu {
-    display: block;
-    top: 100%; 
-    left: 5px;
-    margin: 0px;
-    padding: 10px 20px;               
-    border-radius: 12px;
+    display         : block;
+    top             : 100%;
+    left            : 5px;
+    margin          : 0px;
+    padding         : 10px 20px;
+    border-radius   : 12px;
     background-color: rgba(35, 50, 64, 0.95);
 }
 
 /* De items in het submenu staan onder elkaar */
 .submenu li {
     display: block;
-    width: 100%;
-    height: auto;
+    width  : 100%;
+    height : auto;
     padding: 10px 15px;
 }
 
 .submenu li a {
     display: block;
-    width: 100%;
+    width  : 100%;
 }
 
 .submenu li::after {
@@ -177,18 +178,18 @@ p {
 
 /* 2. Dwing het diepere submenu naar rechts met een specifiekere selector */
 .navbar ul .submenu li.dropdown-sub .submenu {
-    display: none;
-    position: absolute;
-    top: 0 !important;   
-    left: 100% !important;  
-    margin: 0;
-    padding: 10px 20px;
+    display         : none;
+    position        : absolute;
+    top             : 0 !important;
+    left            : 100% !important;
+    margin          : 0;
+    padding         : 10px 20px;
     background-color: rgba(31, 44, 56, 0.98);
-    border-radius: 12px;
+    border-radius   : 12px;
 }
 
 /*Hover */
-.navbar ul .submenu li.dropdown-sub:hover > .submenu {
+.navbar ul .submenu li.dropdown-sub:hover>.submenu {
     display: block;
 }
 
@@ -208,10 +209,10 @@ form {
 }
 
 .bar {
-    display: flex;
-    align-items: center;
+    display        : flex;
+    align-items    : center;
     justify-content: flex-end;
-    gap: 15px;
+    gap            : 15px;
 }
 
 .search {
@@ -221,12 +222,12 @@ form {
     padding      : 14px;
     border-radius: 28px;
     background   : #f4efe6;
-    transition: box-shadow 0.25s;
+    transition   : box-shadow 0.25s;
 }
 
 /*The user gives focus*/
-.search:focus-within{
-box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
+.search:focus-within {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 }
 
 .search-input {
@@ -248,13 +249,13 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 }
 
 /*Style of icons*/
-.icons .material-symbols-outlined{
-    display: inline-block;
-    margin: 25px;
+.icons .material-symbols-outlined {
+    display    : inline-block;
+    margin     : 25px;
     align-items: center;
-    gap: 16px;
-    cursor: pointer;
-    color: rgb(47, 67, 83);
+    gap        : 16px;
+    cursor     : pointer;
+    color      : rgb(47, 67, 83);
 }
 
 /*1) navigatie main*/
@@ -300,8 +301,8 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 style of title 
 ==========
 */
-.title{
-    margin: 5px;
+.title {
+    margin : 5px;
     padding: 0.2rem;
 }
 
@@ -353,7 +354,7 @@ Navigation
     background-color: rgb(34, 49, 61);
     color           : white;
     border-radius   : 15px;
-    cursor: pointer;
+    cursor          : pointer;
 }
 
 .sub-nav {
@@ -512,12 +513,12 @@ Navigation
 
 .card-list .card-item button:hover {
     font-weight: bold;
-    transform       : translateY(-2px);
-    box-shadow      : 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform  : translateY(-2px);
+    box-shadow : 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .card-list .card-item button:active {
-    transform: translateY(0);
+    transform : translateY(0);
     box-shadow: none;
 }
 
@@ -748,7 +749,7 @@ Stijl voor footer
     padding         : 50px 50px 60px 50px;
     bottom          : 0;
     box-sizing      : border-box;
-    min-height          : 450px;
+    min-height      : 450px;
 }
 
 /*
@@ -952,6 +953,27 @@ Stijl voor footer
 
         font-size: clamp(0.95rem, 2vw, 1rem);
 
+    }
+
+    .mainnavbar ul {
+        display       : flex;
+        flex-direction: column;
+        /* Dit zet de links onder elkaar */
+        align-items   : center;
+        /* Centreert de knoppen */
+        gap           : 10px;
+        /* Ruimte tussen de knoppen */
+        padding       : 0;
+        list-style    : none;
+    }
+
+    .mainnavbar li a {
+        display        : block;
+        flex-direction : column;
+        align-items    : center;
+        text-decoration: none;
+        padding        : 10px 20px;
+        width          : 100%;
     }
 
     .card-list {

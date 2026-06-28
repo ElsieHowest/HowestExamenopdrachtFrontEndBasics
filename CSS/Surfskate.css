@@ -818,15 +818,11 @@ label span#close-icon {
     }
 
     h2 {
-
         font-size: clamp(1.5rem, 3vw, 2rem);
-
     }
 
     p {
-
         font-size: clamp(0.95rem, 2vw, 1rem);
-
     }
 
     .mainnavbar ul {
