@@ -306,12 +306,16 @@ form {
 1) style of card items
 */
 .card-list {
-    display              : grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    max-width            : 1250px;
-    margin               : 10px auto;
-    padding              : 20px;
-    gap                  : 20px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1250px;
+    margin: 10px auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card-list > * {
+    flex: 1 1 300px;
 }
 
 .card-list .card-item {
