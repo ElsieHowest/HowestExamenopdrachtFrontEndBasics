@@ -378,6 +378,7 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 }
 
 .chat-box .describe-text {
+    font-family: "Open Sans", sans-serif;
     color      : #555;
     text-align : center;
     font-size  : 17px;
