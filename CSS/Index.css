@@ -497,10 +497,9 @@ aside a:hover {
     padding        : 5px 5px;
     border-radius  : 15px 15px 0 0;
     font-weight    : 400;
-    font-size      : 18px;
+    font-size      : 14px;
     display        : flex;
     justify-content: center;
-    text-align     : center;
 }
 
 .chat .chat-box {
@@ -511,8 +510,8 @@ aside a:hover {
 .chat-box .describe-text {
     color      : #555;
     text-align : center;
-    font-size  : 17px;
-    font-weight: 500;
+    font-size  : 14px;
+    font-weight: 400;
     height     : 20px;
 }
 

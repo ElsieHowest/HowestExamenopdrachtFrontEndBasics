@@ -431,6 +431,15 @@ main {
     transition      : all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
+.chat .head-text-chat h2 {
+    color : white;
+    height: 100px;
+}
+
+.chat .head-text-chat h3 {
+    color : white;
+    height: 100px;
+}
 
 .chat .head-text-chat {
     font-family    : "Open Sans", sans-serif;
@@ -442,20 +451,9 @@ main {
     padding        : 5px 5px;
     border-radius  : 15px 15px 0 0;
     font-weight    : 400;
-    font-size      : 18px;
+    font-size      : 14px;
     display        : flex;
     justify-content: center;
-    text-align     : center;
-}
-
-.chat .head-text-chat h2 {
-    color : white;
-    height: 100px;
-}
-
-.chat .head-text-chat h3 {
-    color : white;
-    height: 100px;
 }
 
 .chat .chat-box {
@@ -464,11 +462,10 @@ main {
 }
 
 .chat-box .describe-text {
-    font-family: "Open Sans", sans-serif;
     color      : #555;
     text-align : center;
-    font-size  : 17px;
-    font-weight: 500;
+    font-size  : 14px;
+    font-weight: 400;
     height     : 20px;
 }
 
