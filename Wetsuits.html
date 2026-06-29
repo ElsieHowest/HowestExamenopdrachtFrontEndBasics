@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Link CSS-->
     <link rel="stylesheet" href="CSS/Wetsuits.css">
-    <!--Link fonts-->
+   <!--Link fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
@@ -207,9 +207,56 @@
             <h3>What do you wear under a wetsuit?</h3>
             <p>
                 Some surfers wear swimwear under their wetsuit, while others prefer nothing underneath
-                for a more natural fit and extra comfort. The best choice depends on personal preference, water temperature and the fit of your wetsuit.
+                for a more natural fit and extra comfort. The best choice depends on personal preference, water
+                temperature and the fit of your wetsuit.
             </p>
         </section>
+
+        <!--Chatbox-->
+        <section id="chatbox-right">
+            <input type="checkbox" id="click">
+            <label for="click">
+                <span id="chat-icon" class="material-symbols-outlined">chat</span>
+                <span id="close-icon" class="material-symbols-outlined">close</span>
+            </label>
+            <div class="chat">
+                <!--Header of chatbox-->
+                <div class="head-text-chat">
+                    <h3>Quick question? - Let's chat!</h3>
+                </div>
+                <!--Chatbox-->
+                <div class="chat-box">
+                    <!--Text of chatbox-->
+                    <div class="describe-text">
+                        <p>
+                            Please fill out the form below to start chatting.
+                        </p>
+                        <!--Form in chatbox-->
+                        <form action="#">
+                            <!--Field one: name-->
+                            <div class="field">
+                                <input type="text" placeholder="Your name" aria-label="Your name" required>
+                            </div>
+                            <!--Field two: email-->
+                            <div class="field">
+                                <input type="email" placeholder="Your email adress" aria-label="Your email adress"
+                                    required>
+                            </div>
+                            <!--Field three: textfield-->
+                            <div class="field">
+                                <textarea id="comment" name="comment" placeholder="Your message" required>
+                                </textarea>
+                            </div>
+                            <button type="submit">Start chat</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
     </main>
 
     <!--Footer-->
@@ -250,7 +297,7 @@
                     A place where surfers, beach lovers and friends come together to enjoy the ocean.
                 </p>
 
-                 <form action="https://jkorpela.fi/cgi-bin/echo.cgi">
+                <form action="https://jkorpela.fi/cgi-bin/echo.cgi">
                     <input type="email" placeholder="Enter your email address" aria-label="Your email adress" required>
                     <button id="button" type="submit">Subscribe</button>
                 </form>

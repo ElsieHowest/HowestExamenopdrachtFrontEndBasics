@@ -421,7 +421,8 @@ main {
     right           : 15px;
     height          : 550px;
     bottom          : 85px;
-    max-width       : 450px;
+    width           : 450px;
+    max-width       : calc(100% - 30px);
     background-color: #ffffff;
     color           : rgb(47, 67, 83);
     border-radius   : 15px;
@@ -463,6 +464,7 @@ main {
 }
 
 .chat-box .describe-text {
+    font-family: "Open Sans", sans-serif;
     color      : #555;
     text-align : center;
     font-size  : 17px;
@@ -687,7 +689,6 @@ label span#close-icon {
     text-decoration: none;
     transition     : background-color 0.2s, color 0.2s;
     /*Opmerking    : subtiel hover-effect */
-
 }
 
 .footer-nav a:hover {
@@ -822,19 +823,20 @@ label span#close-icon {
     }
 
     aside {
-        width: 320px; /* Vaste breedte herstellen voor het floaten */
+        width: 320px;
+        /* Vaste breedte herstellen voor het floaten */
     }
 
     /* Oneven asides floaten links */
     aside:nth-of-type(odd) {
-        float       : left;
-        margin      : 10px 30px 20px 0;
+        float : left;
+        margin: 10px 30px 20px 0;
     }
 
     /* Even asides floaten rechts */
     aside:nth-of-type(even) {
-        float      : right;
-        margin     : 10px 0 20px 30px;
+        float : right;
+        margin: 10px 0 20px 30px;
     }
 
 

@@ -426,7 +426,8 @@ form {
     right           : 15px;
     height          : 550px;
     bottom          : 85px;
-    max-width       : 450px;
+    width           : 450px;
+    max-width       : calc(100% - 30px);
     background-color: #ffffff;
     color           : rgb(47, 67, 83);
     border-radius   : 15px;
@@ -467,6 +468,7 @@ form {
 }
 
 .chat-box .describe-text {
+    font-family: "Open Sans", sans-serif;
     color      : #555;
     text-align : center;
     font-size  : 17px;
