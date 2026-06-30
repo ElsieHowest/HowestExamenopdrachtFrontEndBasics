@@ -428,7 +428,6 @@ aside a:hover {
 }
 
 .card-list .card-item:hover {
-    border: 2px solid rgb(47, 67, 83);
     box-shadow  : 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
@@ -490,7 +489,7 @@ aside a:hover {
     box-shadow: none;
 }
 
-/*Your essentials for summer*/
+/*Style for your essentials for summer*/
 .spotlight {
     display    : inline-block;
     font-family: "Open Sans", sans-serif;
@@ -514,6 +513,7 @@ aside a:hover {
 }
 
 .card-list-essentials .card-item-essentials {
+    position: relative;
     background     : #fff;
     border-radius  : 15px;
     border         : 1px solid transparent;
@@ -531,28 +531,10 @@ aside a:hover {
 }
 
 .card-list-essentials .card-item-essentials:hover {
-    border: 2px solid rgb(47, 67, 83);
     box-shadow  : 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
-/*2) Image of cards*/
-.card-item-essentials img {
-    width     : 100%;
-    display   : block;
-    transition: opacity 0.4s ease;
-}
-
-/* tweede image bovenop eerste */
-.card-item-essentials .image-back {
-    opacity: 0;
-}
-.card-item-essentials:hover .image-front {
-    opacity: 0;
-}
-.card-item-essentials:hover .image-back {
-    opacity: 1;
-}
-
+/*2) Style of image of cards*/
 .card-item-essentials img {
     aspect-ratio    : auto;
     /*Opmerking     : geen geforceerde verhoudingen*/
@@ -561,6 +543,21 @@ aside a:hover {
     aspect-ratio    : 4 / 3;
     object-fit      : contain;
     background-color: #ffffff;
+    transition: opacity 0.4s ease;
+}
+
+/* tweede image bovenop eerste */
+.card-item-essentials .image-second {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.card-item-essentials:hover .image-one {
+    opacity: 0;
+}
+.card-item-essentials:hover .image-second {
+    opacity: 1;
 }
 
 /*titelstijlen*/
@@ -716,7 +713,6 @@ form .textarea textarea:focus::placeholder {
     font-weight: bold;
 }
 
-
 .chat-box form button:active {
     transform: scale(0.97);
 }
@@ -774,9 +770,7 @@ label span#close-icon {
     bottom : 85px;
 }
 
-
 /*Stijl voor footer*/
-
 /*1) General*/
 .footer-distributed {
     display         : flex;
@@ -852,12 +846,10 @@ label span#close-icon {
     text-decoration: none;
     transition     : background-color 0.2s, color 0.2s;
     /*Opmerking    : subtiel hover-effect */
-
 }
 
 .footer-nav a:hover {
     font-weight: bold;
-
 }
 
 /*5) Onderdelen footer*/
