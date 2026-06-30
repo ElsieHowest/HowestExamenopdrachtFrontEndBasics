@@ -575,6 +575,65 @@ aside a:hover {
     text-align: center;
 }
 
+/*Vergelijkingstabel*/
+.yes {
+    color: rgb(47, 67, 83);
+    font-weight: bold;
+}
+
+.no {
+    color: rgb(208, 129, 75);
+}
+
+/*Style of wetstuit table*/
+.comparison {
+    margin-top: 0.5rem;
+}
+
+.comparison table {
+    width           : 100%;
+    border-collapse : collapse;
+    background-color: white;
+    border-radius   : 20px;
+    overflow        : hidden;
+    box-shadow      : 0 10px 20px rgba(0, 0, 0, 0.06);
+    margin-top      : 1.5rem;
+}
+
+/*Style of table header*/
+.comparison thead {
+    background-color: rgb(47, 67, 83);
+    color           : white;
+    font-family     : "Open Sans", sans-serif;
+}
+
+.comparison th {
+    padding       : 1.2rem;
+    text-align    : left;
+    font-size     : 1rem;
+    letter-spacing: 0.5px;
+}
+
+/*Style of table body*/
+.comparison td {
+    padding      : 1rem 1.2rem;
+    border-bottom: 1px solid #eee;
+    font-family  : "Open Sans", sans-serif;
+    color        : #555;
+}
+
+/* laatste lijn geen border */
+.comparison tr:last-child td {
+    border-bottom: none;
+}
+
+/*Style of hover table */
+.comparison tbody tr:hover {
+    background-color: #faf6ef;
+    transition      : 0.2s ease;
+}
+
+
 /*Style of chatbox*/
 .chat {
     padding         : 1.5rem;
