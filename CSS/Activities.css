@@ -110,26 +110,27 @@ p {
 }
 
 /*Style of submenu*/
-.submenu{
-    display: none;
-    position: absolute;
-    min-width: 160px;
+.submenu {
+    display   : none;
+    position  : absolute;
+    min-width : 160px;
     list-style: none;
-    z-index: 1000;
-    top: 100%;        
-    left: 0;          
-    padding: 0;       
-    margin: 0;
-    font-size: 14px;    
+    z-index   : 1000;
+    top       : 100%;
+    left      : 0;
+    padding   : 0;
+    margin    : 0;
+    font-size : 14px;
 }
 
 /* De items BINNEN het submenu */
 .navbar .submenu li {
-    width: auto;      
-    height: auto;     
-    margin: 0;        
-    padding: 8px 0;   
-    display: block;   /* Zorgt dat ze netjes onder elkaar blijven staan */
+    width  : auto;
+    height : auto;
+    margin : 0;
+    padding: 8px 0;
+    display: block;
+    /* Zorgt dat ze netjes onder elkaar blijven staan */
 }
 
 /* De witte hover-lijn wordt niet getoond wordt onder de submenu-items */
@@ -143,26 +144,26 @@ p {
 
 /* Submenu wordt zichtbaar als je op de 'dropdown' li hoovert */
 .navbar ul li.dropdown:hover .submenu {
-    display: block;
-    top: 100%; 
-    left: 5px;
-    margin: 0px;
-    padding: 10px 20px;               
-    border-radius: 12px;
+    display         : block;
+    top             : 100%;
+    left            : 5px;
+    margin          : 0px;
+    padding         : 10px 20px;
+    border-radius   : 12px;
     background-color: rgba(35, 50, 64, 0.95);
 }
 
 /* De items in het submenu staan onder elkaar */
 .submenu li {
     display: block;
-    width: 100%;
-    height: auto;
+    width  : 100%;
+    height : auto;
     padding: 10px 15px;
 }
 
 .submenu li a {
     display: block;
-    width: 100%;
+    width  : 100%;
 }
 
 .submenu li::after {
@@ -180,18 +181,18 @@ p {
 
 /* 2. Dwing het diepere submenu naar rechts met een specifiekere selector */
 .navbar ul .submenu li.dropdown-sub .submenu {
-    display: none;
-    position: absolute;
-    top: 0 !important;   
-    left: 100% !important;  
-    margin: 0;
-    padding: 10px 20px;
+    display         : none;
+    position        : absolute;
+    top             : 0 !important;
+    left            : 100% !important;
+    margin          : 0;
+    padding         : 10px 20px;
     background-color: rgba(31, 44, 56, 0.98);
-    border-radius: 12px;
+    border-radius   : 12px;
 }
 
 /*Hover */
-.navbar ul .submenu li.dropdown-sub:hover > .submenu {
+.navbar ul .submenu li.dropdown-sub:hover>.submenu {
     display: block;
 }
 
@@ -260,7 +261,7 @@ main button::before {
     /*Animatie achter de tekst*/
 }
 
-main button:hover{
+main button:hover {
     color: #ffffff;
 }
 
@@ -276,10 +277,10 @@ form {
 }
 
 .bar {
-    display: flex;
-    align-items: center;
+    display        : flex;
+    align-items    : center;
     justify-content: flex-end;
-    gap: 15px;
+    gap            : 15px;
 }
 
 .search {
@@ -289,12 +290,12 @@ form {
     padding      : 14px;
     border-radius: 28px;
     background   : #f4efe6;
-    transition: box-shadow 0.25s;
+    transition   : box-shadow 0.25s;
 }
 
 /*The user gives focus*/
-.search:focus-within{
-box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
+.search:focus-within {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 }
 
 .search-input {
@@ -316,13 +317,13 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 }
 
 /*Style of icons*/
-.icons .material-symbols-outlined{
-    display: inline-block;
-    margin: 25px;
+.icons .material-symbols-outlined {
+    display    : inline-block;
+    margin     : 25px;
     align-items: center;
-    gap: 16px;
-    cursor: pointer;
-    color: rgb(47, 67, 83);
+    gap        : 16px;
+    cursor     : pointer;
+    color      : rgb(47, 67, 83);
 }
 
 /*Chatbox*/
@@ -349,10 +350,10 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 }
 
 .chat .head-text-chat h3 {
-    color : white;
-    font-size: 15px;
+    color      : white;
+    font-size  : 15px;
     font-weight: 600;
-    margin   : 0 auto;
+    margin     : 0 auto;
     line-height: 1.3;
 }
 
@@ -589,7 +590,14 @@ label span#close-icon {
     gap           : 5px;
 }
 
-.footer-nav a {
+.footer-nav ul li {
+    text-decoration: none;
+    list-style     : none;
+    font-family    : "Open Sans", sans-serif;
+    text-align     : left;
+}
+
+.footer-nav ul li a {
     display        : block;
     min-width      : 80px;
     padding        : 5px 10px;
@@ -598,7 +606,6 @@ label span#close-icon {
     text-decoration: none;
     transition     : background-color 0.2s, color 0.2s;
     /*Opmerking    : subtiel hover-effect */
-
 }
 
 .footer-nav a:hover {
@@ -849,14 +856,21 @@ label span#close-icon {
         width     : 100%;
         text-align: center;
     }
-}
 
-/*3) Printversie*/
-@media print {
+    .footer-distributed .footer-left .footer-nav {
+        display       : flex;
+        flex-direction: column;
+        text-align    : center;
+        align-items   : center;
+    }
 
-    header,
-    footer,
-    aside {
-        display: none
+    .footer-distributed .footer-left .footer-nav ul {
+        padding   : 0;
+        margin    : 0;
+        list-style: none;
+    }
+
+    .footer-distributed .footer-left .footer-nav ul li {
+        text-align: center;
     }
 }

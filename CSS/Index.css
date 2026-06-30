@@ -428,7 +428,7 @@ aside a:hover {
 }
 
 .card-list .card-item:hover {
-    box-shadow  : 0 10px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
 /*
@@ -462,8 +462,8 @@ aside a:hover {
 /*Style of buttons*/
 .card-list .card-item button {
     display         : block;
-    align-items: center;
-    text-align: center;
+    align-items     : center;
+    text-align      : center;
     margin          : 5px;
     color           : #ffffff;
     background-color: rgb(47, 67, 83);
@@ -505,7 +505,7 @@ aside a:hover {
     margin   : 10px auto;
     padding  : 20px;
     gap      : 20px;
-    position: relative;
+    position : relative;
 }
 
 .card-list-essentials>* {
@@ -513,7 +513,7 @@ aside a:hover {
 }
 
 .card-list-essentials .card-item-essentials {
-    position: relative;
+    position       : relative;
     background     : #fff;
     border-radius  : 15px;
     border         : 1px solid transparent;
@@ -531,7 +531,7 @@ aside a:hover {
 }
 
 .card-list-essentials .card-item-essentials:hover {
-    box-shadow  : 0 10px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
 /*2) Style of image of cards*/
@@ -543,19 +543,21 @@ aside a:hover {
     aspect-ratio    : 4 / 3;
     object-fit      : contain;
     background-color: #ffffff;
-    transition: opacity 0.4s ease;
+    transition      : opacity 0.4s ease;
 }
 
 /* tweede image bovenop eerste */
 .card-item-essentials .image-second {
-    opacity: 0;
+    opacity : 0;
     position: absolute;
-    top: 0;
-    left: 0;
+    top     : 0;
+    left    : 0;
 }
+
 .card-item-essentials:hover .image-one {
     opacity: 0;
 }
+
 .card-item-essentials:hover .image-second {
     opacity: 1;
 }
@@ -577,7 +579,7 @@ aside a:hover {
 
 /*Vergelijkingstabel*/
 .yes {
-    color: rgb(47, 67, 83);
+    color      : rgb(47, 67, 83);
     font-weight: bold;
 }
 
@@ -844,7 +846,6 @@ label span#close-icon {
     height          : 450px;
 }
 
-
 .footer-distributed .footer-center h2,
 .footer-distributed .footer-right h2 {
     font-family: "Playfair display", sans-serif;
@@ -896,7 +897,14 @@ label span#close-icon {
     gap           : 5px;
 }
 
-.footer-nav a {
+.footer-nav ul li {
+    text-decoration: none;
+    list-style     : none;
+    font-family    : "Open Sans", sans-serif;
+    text-align     : left;
+}
+
+.footer-nav ul li a {
     display        : block;
     min-width      : 80px;
     padding        : 5px 10px;
@@ -917,6 +925,8 @@ label span#close-icon {
     width : 20%;
     margin: 20px 0 12px 0;
 }
+
+
 
 .footer-distributed .footer-left a {
     display        : inline-block;
@@ -1266,14 +1276,21 @@ label span#close-icon {
         width     : 100%;
         text-align: center;
     }
-}
 
-/*3) Printversie*/
-@media print {
+    .footer-distributed .footer-left .footer-nav {
+        display       : flex;
+        flex-direction: column;
+        text-align    : center;
+        align-items   : center;
+    }
 
-    header,
-    footer,
-    aside {
-        display: none
+    .footer-distributed .footer-left .footer-nav ul {
+        padding   : 0;
+        margin    : 0;
+        list-style: none;
+    }
+
+    .footer-distributed .footer-left .footer-nav ul li {
+        text-align: center;
     }
 }

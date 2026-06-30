@@ -697,7 +697,14 @@ label span#close-icon {
     gap           : 5px;
 }
 
-.footer-nav a {
+.footer-nav ul li {
+    text-decoration: none;
+    list-style     : none;
+    font-family    : "Open Sans", sans-serif;
+    text-align     : left;
+}
+
+.footer-nav ul li a {
     display        : block;
     min-width      : 80px;
     padding        : 5px 10px;
@@ -706,7 +713,6 @@ label span#close-icon {
     text-decoration: none;
     transition     : background-color 0.2s, color 0.2s;
     /*Opmerking    : subtiel hover-effect */
-
 }
 
 .footer-nav a:hover {
@@ -949,14 +955,22 @@ label span#close-icon {
         width     : 100%;
         text-align: center;
     }
-}
 
-/*3) Printversie*/
-@media print {
-
-    header,
-    footer,
-    aside {
-        display: none
+    .footer-distributed .footer-left .footer-nav {
+        display       : flex;
+        flex-direction: column;
+        text-align    : center;
+        align-items   : center;
     }
+
+    .footer-distributed .footer-left .footer-nav ul {
+        padding   : 0;
+        margin    : 0;
+        list-style: none;
+    }
+
+    .footer-distributed .footer-left .footer-nav ul li {
+        text-align: center;
+    }
+
 }
