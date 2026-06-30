@@ -235,12 +235,13 @@
                         <form action="https://jkorpela.fi/cgi-bin/echo.cgi">
                             <!--Field one: name-->
                             <div class="field">
-                                <input type="text" placeholder="Your name" aria-label="Your name" required>
+                                <input id="chat-name" name="name" type="text" placeholder="Your name"
+                                    aria-label="Your name" required>
                             </div>
                             <!--Field two: email-->
                             <div class="field">
-                                <input type="email" placeholder="Your email adress" aria-label="Your email adress"
-                                    required>
+                                <input id="chat-email" name="email" type="email" placeholder="Your email adress"
+                                    aria-label="Your email adress" required>
                             </div>
                             <!--Field three: textfield-->
                             <div class="field">
@@ -250,12 +251,9 @@
                             <button type="submit">Start chat</button>
                         </form>
                     </div>
-
                 </div>
             </div>
-
         </section>
-
     </main>
 
     <!--Footer-->
@@ -299,7 +297,7 @@
                 </p>
 
                 <form action="https://jkorpela.fi/cgi-bin/echo.cgi">
-                    <input type="email" placeholder="Enter your email address" aria-label="Your email adress" required>
+                    <input id="email" name="email" type="email" placeholder="Enter your email address" aria-label="Your email adress" required>
                     <button id="button" type="submit">Subscribe</button>
                 </form>
             </section>

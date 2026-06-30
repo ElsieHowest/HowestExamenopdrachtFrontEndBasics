@@ -520,32 +520,31 @@
                                                         Please fill out the form below to start chatting.
                                                 </p>
                                                 <!--Form in chatbox-->
-                                                <form action="#">
+                                                <form action="https://jkorpela.fi/cgi-bin/echo.cgi">
                                                         <!--Field one: name-->
                                                         <div class="field">
-                                                                <input type="text" placeholder="Your name"
-                                                                        aria-label="Your name" required>
+                                                                <input id="chat-name" name="name" type="text"
+                                                                        placeholder="Your name" aria-label="Your name"
+                                                                        required>
                                                         </div>
                                                         <!--Field two: email-->
                                                         <div class="field">
-                                                                <input type="email" placeholder="Your email adress"
+                                                                <input id="chat-email" name="email" type="email"
+                                                                        placeholder="Your email adress"
                                                                         aria-label="Your email adress" required>
                                                         </div>
                                                         <!--Field three: textfield-->
                                                         <div class="field">
                                                                 <textarea id="comment" name="comment"
                                                                         placeholder="Your message" required>
-                                </textarea>
+                                                                </textarea>
                                                         </div>
                                                         <button type="submit">Start chat</button>
                                                 </form>
                                         </div>
-
                                 </div>
                         </div>
-
                 </section>
-
         </main>
 
         <!--footer-->
@@ -591,7 +590,7 @@
                                 </p>
 
                                 <form action="https://jkorpela.fi/cgi-bin/echo.cgi">
-                                        <input type="email" placeholder="Enter your email address"
+                                        <input id="email" name="email" type="email" placeholder="Enter your email address"
                                                 aria-label="Your email adress" required>
                                         <button id="button" type="submit">Subscribe</button>
                                 </form>

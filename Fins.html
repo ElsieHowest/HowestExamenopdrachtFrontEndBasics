@@ -351,49 +351,48 @@
         </section>
     </main>
 
-    <!--Chatbox-->
-    <section id="chatbox-right">
-        <input type="checkbox" id="click">
-        <label for="click">
-            <span id="chat-icon" class="material-symbols-outlined">chat</span>
-            <span id="close-icon" class="material-symbols-outlined">close</span>
-        </label>
-        <div class="chat">
-            <!--Header of chatbox-->
-            <div class="head-text-chat">
-                <h3>Quick question? - Let's chat!</h3>
-            </div>
-            <!--Chatbox-->
-            <div class="chat-box">
-                <!--Text of chatbox-->
-                <div class="describe-text">
-                    <p>
-                        Please fill out the form below to start chatting.
-                    </p>
-                    <!--Form in chatbox-->
-                    <form action="#">
-                        <!--Field one: name-->
-                        <div class="field">
-                            <input type="text" placeholder="Your name" aria-label="Your name" required>
-                        </div>
-                        <!--Field two: email-->
-                        <div class="field">
-                            <input type="email" placeholder="Your email adress" aria-label="Your email adress" required>
-                        </div>
-                        <!--Field three: textfield-->
-                        <div class="field">
-                            <textarea id="comment" name="comment" placeholder="Your message" required>
-                                </textarea>
-                        </div>
-                        <button type="submit">Start chat</button>
-                    </form>
+   <!--Chatbox-->
+        <section id="chatbox-right">
+            <input type="checkbox" id="click">
+            <label for="click">
+                <span id="chat-icon" class="material-symbols-outlined">chat</span>
+                <span id="close-icon" class="material-symbols-outlined">close</span>
+            </label>
+            <div class="chat">
+                <!--Header of chatbox-->
+                <div class="head-text-chat">
+                    <h3>Quick question? - Let's chat!</h3>
                 </div>
-
+                <!--Chatbox-->
+                <div class="chat-box">
+                    <!--Text of chatbox-->
+                    <div class="describe-text">
+                        <p>
+                            Please fill out the form below to start chatting.
+                        </p>
+                        <!--Form in chatbox-->
+                        <form action="https://jkorpela.fi/cgi-bin/echo.cgi">
+                            <!--Field one: name-->
+                            <div class="field">
+                                <input id="chat-name" name="name" type="text" placeholder="Your name" aria-label="Your name"
+                                    required>
+                            </div>
+                            <!--Field two: email-->
+                            <div class="field">
+                                <input id="chat-email" name="email" type="email" placeholder="Your email adress"
+                                    aria-label="Your email adress" required>
+                            </div>
+                            <!--Field three: textfield-->
+                            <div class="field">
+                                <textarea id="comment" name="comment" placeholder="Your message" required>
+                                </textarea>
+                            </div>
+                            <button type="submit">Start chat</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </div>
-
-    </section>
-
+        </section>
     </main>
 
     <!--Footer-->
@@ -438,7 +437,7 @@
                 </p>
 
                 <form action="https://jkorpela.fi/cgi-bin/echo.cgi">
-                    <input type="email" placeholder="Enter your email address" aria-label="Your email adress" required>
+                    <input id="email" name="email" type="email" placeholder="Enter your email address" aria-label="Your email adress" required>
                     <button id="button" type="submit">Subscribe</button>
                 </form>
             </section>
