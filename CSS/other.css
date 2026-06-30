@@ -23,6 +23,11 @@ body {
     padding         : 10px 0;
 }
 
+.banner {
+    background-color: rgb(47, 67, 83);
+    width           : 100%;
+}
+
 /*Style logo*/
 .logo-header {
     display       : flex;
@@ -55,6 +60,7 @@ p {
     font-family: "Open Sans", sans-serif;
     font-size  : 1rem;
 }
+
 
 /*Style of main*/
 main {
@@ -108,15 +114,12 @@ main .shop {
     /*De lijn is nog niet zichtbaar*/
     background : #fff;
     position   : absolute;
-    left       : 0;
-    /*De lijn start vanaf links*/
-    bottom     : -0.5px;
     /*Opmerking: een punt gebruiken, geen komma*/
     transition : width 0.5s;
 }
 
 .navbar ul li:hover::after {
-    width: 50px;
+    font-weight: bold;
     /*De lijn is zichtbaar bij hover/*/
 }
 
@@ -154,7 +157,8 @@ main .shop {
 }
 
 /* Submenu wordt zichtbaar als je op de 'dropdown' li hoovert */
-.navbar ul li.dropdown:hover .submenu {
+/*Use direct-child selector om enkel het eerste niveau van submenu te openen*/
+.navbar ul li.dropdown:hover >.submenu {
     display         : block;
     top             : 100%;
     left            : 5px;

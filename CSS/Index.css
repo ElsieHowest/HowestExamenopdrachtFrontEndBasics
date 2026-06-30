@@ -419,7 +419,7 @@ aside a:hover {
     cursor         : pointer;
     overflow       : hidden;
     transition     :
-        border-color 0.5s ease,
+        border 0.5s ease,
         /*Kleur van border veranderd op hover*/
         transform 0.3s ease,
         /*animatie CSS op hover*/
@@ -428,7 +428,7 @@ aside a:hover {
 }
 
 .card-list .card-item:hover {
-    border-color: 2px solid rgb(47, 67, 83);
+    border: 2px solid rgb(47, 67, 83);
     box-shadow  : 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
@@ -453,6 +453,125 @@ aside a:hover {
 }
 
 .card-list .card-item p {
+    color     : rgb(47, 67, 83);
+    font-size : 0.9rem;
+    padding   : 5px;
+    text-align: center;
+}
+
+/*Style of summer essentials*/
+/*Style of buttons*/
+.card-list .card-item button {
+    display         : block;
+    align-items: center;
+    text-align: center;
+    margin          : 5px;
+    color           : #ffffff;
+    background-color: rgb(47, 67, 83);
+    border          : none;
+    border-radius   : 20px;
+    height          : 35px;
+    width           : 100px;
+    cursor          : pointer;
+    transition      :
+        background-color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+.card-list .card-item button:hover {
+    font-weight: bold;
+    transform  : translateY(-2px);
+    box-shadow : 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-list .card-item button:active {
+    transform : translateY(0);
+    box-shadow: none;
+}
+
+/*Your essentials for summer*/
+.spotlight {
+    display    : inline-block;
+    font-family: "Open Sans", sans-serif;
+    font-size  : 11px;
+    width      : 100%;
+}
+
+/*1) style of card items*/
+.card-list-essentials {
+    display  : flex;
+    flex-wrap: wrap;
+    max-width: 1250px;
+    margin   : 10px auto;
+    padding  : 20px;
+    gap      : 20px;
+    position: relative;
+}
+
+.card-list-essentials>* {
+    flex: 1 1 300px;
+}
+
+.card-list-essentials .card-item-essentials {
+    background     : #fff;
+    border-radius  : 15px;
+    border         : 1px solid transparent;
+    list-style     : none;
+    text-decoration: none;
+    cursor         : pointer;
+    overflow       : hidden;
+    transition     :
+        border-color 0.5s ease,
+        /*Kleur van border veranderd op hover*/
+        transform 0.3s ease,
+        /*animatie CSS op hover*/
+        box-shadow 0.3s ease;
+    /*Schaduw veranderd op hover*/
+}
+
+.card-list-essentials .card-item-essentials:hover {
+    border: 2px solid rgb(47, 67, 83);
+    box-shadow  : 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/*2) Image of cards*/
+.card-item-essentials img {
+    width     : 100%;
+    display   : block;
+    transition: opacity 0.4s ease;
+}
+
+/* tweede image bovenop eerste */
+.card-item-essentials .image-back {
+    opacity: 0;
+}
+.card-item-essentials:hover .image-front {
+    opacity: 0;
+}
+.card-item-essentials:hover .image-back {
+    opacity: 1;
+}
+
+.card-item-essentials img {
+    aspect-ratio    : auto;
+    /*Opmerking     : geen geforceerde verhoudingen*/
+    width           : 100%;
+    height          : 300px;
+    aspect-ratio    : 4 / 3;
+    object-fit      : contain;
+    background-color: #ffffff;
+}
+
+/*titelstijlen*/
+.card-list-essentials .card-item-essentials h3 {
+    color     : rgb(47, 67, 83);
+    font-size : 1rem;
+    padding   : 0;
+    text-align: center;
+}
+
+.card-list-essentials .card-item-essentials p {
     color     : rgb(47, 67, 83);
     font-size : 0.9rem;
     padding   : 5px;
