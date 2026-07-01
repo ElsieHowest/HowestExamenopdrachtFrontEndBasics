@@ -18,6 +18,11 @@ body {
     padding         : 10px 0;
 }
 
+.banner {
+    background-color: rgb(47, 67, 83);
+    width           : 100%;
+}
+
 /*Style logo*/
 .logo-header {
     display       : flex;
@@ -60,7 +65,7 @@ p {
     font-size  : 0.8rem;
 }
 
-/*Style of Navigation*/
+/*Navigation*/
 /*Style of navbar*/
 .navbar {
     font-family    : "Open Sans", sans-serif;
@@ -70,6 +75,7 @@ p {
     display        : flex;
     align-items    : center;
     justify-content: space-between;
+    z-index        : 100;
 }
 
 .navbar li {
@@ -88,24 +94,13 @@ p {
 .navbar ul li a {
     text-decoration: none;
     color          : #fff;
+     display: block;
+    padding: 10px 0;
+    transition: font-weight 0.2s;
 }
 
-.navbar ul li::after {
-    content    : '';
-    height     : 2px;
-    width      : 0;
-    /*De lijn is nog niet zichtbaar*/
-    background : #fff;
-    position   : absolute;
-    left       : 0;
-    /*De lijn start vanaf links*/
-    bottom     : -0.5px;
-    /*Opmerking: een punt gebruiken, geen komma*/
-    transition : width 0.5s;
-}
-
-.navbar ul li:hover::after {
-    width: 50px;
+.navbar ul li a:hover {
+    font-weight: bold;
     /*De lijn is zichtbaar bij hover/*/
 }
 
@@ -143,7 +138,7 @@ p {
 }
 
 /* Submenu wordt zichtbaar als je op de 'dropdown' li hoovert */
-.navbar ul li.dropdown:hover .submenu {
+.navbar ul li.dropdown:hover > .submenu {
     display         : block;
     top             : 100%;
     left            : 5px;
@@ -195,6 +190,7 @@ p {
 .navbar ul .submenu li.dropdown-sub:hover>.submenu {
     display: block;
 }
+
 
 /*Style main*/
 main {

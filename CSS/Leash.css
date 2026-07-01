@@ -24,6 +24,11 @@ body {
     padding         : 10px 0;
 }
 
+.banner {
+    background-color: rgb(47, 67, 83);
+    width           : 100%;
+}
+
 /*Style logo*/
 .logo-header {
     display       : flex;
@@ -68,11 +73,6 @@ main {
     gap           : 5px;
 }
 
-main .intro,
-main .shop {
-    margin: 1rem;
-}
-
 /*Navigation*/
 /*Style of navbar*/
 .navbar {
@@ -83,6 +83,7 @@ main .shop {
     display        : flex;
     align-items    : center;
     justify-content: space-between;
+    z-index        : 100;
 }
 
 .navbar li {
@@ -101,24 +102,13 @@ main .shop {
 .navbar ul li a {
     text-decoration: none;
     color          : #fff;
+     display: block;
+    padding: 10px 0;
+    transition: font-weight 0.2s;
 }
 
-.navbar ul li::after {
-    content    : '';
-    height     : 2px;
-    width      : 0;
-    /*De lijn is nog niet zichtbaar*/
-    background : #fff;
-    position   : absolute;
-    left       : 0;
-    /*De lijn start vanaf links*/
-    bottom     : -0.5px;
-    /*Opmerking: een punt gebruiken, geen komma*/
-    transition : width 0.5s;
-}
-
-.navbar ul li:hover::after {
-    width: 50px;
+.navbar ul li a:hover {
+    font-weight: bold;
     /*De lijn is zichtbaar bij hover/*/
 }
 
@@ -136,16 +126,17 @@ main .shop {
     font-size : 14px;
 }
 
-/* De items van het submenu */
+/* De items BINNEN het submenu */
 .navbar .submenu li {
     width  : auto;
     height : auto;
     margin : 0;
     padding: 8px 0;
     display: block;
-    /*Items staan netjes onder elkaar*/
+    /* Zorgt dat ze netjes onder elkaar blijven staan */
 }
 
+/* De witte hover-lijn wordt niet getoond wordt onder de submenu-items */
 .navbar .submenu li::after {
     display: none;
 }
@@ -155,7 +146,7 @@ main .shop {
 }
 
 /* Submenu wordt zichtbaar als je op de 'dropdown' li hoovert */
-.navbar ul li.dropdown:hover .submenu {
+.navbar ul li.dropdown:hover > .submenu {
     display         : block;
     top             : 100%;
     left            : 5px;
@@ -191,7 +182,7 @@ main .shop {
     position: relative;
 }
 
-/* 2. Dwing het diepere submenu naar rechts*/
+/* 2. Dwing het diepere submenu naar rechts met een specifiekere selector */
 .navbar ul .submenu li.dropdown-sub .submenu {
     display         : none;
     position        : absolute;
@@ -206,6 +197,11 @@ main .shop {
 /*Hover */
 .navbar ul .submenu li.dropdown-sub:hover>.submenu {
     display: block;
+}
+
+main .intro,
+main .shop {
+    margin: 1rem;
 }
 
 /*Style of searchbar*/
