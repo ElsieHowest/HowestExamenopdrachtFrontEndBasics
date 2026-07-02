@@ -110,18 +110,50 @@
             </div>
         </section>
 
+        <!--Title-->
+        <div class="contactTitle">
+            <h2>Get in Touch</h2>
+        </div>
 
         <div class="contactUs">
-            <div class="contactTitle">
-                <h2>Get in Touch</h2>
-            </div>
-
             <div class="box">
                 <!--Send a message-->
                 <div class="contact form">
                     <h3>Send a message</h3>
                     <form>
                         <div class="formBox">
+                            <!--Keuzelijst-->
+                            <div class="inputBox">
+                                <span>Reason for contact</span>
+                                <select>
+                                    <option value="">Choose a reason</option>
+                                    <option>Surf lesson</option>
+                                    <option>Surf shop</option>
+                                    <option>Rental</option>
+                                    <option>General question</option>
+                                </select>
+                            </div>
+
+                            <!--radiobuttons toevoegen-->
+                            <div class="radioBox">
+                                <span>I am a</span>
+
+                                <label>
+                                    <input type="radio" name="visitor" value="beginner">
+                                    Beginner
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="visitor" value="intermediate">
+                                    Intermediate surfer
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="visitor" value="advanced">
+                                    Advanced surfer
+                                </label>
+                            </div>
+
                             <div class="inputRow50">
                                 <div class="inputBox">
                                     <span>First name</span>
@@ -147,7 +179,9 @@
                                     <textarea placeholder="Write your message here, ..."></textarea>
                                 </div>
 
+                                <!--buttons-->
                                 <div class="submit">
+                                    <input type="reset" value="Reset">
                                     <input type="submit" value="Send">
                                 </div>
                             </div>
@@ -244,19 +278,11 @@
                 </p>
 
                 <form action="https://jkorpela.fi/cgi-bin/echo.cgi">
-                    <input id="email" name="email" type="email" placeholder="Enter your email address" aria-label="Your email adress" required>
+                    <input id="email" name="email" type="email" placeholder="Enter your email address"
+                        aria-label="Your email adress" required>
                     <button id="button" type="submit">Subscribe</button>
                 </form>
             </section>
-
-            <!--
-            <h3>Let's keep you posted</h3>
-            <div class="footer-icons">
-            <button style="font-size:24px"><i class="fa fa-headphones"></i></button>
-            </div>
-            -->
-        </div>
-
     </footer>
 
     <!--Copyright-->
