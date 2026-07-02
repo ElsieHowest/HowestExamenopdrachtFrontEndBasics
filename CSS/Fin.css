@@ -632,7 +632,6 @@ label span#close-icon {
 }
 
 /*Stijl voor footer*/
-
 /*1) General*/
 .footer-distributed {
     display         : flex;
@@ -717,8 +716,7 @@ label span#close-icon {
 }
 
 .footer-nav a:hover {
-    font-weight: bold;
-
+    font-weight: 700;
 }
 
 /*5) Onderdelen footer*/

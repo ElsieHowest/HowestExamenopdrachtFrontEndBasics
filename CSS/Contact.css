@@ -109,8 +109,7 @@ p {
 }
 
 .navbar ul li a:hover {
-    font-weight: bold;
-    /*De lijn is zichtbaar bij hover/*/
+    font-weight: 700;
 }
 
 /*Style of submenu*/
@@ -653,7 +652,7 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 }
 
 .footer-nav a:hover {
-    font-weight: bold;
+    font-weight: 700;
 
 }
 
