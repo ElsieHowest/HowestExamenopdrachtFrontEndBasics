@@ -97,8 +97,7 @@ p {
 }
 
 .navbar ul li a:hover {
-    font-weight: bold;
-    /*De lijn is zichtbaar bij hover/*/
+    font-weight: 700;
 }
 
 /*Style of submenu*/

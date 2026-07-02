@@ -83,6 +83,7 @@ main {
     display        : flex;
     align-items    : center;
     justify-content: space-between;
+    position       : relative;
     z-index        : 100;
 }
 
@@ -108,7 +109,7 @@ main {
 }
 
 .navbar ul li a:hover {
-    font-weight: bold;
+    font-weight: 700;
     /*De lijn is zichtbaar bij hover/*/
 }
 

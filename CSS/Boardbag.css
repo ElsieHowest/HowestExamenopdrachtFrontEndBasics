@@ -73,6 +73,7 @@ p {
     display        : flex;
     align-items    : center;
     justify-content: space-between;
+    position       : relative;
     z-index        : 100;
 }
 
@@ -98,8 +99,7 @@ p {
 }
 
 .navbar ul li a:hover {
-    font-weight: bold;
-    /*De lijn is zichtbaar bij hover/*/
+    font-weight: 700;
 }
 
 /*Style of submenu*/
