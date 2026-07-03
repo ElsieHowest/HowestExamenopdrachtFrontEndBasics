@@ -245,43 +245,142 @@ form {
     color      : rgb(47, 67, 83);
 }
 
-/*1) navigatie main*/
+/*Style of mainnavbar*/
 .mainnavbar {
-    font-family: "Open Sans", sans-serif;
-    width      : 100%;
-}
-
-.mainnavbar ul {
-    list-style     : none;
-    display        : flex;
-    flex-wrap      : wrap;
-    justify-content: center;
-    gap            : 20px;
-    padding        : 0;
-}
-
-.mainnavbar li a {
-    display        : flex;
-    justify-content: center;
-    align-items    : center;
-    text-decoration: none;
-    padding        : 14px 28px;
-    border-radius  : 20px;
-    background     : rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(10px);
-    border         : 1px solid rgba(255, 255, 255, 0.3);
-    color          : rgb(47, 67, 83);
+    top: 0;
+    left: 0;
+    background-color:  rgb(47, 67, 83);
+    width: 100%;
+    position: fixed; /* Zorgt ervoor dat de navbar bovenaan blijft staan */
+    z-index: 1000; /* Zorgt ervoor dat de navbar boven andere elementen blijft */
     font-family    : "Open Sans", sans-serif;
-    font-weight    : 600;
-    transition     : 0.3s;
 }
 
-.mainnavbar a:hover {
+.mainnav {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.mainnavbar .mainnav .mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 700px;
+    background: white;
+    padding: 20px;
+    gap: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/*Style of nav-item dropdown*/
+.mainnavbar > .mainnav >.nav-item > a{
+    display: flex;
+    justify-content: space-between;
+    color:  #fff;
     text-decoration: none;
-    background     : #fff;
-    border         : 1px solid rgba(255, 255, 255, 0.3);
+    margin: 12px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 600;
 }
 
+.mainnavbar .mainnav .nav-item a:hover {
+    transform: scale(1.05);
+}
+
+/*Style of mega-menu*/
+.mainnavbar .mainnav .mega-menu {
+    display: none; /* Standaard verborgen */
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%); /* Centreert het menu netjes */
+    width: 700px;
+    background: white;
+    padding: 25px;
+    gap: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/*Active state of mega-menu*/
+/* Activeer het menu bij hover */
+.nav-item.dropdown:hover .mega-menu {
+    display: flex;
+}
+
+.mainnavbar .mainnav .mega-menu .mega-column {
+    color:  rgb(47, 67, 83);
+    flex: 1;
+}
+
+.mega-menu .mega-column h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 14px;
+    border-bottom: 1px solid  rgb(47, 67, 83); /* Subtiel lijntje onder de categorie */
+    padding-bottom: 5px;
+}
+
+.mega-menu .mega-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Stijl voor de links in de mega-menu kolommen */
+.mainnavbar .mainnav .mega-menu .mega-column ul li a {
+    color: rgb(47, 67, 83);
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+.mainnavbar .mainnav .mega-menu .mega-column ul li a:hover {
+     transform: translateX(8px);
+    /* Schuift 8 pixels naar rechts */
+}
+
+/* Styling voor het Featured blokje */
+.mega-menu .mega-feature {
+    background: #f4efe6;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    color: rgb(47, 67, 83);
+}
+
+.mega-menu .mega-feature h4 {
+    margin-top: 0;
+}
+
+.mega-menu .mega-feature p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.mega-menu .mega-feature .cta{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: rgb(47, 67, 83);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.mega-menu .mega-feature .cta:hover{
+    background: rgb(208, 129, 75);
+    font-weight: 700;
+}
 
 /*Style of title */
 .title {

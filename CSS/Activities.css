@@ -497,7 +497,7 @@ label span {
 }
 
 /*Start state of chat button*/
-Label span#chat-icon {
+label span#chat-icon {
     opacity: 1;
 }
 
