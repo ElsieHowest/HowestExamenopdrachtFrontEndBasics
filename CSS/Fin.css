@@ -30,16 +30,12 @@ body {
 }
 
 /*Style logo*/
-.logo-header {
+.logo {
     display       : flex;
     flex-direction: column;
     /*Logo boven navigatie*/
     align-items   : center;
-}
-
-/*Style header logo*/
-.logo {
-    width           : 90px;
+     width           : 90px;
     height          : auto;
     background-color: transparent;
     padding         : 10px;
@@ -206,7 +202,7 @@ main .shop {
 
 
 /*Style of searchbar*/
-form {
+.search form {
     flex-shrink: 0;
 }
 
