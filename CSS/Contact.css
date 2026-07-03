@@ -23,17 +23,12 @@ body {
     width           : 100%;
 }
 
-
-/*Style logo*/
-.logo-header {
+/*Style header logo*/
+.logo {
     display       : flex;
     flex-direction: column;
     /*Logo boven navigatie*/
     align-items   : center;
-}
-
-/*Style header logo*/
-.logo {
     width           : 90px;
     height          : auto;
     background-color: transparent;
@@ -263,25 +258,6 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
     gap: 16px;
     cursor: pointer;
     color: rgb(47, 67, 83);
-}
-
-/*Style of title*/
-.contactTitle {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 5px 5px;
-}
-
-.contactTitle h2{
-    color      : rgb(47, 67, 83);
-    font-family: "Open Sans", sans-serif;
-    margin     : 0;
-    padding    : 0;
-    font-size  : 2em;   
-    display   : flex;
-    text-align: center;
-    align-items: center;
 }
 
 /*Style of inputbox*/
@@ -567,7 +543,6 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 }
 
 /*Stijl voor footer*/
-
 /*1) General*/
 .footer-distributed {
     display         : flex;
@@ -736,4 +711,132 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
     color           : white;
     width           : 100%;
     /*Volledige footer heeft dezelfde background color*/
+}
+
+/*Mediaquery*/
+@media (max-width: 768px) {
+
+    /*Stijl vooor logo als scherm kleiner is dan 768px*/
+    .logo {
+        width: 60px;
+    }
+
+    /*Stijl voor zoekbalk als scherm kleiner is dan 768px*/
+      .bar {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .search {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .icons .material-symbols-outlined {
+        margin: 0;
+    }
+    
+    /*Stijl voor .contactUs als scherm kleiner is dan 768px*/
+    /* Contactpagina onder elkaar */
+    .box {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "form"
+            "info"
+            "map";
+    }
+
+    .form,
+    .info,
+    .map {
+        grid-column: auto;
+    }
+
+    /* Voornaam en achternaam, enz. onder elkaar */
+    .formBox .inputRow50 {
+        grid-template-columns: 1fr;
+    }
+
+    /* Bericht neemt nog steeds volledige breedte */
+    .formBox .inputRow50 .message {
+        grid-column: auto;
+    }
+
+    /* Knop onder de velden */
+    .formBox .inputRow50 .submit {
+        grid-column: auto;
+        justify-content: center;
+    }
+
+     .submit input {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Minder padding op kleine schermen */
+    .contact,
+    .info {
+        padding: 20px;
+    }
+
+    /* Radio buttons blijven onder elkaar */
+    .radioBox {
+        grid-column: auto;
+    }
+
+    /*Stijl voor footer als scherm kleiner is dan 768px*/
+    .footer-distributed {
+        display         : flex;
+        flex-direction  : column;
+        flex-wrap       : nowrap;
+        justify-content : center;
+        /* Zorgt dat de kolommen als geheel gecentreerd worden */
+        align-items     : center;
+        /* Centreert de kolommen verticaal indien nodig */
+        background-color: rgb(47, 67, 83);
+        width           : 100%;
+        margin-top      : 10px;
+        padding         : 50px 50px 60px 50px;
+        bottom          : 0;
+        box-sizing      : border-box;
+        height          : auto;
+        /*De footer past zich automatisch aan*/
+        gap             : 30px;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        width     : 100%;
+        text-align: center;
+    }
+
+    .footer-distributed .footer-left .footer-nav {
+        display       : flex;
+        flex-direction: column;
+        text-align    : center;
+        align-items   : center;
+    }
+
+    .footer-distributed .footer-left .footer-nav ul {
+        padding   : 0;
+        margin    : 0;
+        list-style: none;
+    }
+
+    .footer-distributed .footer-left .footer-nav ul li {
+        text-align: center;
+    }
 }
