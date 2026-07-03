@@ -785,3 +785,115 @@ label span#close-icon {
     /*Volledige footer heeft dezelfde background color*/
 }
 
+
+/*Mediaquery*/
+@media (max-width: 768px) {
+
+    /*Stijl vooor logo als scherm kleiner is dan 768px*/
+    .logo {
+        width: 60px;
+    }
+
+    /*Stijl voor zoekbalk als scherm kleiner is dan 768px*/
+    .bar {
+        flex-direction : column;
+        align-items    : center;
+        justify-content: center;
+        gap            : 15px;
+    }
+
+    .search {
+        width    : 100%;
+        max-width: 450px;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .icons {
+        display        : flex;
+        justify-content: center;
+        gap            : 20px;
+    }
+
+    .icons .material-symbols-outlined {
+        margin: 0;
+    }
+
+    /*Stijl voor .shop als scherm kleiner is dan 768px*/
+    /*Cards onder elkaar*/
+    .card-list {
+        display              : grid;
+        grid-template-columns: 1fr;
+        gap                  : 15px;
+    }
+
+    .card-list .card-item img.brand-image {
+        width: 100%;
+    }
+
+    /*De cards nemen de volledige breedte van de container in*/
+    .card-item {
+        display       : flex;
+        flex-direction: column;
+        align-items   : center;
+        text-align    : center;
+    }
+
+    .brand-image {
+        width    : 80%;
+        max-width: 220px;
+        height   : auto;
+        margin   : 0 auto;
+    }
+
+    .brand-content {
+        padding: 10px 0;
+    }
+
+    /*Stijl voor footer als scherm kleiner is dan 768px*/
+    .footer-distributed {
+        display         : flex;
+        flex-direction  : column;
+        flex-wrap       : nowrap;
+        justify-content : center;
+        /* Zorgt dat de kolommen als geheel gecentreerd worden */
+        align-items     : center;
+        /* Centreert de kolommen verticaal indien nodig */
+        background-color: rgb(47, 67, 83);
+        width           : 100%;
+        margin-top      : 10px;
+        padding         : 50px 50px 60px 50px;
+        bottom          : 0;
+        box-sizing      : border-box;
+        height          : auto;
+        /*De footer past zich automatisch aan*/
+        gap             : 30px;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        width     : 100%;
+        text-align: center;
+    }
+
+    .footer-distributed .footer-left .footer-nav {
+        display       : flex;
+        flex-direction: column;
+        text-align    : center;
+        align-items   : center;
+    }
+
+    .footer-distributed .footer-left .footer-nav ul {
+        padding   : 0;
+        margin    : 0;
+        list-style: none;
+    }
+
+    .footer-distributed .footer-left .footer-nav ul li {
+        text-align: center;
+    }
+}
+
