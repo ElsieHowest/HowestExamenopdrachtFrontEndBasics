@@ -1,0 +1,979 @@
+/*General style*/
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    width     : 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #fcf7ea;
+    margin          : 0;
+    padding         : 0;
+    width           : 100%;
+}
+
+/*Stijl voor header*/
+.header {
+    margin          : 0 auto;
+    align-items     : center;
+    background-color: rgb(47, 67, 83);
+    padding         : 10px 0;
+}
+
+.banner {
+    background-color: rgb(47, 67, 83);
+    width           : 100%;
+}
+
+/*Style logo*/
+.logo {
+    display       : flex;
+    flex-direction: column;
+    /*Logo boven navigatie*/
+    align-items   : center;
+     width           : 90px;
+    height          : auto;
+    background-color: transparent;
+    padding         : 10px;
+}
+
+/*Titelstijlen
+*/
+h1,
+h2 {
+    font-family: "Open Sans", sans-serif;
+    color      : rgb(208, 129, 75);
+    font-size  : 2rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    font-size  : 1rem;
+}
+
+
+/*Navigation*/
+/*Style of navbar*/
+.navbar {
+    font-family    : "Open Sans", sans-serif;
+    width          : 85%;
+    padding        : 35px;
+    margin         : auto;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    position       : relative;
+    z-index        : 100;
+}
+
+.navbar li {
+    width : auto;
+    height: auto;
+}
+
+.navbar ul li {
+    list-style: none;
+    display   : inline-block;
+    /*Elementen staan naast elkaar*/
+    margin    : 0 20px;
+    position  : relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color          : #fff;
+     display: block;
+    padding: 10px 0;
+    transition: font-weight 0.2s;
+}
+
+.navbar ul li a:hover {
+    font-weight: 700;
+}
+
+/*Style of submenu*/
+.submenu {
+    display   : none;
+    position  : absolute;
+    min-width : 160px;
+    list-style: none;
+    z-index   : 1000;
+    top       : 100%;
+    left      : 0;
+    padding   : 0;
+    margin    : 0;
+    font-size : 14px;
+}
+
+/* De items BINNEN het submenu */
+.navbar .submenu li {
+    width  : auto;
+    height : auto;
+    margin : 0;
+    padding: 8px 0;
+    display: block;
+    /* Zorgt dat ze netjes onder elkaar blijven staan */
+}
+
+/* De witte hover-lijn wordt niet getoond wordt onder de submenu-items */
+.navbar .submenu li::after {
+    display: none;
+}
+
+.navbar ul li.dropdown {
+    position: relative;
+}
+
+/* Submenu wordt zichtbaar als je op de 'dropdown' li hoovert */
+.navbar ul li.dropdown:hover > .submenu {
+    display         : block;
+    top             : 100%;
+    left            : 5px;
+    margin          : 0px;
+    padding         : 10px 20px;
+    border-radius   : 12px;
+    background-color: rgba(35, 50, 64, 0.95);
+}
+
+/* De items in het submenu staan onder elkaar */
+.submenu li {
+    display: block;
+    width  : 100%;
+    height : auto;
+    padding: 10px 15px;
+}
+
+.submenu li a {
+    display: block;
+    width  : 100%;
+}
+
+.submenu li::after {
+    display: none;
+}
+
+/*Stijl of dropdown-sub*/
+.navbar .submenu li.dropdown-sub {
+    position: relative;
+}
+
+.navbar ul .submenu li.dropdown-sub {
+    position: relative;
+}
+
+/* 2. Dwing het diepere submenu naar rechts met een specifiekere selector */
+.navbar ul .submenu li.dropdown-sub .submenu {
+    display         : none;
+    position        : absolute;
+    top             : 0 !important;
+    left            : 100% !important;
+    margin          : 0;
+    padding         : 10px 20px;
+    background-color: rgba(31, 44, 56, 0.98);
+    border-radius   : 12px;
+}
+
+/*Hover */
+.navbar ul .submenu li.dropdown-sub:hover>.submenu {
+    display: block;
+}
+
+/*Style of main*/
+main {
+    max-width     : 1100px;
+    margin        : 15px auto;
+    padding       : 15px 20px;
+    display       : flex;
+    flex-direction: column;
+    gap           : 5px;
+}
+
+.about-text,
+.category-section,
+.category-section-essentials,
+.comparison {
+    padding: 0 1rem;
+}
+
+.about p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color     : rgb(47, 67, 83);
+}
+
+
+/*Style of searchbar*/
+.search form {
+    flex-shrink: 0;
+}
+
+.bar {
+    display        : flex;
+    align-items    : center;
+    justify-content: flex-end;
+    gap            : 15px;
+}
+
+.search {
+    width        : max-content;
+    display      : flex;
+    align-items  : center;
+    padding      : 14px;
+    border-radius: 28px;
+    background   : #f4efe6;
+    transition   : box-shadow 0.25s;
+}
+
+/*The user gives focus*/
+.search:focus-within {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
+}
+
+.search-input {
+    font-size    : 16px;
+    font-family  : "Open Sans", sans-serif;
+    color        : rgb(47, 67, 83);
+    margin-left  : 14px;
+    border-radius: 28px;
+    outline      : none;
+    border       : none;
+    background   : transparent;
+    width        : 300px;
+}
+
+/*Style of placeholder text*/
+.search-input::placeholder,
+.search-icon {
+    color: rgb(47, 67, 83);
+}
+
+/*Style of icons*/
+.icons .material-symbols-outlined {
+    display    : inline-block;
+    margin     : 25px;
+    align-items: center;
+    gap        : 16px;
+    cursor     : pointer;
+    color      : rgb(47, 67, 83);
+}
+
+/*Aside*/
+aside {
+    text-align      : center;
+    margin          : 40px auto;
+    padding         : 30px;
+    background-color: #f3eae1;
+    max-width       : 800px;
+    border-radius   : 15px;
+}
+
+aside h3 {
+    font-family: "Open Sans", sans-serif;
+    color      : rgb(208, 129, 75);
+    font-size  : 1.2em;
+}
+
+aside a {
+    text-decoration : none;
+    font-weight     : bold;
+    font-size       : 16px;
+    color           : #ffff;
+    background-color: rgb(47, 67, 83);
+    display         : inline-block;
+    padding         : 10px 20px;
+    border-radius   : 20px;
+    transition      : all 0.3s ease;
+}
+
+aside a:hover {
+    background-color: #ffff;
+    color           : rgb(47, 67, 83);
+    border          : 1px solid #fff;
+    cursor          : pointer;
+}
+
+/*Shop*/
+.shop {
+    display    : inline-block;
+    font-family: "Open Sans", sans-serif;
+    font-size  : 11px;
+    width      : 100%;
+}
+
+/*
+1) style of card items
+*/
+.card-list {
+    display              : grid;
+    grid-template-columns: repeat(3, 1fr);
+    /*Opmerking          : altijd drie kolommen op groot scherm*/
+    max-width            : 1150px;
+    margin               : 10px auto;
+    padding              : 20px;
+    gap                  : 20px;
+    justify-content      : center;
+    /*Opmerking          : de kolommen worden gecentreerd binnen de container*/
+}
+
+.card-list .card-item {
+    background     : #fff;
+    border-radius  : 15px;
+    border         : 1px solid transparent;
+    list-style     : none;
+    text-decoration: none;
+    cursor         : pointer;
+    overflow       : hidden;
+    transition     :
+        border 0.5s ease,
+        /*Kleur van border veranderd op hover*/
+        transform 0.3s ease,
+        /*animatie CSS op hover*/
+        box-shadow 0.3s ease;
+    /*Schaduw veranderd op hover*/
+}
+
+.card-list .card-item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/*
+2) Image of cards
+*/
+.card-list .card-item img {
+    width       : 100%;
+    max-height  : 300px;
+    aspect-ratio: 4 / 3;
+    /*Opmerking : Bepaling van de gewenste verhouding tussen breedte en hoogte*/
+    object-fit  : cover;
+    /*Past de afbeelding telkens aan*/
+    display     : block;
+}
+
+.card-list .card-item h3 {
+    color     : rgb(47, 67, 83);
+    font-size : 1rem;
+    padding   : 0;
+    text-align: center;
+}
+
+.card-list .card-item p {
+    color     : rgb(47, 67, 83);
+    font-size : 0.9rem;
+    padding   : 5px;
+    text-align: center;
+}
+
+/*Style of summer essentials*/
+/*Style of buttons*/
+.card-list .card-item button {
+    display         : block;
+    align-items     : center;
+    text-align      : center;
+    margin          : 5px;
+    color           : #ffffff;
+    background-color: rgb(47, 67, 83);
+    border          : none;
+    border-radius   : 20px;
+    height          : 35px;
+    width           : 100px;
+    cursor          : pointer;
+    transition      :
+        background-color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+.card-list .card-item button:hover {
+    font-weight: bold;
+    transform  : translateY(-2px);
+    box-shadow : 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-list .card-item button:active {
+    transform : translateY(0);
+    box-shadow: none;
+}
+
+/*Style for your essentials for summer*/
+.spotlight {
+    display    : inline-block;
+    font-family: "Open Sans", sans-serif;
+    font-size  : 11px;
+    width      : 100%;
+}
+
+/*1) style of card items*/
+.card-list-essentials {
+    display  : flex;
+    flex-wrap: wrap;
+    max-width: 1250px;
+    margin   : 10px auto;
+    padding  : 20px;
+    gap      : 20px;
+    position : relative;
+}
+
+.card-list-essentials>* {
+    flex: 1 1 300px;
+}
+
+.card-list-essentials .card-item-essentials {
+    position       : relative;
+    background     : #fff;
+    border-radius  : 15px;
+    border         : 1px solid transparent;
+    list-style     : none;
+    text-decoration: none;
+    cursor         : pointer;
+    overflow       : hidden;
+    transition     :
+        border-color 0.5s ease,
+        /*Kleur van border veranderd op hover*/
+        transform 0.3s ease,
+        /*animatie CSS op hover*/
+        box-shadow 0.3s ease;
+    /*Schaduw veranderd op hover*/
+}
+
+.card-list-essentials .card-item-essentials:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/*2) Style of image of cards*/
+.card-item-essentials img {
+    aspect-ratio    : auto;
+    /*Opmerking     : geen geforceerde verhoudingen*/
+    width           : 100%;
+    height          : 300px;
+    aspect-ratio    : 4 / 3;
+    object-fit      : contain;
+    background-color: #ffffff;
+    transition      : opacity 0.4s ease;
+}
+
+/* tweede image bovenop eerste */
+.card-item-essentials .image-second {
+    opacity : 0;
+    position: absolute;
+    top     : 0;
+    left    : 0;
+}
+
+.card-item-essentials:hover .image-one {
+    opacity: 0;
+}
+
+.card-item-essentials:hover .image-second {
+    opacity: 1;
+}
+
+/*titelstijlen*/
+.card-list-essentials .card-item-essentials h3 {
+    color     : rgb(47, 67, 83);
+    font-size : 1rem;
+    padding   : 0;
+    text-align: center;
+}
+
+.card-list-essentials .card-item-essentials p {
+    color     : rgb(47, 67, 83);
+    font-size : 0.9rem;
+    padding   : 5px;
+    text-align: center;
+}
+
+/*Vergelijkingstabel*/
+.yes {
+    color      : rgb(47, 67, 83);
+    font-weight: bold;
+}
+
+.no {
+    color: rgb(208, 129, 75);
+}
+
+/*Style of wetstuit table*/
+.comparison {
+    margin-top: 0.5rem;
+}
+
+.comparison table {
+    width           : 100%;
+    border-collapse : collapse;
+    background-color: white;
+    border-radius   : 20px;
+    overflow        : hidden;
+    box-shadow      : 0 10px 20px rgba(0, 0, 0, 0.06);
+    margin-top      : 1.5rem;
+}
+
+/*Style of table header*/
+.comparison thead {
+    background-color: rgb(47, 67, 83);
+    color           : white;
+    font-family     : "Open Sans", sans-serif;
+}
+
+.comparison th {
+    padding       : 1.2rem;
+    text-align    : left;
+    font-size     : 1rem;
+    letter-spacing: 0.5px;
+}
+
+/*Style of table body*/
+.comparison td {
+    padding      : 1rem 1.2rem;
+    border-bottom: 1px solid #eee;
+    font-family  : "Open Sans", sans-serif;
+    color        : #555;
+}
+
+/* laatste lijn geen border */
+.comparison tr:last-child td {
+    border-bottom: none;
+}
+
+/*Style of hover table */
+.comparison tbody tr:hover {
+    background-color: #faf6ef;
+    transition      : 0.2s ease;
+}
+
+
+/*Chatbox*/
+/*1) Titelstijlen chatbox*/
+.chat .head-text-chat h2 {
+    color : white;
+    height: 100px;
+}
+
+.chat .head-text-chat h3 {
+    color : white;
+    height: 100px;
+}
+
+/*2) Chatbox head*/
+.chat {
+    padding         : 1.5rem;
+    margin          : 1.5em;
+    position        : fixed;
+    right           : 15px;
+    height          : 550px;
+    bottom          : 85px;
+    width           : 450px;
+    max-width       : calc(100% - 30px);
+    background-color: #ffffff;
+    color           : rgb(47, 67, 83);
+    border-radius   : 15px;
+    box-shadow      : 0px 15px 20px rgb(0, 0, 0, 0.1);
+    opacity         : 0;
+    transition      : all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.chat .head-text-chat {
+    font-family    : "Open Sans", sans-serif;
+    background     : #2f3e46;
+    color          : #fff;
+    line-height    : 45px;
+    height         : 85px;
+    margin         : 10px auto;
+    padding        : 5px 5px;
+    border-radius  : 15px 15px 0 0;
+    font-weight    : 400;
+    font-size      : 14px;
+    display        : flex;
+    justify-content: center;
+}
+
+.chat .chat-box {
+    padding: 10px;
+    width  : 100%;
+}
+
+.chat-box .describe-text {
+    color      : #555;
+    text-align : center;
+    font-size  : 14px;
+    font-weight: 400;
+    height     : 20px;
+}
+
+/*4) Chatbox form*/
+.chat-box form {
+    padding: 10px 12px;
+    margin : 20px 0;
+}
+
+.chat-box form .field {
+    height    : 50px;
+    width     : 100%;
+    margin-top: 20px;
+}
+
+.chat-box form .field:last-child {
+    margin-bottom: 15px;
+}
+
+form .field input,
+form .field button,
+form .field textarea {
+    width        : 100%;
+    height       : 100%;
+    padding-left : 20px;
+    border       : 1px solid lightgrey;
+    outline      : none;
+    border-radius: 25px;
+    font-size    : 16px;
+}
+
+form .field input::placeholder,
+form .field textarea::placeholder {
+    color     : silver;
+    transition: all 0.3s ease;
+}
+
+form .field input:focus {
+    border-color: rgb(208, 129, 75);
+}
+
+form .field input:focus::placeholder,
+form .textarea textarea:focus::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chat-box form .textarea {
+    height: 80px;
+    width : 100%;
+}
+
+.chat-box form .field textarea {
+    height       : 100%;
+    width        : 100%;
+    border-radius: 50px;
+    border       : 1px solid lightgrey;
+    resize       : none;
+    padding      : 15px 20px;
+    font-size    : 16px;
+}
+
+.chat-box form .field textarea:focus::placeholder {
+    border-color: rgb(208, 129, 75);
+}
+
+/*Style button chatbox*/
+.chat-box form button {
+    font-family  : "Open Sans", sans-serif;
+    border       : none;
+    border-radius: 15px;
+    outline      : none;
+    cursor       : pointer;
+    background   : rgb(47, 67, 83);
+    color        : #fff;
+    height       : 35px;
+    width        : 100%;
+    margin       : 12px auto;
+    padding      : 5px;
+    transition   : all 0.3s ease;
+}
+
+.chat-box form button:hover {
+    font-weight: 700;
+}
+
+.chat-box form button:active {
+    transform: scale(0.97);
+}
+
+/*Icon chatbox*/
+#click {
+    display: none;
+}
+
+label {
+    position        : fixed;
+    right           : 30px;
+    bottom          : 20px;
+    height          : 55px;
+    width           : 55px;
+    background-color: #fff;
+    color           : #2f3e46;
+    text-align      : center;
+    line-height     : 55px;
+    border-radius   : 50px;
+    font-size       : 30px;
+    cursor          : pointer;
+}
+
+/*Stijl voor icoon chatbox*/
+label span {
+    position  : absolute;
+    top       : 50%;
+    left      : 50%;
+    transform : translate(-50%, -50%);
+    transition: all 0.5s ease;
+}
+
+/*Start state of chat button*/
+label span#chat-icon {
+    opacity: 1;
+}
+
+label span#close-icon {
+    opacity: 0;
+}
+
+#click:checked~label span#chat-icon {
+    opacity  : 0;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+#click:checked~label span#close-icon {
+    opacity  : 1;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+#click:checked~.chat {
+    opacity: 1;
+    bottom : 85px;
+}
+
+/*Stijl voor footer*/
+/*1) General*/
+.footer-distributed {
+    display         : flex;
+    flex-wrap       : nowrap;
+    background-color: rgb(47, 67, 83);
+    width           : 100%;
+    /*Volledige footer heeft dezelfde background color*/
+    margin-top      : 10px;
+    padding         : 50px 50px 60px 50px;
+    bottom          : 0;
+    box-sizing      : border-box;
+    height          : 450px;
+}
+
+.footer-distributed .footer-center h2,
+.footer-distributed .footer-right h2 {
+    font-family: "Playfair display", sans-serif;
+}
+
+/*2) Titelstijlen footer*/
+.footer-distributed h2,
+/*Opmerking: komma niet vergeten*/
+.footer-distributed h3 {
+    font-size: 16px;
+    color    : white;
+}
+
+.footer-distributed h2 {
+    margin : 5px;
+    padding: 5px;
+}
+
+.footer-distributed h3,
+/*Opmerking: komma niet vergeten*/
+.footer-distributed p {
+    margin : 10px;
+    padding: 5px;
+}
+
+.footer-distributed .footer-center p,
+.footer-distributed .footer-right p {
+    font-size     : 12px;
+    display       : inline-block;
+    color         : #fff;
+    vertical-align: middle;
+}
+
+
+/*3) Logo seahorse footer*/
+.logo-footer #seahorse {
+    height     : 135px;
+    width      : auto;
+    align-items: center;
+    margin     : 5px auto;
+}
+
+/*4) Stjl voor navigatie in footer*/
+.footer-nav {
+    display       : flex;
+    flex-direction: column;
+    margin        : 5px;
+    padding       : 5px;
+    gap           : 5px;
+}
+
+.footer-nav ul li {
+    text-decoration: none;
+    list-style     : none;
+    font-family    : "Open Sans", sans-serif;
+    text-align     : left;
+}
+
+.footer-nav ul li a {
+    display        : block;
+    min-width      : 80px;
+    padding        : 5px 10px;
+    font-size      : 12px;
+    color          : #fff;
+    text-decoration: none;
+    transition     : background-color 0.2s, color 0.2s;
+    /*Opmerking    : subtiel hover-effect */
+}
+
+.footer-nav a:hover {
+    font-weight: 700;
+}
+
+/*5) Onderdelen footer*/
+/*5.1) Style footer left*/
+.footer-distributed .footer-left {
+    width : 20%;
+    margin: 20px 0 12px 0;
+}
+
+.footer-distributed .footer-left a {
+    display        : inline-block;
+    line-height    : 1.8;
+    text-decoration: none;
+    color          : #fff;
+}
+
+/*5.2) Style footer center*/
+.footer-distributed .footer-center {
+    width      : 45%;
+    font-size  : 12px;
+    font-weight: normal;
+    margin     : 5px;
+    box-sizing : border-box;
+}
+
+/*5.3) footer right*/
+.footer-distributed .footer-right {
+    width     : 35%;
+    padding   : 0 10px;
+    box-sizing: border-box;
+}
+
+/*5.4) e-mailform footer right*/
+.footer-distributed .footer-right form {
+    display       : flex;
+    flex-direction: column;
+    /*Input en button staan onder elkaar*/
+    gap           : 5px;
+    margin-top    : 10px;
+}
+
+.footer-distributed .footer-right form input {
+    border-radius: 20px;
+    height       : 35px;
+    width        : 100%;
+    padding      : 0 12px;
+    font-size    : 12px;
+    border       : none;
+    box-sizing   : border-box;
+}
+
+.footer-distributed .footer-right form .button-footer {
+    border-radius   : 20px;
+    height          : 35px;
+    width           : 100%;
+    cursor          : pointer;
+    border          : none;
+    background-color: #fff;
+    background-image: none;
+    /* verwijdert de gradient van de algemene button-stijl */
+    color           : rgb(47, 67, 83);
+    font-size       : 12px;
+    font-weight     : bold;
+    transition      : background-color 0.2s, color 0.2s;
+    /* subtiel hover-effect */
+}
+
+.footer-distributed .footer-right form .button-footer:hover {
+    background-color: rgb(47, 67, 83);
+    background-image: none;
+    /* verwijdert de gradient van de algemene button-stijl */
+    color           : #fff;
+    border          : 1px solid #fff;
+}
+
+/*6) Stijl copyright*/
+.end .copy {
+    font-size       : 0.5em;
+    text-align      : left;
+    line-height     : 1;
+    margin          : 0;
+    padding         : 12px;
+    background-color: rgb(47, 67, 83);
+    color           : white;
+    width           : 100%;
+    /*Volledige footer heeft dezelfde stijl*/
+}
+
+/*Mediaquery*/
+@media (max-width: 768px) {
+    
+    /*Stijl vooor logo als scherm kleiner is dan 768px*/
+      .logo { 
+        width: 80px; 
+    } 
+    
+    /*stijl voor card-itms als scherm kleiner is dan 768px*/
+        .card-item img { 
+        height: 220px; 
+    } 
+
+    /*Stijl voor footer als scherm kleiner is dan 768px*/
+        .footer-distributed { 
+        display         : flex; 
+        flex-direction  : column; 
+        flex-wrap       : nowrap; 
+        justify-content : center; 
+        /* Zorgt dat de kolommen als geheel gecentreerd worden */ 
+        align-items     : center; 
+        /* Centreert de kolommen verticaal indien nodig */ 
+        background-color: rgb(47, 67, 83); 
+        width           : 100%; 
+        margin-top      : 10px; 
+        padding         : 50px 50px 60px 50px; 
+        bottom          : 0; 
+        box-sizing      : border-box; 
+        height          : auto; 
+        /*De footer past zich automatisch aan*/ 
+        gap             : 30px; 
+    } 
+
+    .footer-distributed .footer-left, 
+    .footer-distributed .footer-center, 
+    .footer-distributed .footer-right { 
+        width     : 100%; 
+        text-align: center; 
+    } 
+
+    .footer-distributed .footer-left .footer-nav { 
+        display       : flex; 
+        flex-direction: column; 
+        text-align    : center; 
+        align-items   : center; 
+    } 
+
+    .footer-distributed .footer-left .footer-nav ul { 
+        padding   : 0; 
+        margin    : 0; 
+        list-style: none; 
+    } 
+
+    .footer-distributed .footer-left .footer-nav ul li { 
+        text-align: center; 
+    }
+}
