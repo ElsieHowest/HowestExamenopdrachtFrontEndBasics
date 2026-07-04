@@ -32,9 +32,6 @@ body {
 /*Style logo*/
 .logo {
     display         : flex;
-    flex-direction  : column;
-    /*Logo boven navigatie*/
-    align-items     : center;
     width           : 90px;
     height          : auto;
     background-color: transparent;
@@ -65,6 +62,7 @@ p {
 .navbar {
     font-family    : "Open Sans", sans-serif;
     width          : 85%;
+    height: 140px;
     padding        : 35px;
     margin         : auto;
     display        : flex;
@@ -271,7 +269,7 @@ main {
     left: 0;
     background-color:  rgb(47, 67, 83);
     width: 100%;
-    position: fixed; /* Zorgt ervoor dat de navbar bovenaan blijft staan */
+    position: sticky; /* Zorgt ervoor dat de navbar bovenaan blijft staan */
     z-index: 1000; /* Zorgt ervoor dat de navbar boven andere elementen blijft */
     font-family    : "Open Sans", sans-serif;
 }
