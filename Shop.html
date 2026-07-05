@@ -72,13 +72,24 @@
             <nav class="navbar">
                 <img src="Images/Brand/Logo-seahorse.png" class="logo" title="Logo salty cheeks, seahorse"
                     alt="Logo salty cheeks, seahorse">
-                <ul>
+
+                <!--Hamburger icon voor als het scherm kleiner is-->
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-button menu-toggle-label">
+                    <span id="menu-icon" class="material-symbols-outlined">
+                        menu
+                    </span>
+                    <span id="menu-close-icon" class="material-symbols-outlined">close</span>
+                </label>
+
+                <!--Navigation-->
+                <ul class="nav-links">
                     <!--Index-->
-                    <li><a href="index.html" class="current">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <!--Dropdown-->
                     <li class="dropdown">
                         <!--Surfshop-->
-                        <a href="shop.html">Surfshop &#9662;</a>
+                        <a href="shop.html">Surfshop</a>
 
                         <ul class="submenu">
                             <!--Surfboards-->
@@ -103,6 +114,7 @@
                     <li><a href="partners.html">Partners</a></li>
                 </ul>
             </nav>
+        </section>
     </header>
 
     <!--Main-->
