@@ -58,12 +58,26 @@ p {
     font-size  : 0.8rem;
 }
 
-/*Style of header*/
-/*Style of logo*/
+/*Stijl voor header*/
+.header {
+    margin          : 0 auto;
+    align-items     : center;
+    background-color: rgb(47, 67, 83);
+    padding         : 10px 0;
+}
+
+.banner {
+    background-color: rgb(47, 67, 83);
+     width           : 100%;
+}
+
+/*Style logo*/
 .logo {
-    width : 90px;
-    cursor: pointer;
-    /*De gebruiker kan op het logo klikken*/
+    display         : flex;
+    width           : 90px;
+    height          : auto;
+    background-color: transparent;
+    padding         : 10px;
 }
 
 /* Verberg de mobiele menu-knoppen standaard op desktop screens */

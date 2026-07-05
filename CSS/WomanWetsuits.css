@@ -47,12 +47,26 @@ p {
     font-size  : 1rem;
 }
 
-/*Stijl voor logo*/
-.logo-header {
-    display       : flex;
-    flex-direction: column;
-    /*Logo boven navigatie*/
-    align-items   : center;
+/*Stijl voor header*/
+.header {
+    margin          : 0 auto;
+    align-items     : center;
+    background-color: rgb(47, 67, 83);
+    padding         : 10px 0;
+}
+
+.banner {
+    background-color: rgb(47, 67, 83);
+     width           : 100%;
+}
+
+/*Style logo*/
+.logo {
+    display         : flex;
+    width           : 90px;
+    height          : auto;
+    background-color: transparent;
+    padding         : 10px;
 }
 
 /* Verberg de mobiele menu-knoppen standaard op desktop screens */
@@ -60,7 +74,6 @@ p {
 .menu-button {
     display: none;
 }
-
 
 /*Navigation*/
 /*Style of navbar*/
