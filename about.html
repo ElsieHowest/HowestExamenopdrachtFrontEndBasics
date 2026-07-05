@@ -25,7 +25,7 @@
 
 <body>
     <!--Header-->
-    <header>
+    <header class="header">
         <!--Navigation of mainnavbar-->
         <nav class="mainnavbar">
             <ul class="mainnav">
@@ -68,39 +68,52 @@
             </ul>
         </nav>
 
-        <section class="header">
-            <section class="banner">
-                <nav class="navbar">
-                    <img src="Images/Brand/Logo-seahorse.png" class="logo" title="Logo salty cheeks, seahorse"
-                        alt="Logo salty cheeks, seahorse">
-                    <ul>
-                        <!--Index-->
-                        <li><a href="index.html">Home</a></li>
-                        <!--Dropdown-->
-                        <li class="dropdown">
-                            <!--Surfshop-->
-                            <a href="shop.html">Surfshop</a>
-                            <ul class="submenu">
-                                <!--Surfboards-->
-                                <li><a href="surfboards.html">Surfboards</a></li>
-                                <!--Surfskate-->
-                                <li><a href="surfskate.html">Surfskates</a></li>
-                                <!--Wetsuit-->
-                                <li class="dropdown-sub">
-                                    <a href="wetsuits.html">Wetsuits</a>
-                                </li>
-                                <!--Wetsuit-->
-                                <li class="dropdown-sub">
-                                    <a href="musthaves.html">Surf essentials</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="activities.html">Salt sessions</a></li>
-                        <li><a href="contact.html">Find us</a></li>
-                        <li><a href="partners.html">Partners</a></li>
-                    </ul>
-                </nav>
-            </section>
+        <section class="banner">
+            <nav class="navbar">
+                <img src="Images/Brand/Logo-seahorse.png" class="logo" title="Logo salty cheeks, seahorse"
+                    alt="Logo salty cheeks, seahorse">
+
+                <!--Hamburger icon voor als het scherm kleiner is-->
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-button menu-toggle-label">
+                    <span id="menu-icon" class="material-symbols-outlined">
+                        menu
+                    </span>
+                    <span id="menu-close-icon" class="material-symbols-outlined">close</span>
+                </label>
+
+
+                <ul class="nav-links">
+                    <!--Index-->
+                    <li><a href="index.html">Home</a></li>
+                    <!--Dropdown-->
+                    <li class="dropdown">
+                        <!--Surfshop-->
+                        <a href="shop.html">Surfshop</a>
+
+                        <ul class="submenu">
+                            <!--Surfboards-->
+                            <li><a href="surfboards.html">Surfboards</a></li>
+                            <!--Surfskate-->
+                            <li><a href="surfskate.html">Surfskates</a></li>
+                            <!--Wetsuit-->
+                            <li class="dropdown-sub">
+                                <a href="wetsuits.html">Wetsuits</a>
+                            </li>
+                            <!--Musthaves-->
+                            <li class="dropdown-sub">
+                                <a href="musthaves.html">Surf essentials</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a href="activities.html">Salt sessions</a></li>
+
+                    <li><a href="contact.html">Find us</a></li>
+
+                    <li><a href="partners.html">Partners</a></li>
+                </ul>
+            </nav>
         </section>
     </header>
 
@@ -128,13 +141,12 @@
                     favorite
                 </span>
                 <!--Add to cart-->
-                <span class="material-symbols-outlined">
-                    shopping_cart
-                </span>
+                <a href="contact.html" title="Contact us to place an order">
+                    <span class="material-symbols-outlined">
+                        shopping_cart
+                    </span>
             </div>
         </section>
-
-
 
         <!--About us-->
         <section class="about">
@@ -335,9 +347,9 @@
         <!--Chatbox-->
         <section id="chatbox-right">
             <input type="checkbox" id="click">
-            <label for="click">
+            <label for="click" class="chat-toggle-label">
                 <span id="chat-icon" class="material-symbols-outlined">chat</span>
-                <span id="close-icon" class="material-symbols-outlined">close</span>
+                <span id="chat-close-icon" class="material-symbols-outlined">close</span>
             </label>
             <div class="chat">
                 <!--Header of chatbox-->
