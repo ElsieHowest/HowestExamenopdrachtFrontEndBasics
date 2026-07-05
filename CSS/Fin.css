@@ -496,15 +496,31 @@ main .shop {
 }
 
 /*Style of buttons*/
-.card-list .card-item button {
-    display         : inline-block;
+.card-list .card-item .buttons {
+    display        : flex;
+    flex-wrap      : nowrap;
+    justify-content: center;
+    gap            : 5px;
+}
+
+.card-list .card-item button,
+.card-list .card-item .btn-mail {
+    display         : inline-flex;
+    align-items     : center;
+    justify-content : center;
     margin          : 5px;
     color           : #ffffff;
     background-color: rgb(47, 67, 83);
     border          : none;
     border-radius   : 20px;
     height          : 35px;
-    width           : 100px;
+    width           : 120px;
+    line-height: 35px;
+    text-decoration: none;
+    white-space     : nowrap;
+    overflow        : hidden;
+    text-overflow   : ellipsis;
+    /* voorkomt dat tekst buiten de knop loopt bij krimpen */
     cursor          : pointer;
     transition      :
         background-color 0.3s ease,
@@ -512,13 +528,15 @@ main .shop {
         box-shadow 0.3s ease;
 }
 
-.card-list .card-item button:hover {
-    font-weight: bold;
+.card-list .card-item button:hover,
+.card-list .card-item .btn-mail:hover  {
+    font-weight: 700;
     transform  : translateY(-2px);
     box-shadow : 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.card-list .card-item button:active {
+.card-list .card-item button:active,
+.card-list .card-item .btn-mail:active {
     transform : translateY(0);
     box-shadow: none;
 }
