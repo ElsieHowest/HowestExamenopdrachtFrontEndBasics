@@ -41,6 +41,12 @@ p {
     color      : rgba(35, 50, 64, 0.95);
 }
 
+/* Verberg de mobiele menu-knoppen standaard op desktop screens */
+#menu-toggle,
+.menu-button {
+    display: none;
+}
+
 /*Navigation*/
 /*Style of navbar*/
 .navbar {

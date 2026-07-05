@@ -95,6 +95,13 @@ section::after {
     clear  : both;
 }
 
+/* Verberg de mobiele menu-knoppen standaard op desktop screens */
+#menu-toggle,
+.menu-button {
+    display: none;
+}
+
+
 /*Navigation*/
 /*Style of navbar*/
 .navbar {

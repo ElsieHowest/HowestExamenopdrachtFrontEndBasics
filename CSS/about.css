@@ -57,6 +57,12 @@ p {
     font-size  : 1rem;
 }
 
+/* Verberg de mobiele menu-knoppen standaard op desktop screens */
+#menu-toggle,
+.menu-button {
+    display: none;
+}
+
 /*menu enkel zichtbaar op kleiner scherm*/
 .menu {
     display: none;
@@ -275,13 +281,6 @@ main {
     cursor     : pointer;
     color      : rgb(47, 67, 83);
 }
-
-/* Verberg de mobiele menu-knoppen standaard op desktop screens */
-#menu-toggle,
-.menu-button {
-    display: none;
-}
-
 
 /*Style of mainnavbar*/
 .mainnavbar {
