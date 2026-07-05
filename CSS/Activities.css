@@ -854,54 +854,6 @@ label span#close-icon {
         margin: 0;
     }
     
-    /*Stijl voor .contactUs als scherm kleiner is dan 768px*/
-    /* Contactpagina onder elkaar */
-    .box {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "form"
-            "info"
-            "map";
-    }
-
-    .form,
-    .info,
-    .map {
-        grid-column: auto;
-    }
-
-    /* Voornaam en achternaam, enz. onder elkaar */
-    .formBox .inputRow50 {
-        grid-template-columns: 1fr;
-    }
-
-    /* Bericht neemt nog steeds volledige breedte */
-    .formBox .inputRow50 .message {
-        grid-column: auto;
-    }
-
-    /* Knop onder de velden */
-    .formBox .inputRow50 .submit {
-        grid-column: auto;
-        justify-content: center;
-    }
-
-     .submit input {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    /* Minder padding op kleine schermen */
-    .contact,
-    .info {
-        padding: 20px;
-    }
-
-    /* Radio buttons blijven onder elkaar */
-    .radioBox {
-        grid-column: auto;
-    }
-
     /*Stijl voor footer als scherm kleiner is dan 768px*/
     .footer-distributed {
         display         : flex;
