@@ -263,6 +263,10 @@ main {
 }
 
 /*Style of icons*/
+.icons a {
+    text-decoration: none;
+}
+
 .icons .material-symbols-outlined {
     display    : inline-block;
     margin     : 25px;
