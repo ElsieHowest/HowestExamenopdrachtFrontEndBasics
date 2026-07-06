@@ -725,11 +725,11 @@ form .textarea textarea:focus::placeholder {
 }
 
 /*Start state of chat button*/
-.chatbox-right label span#chat-icon {
+#chatbox-right label span#chat-icon {
     opacity: 1 !important;
 }
 
-.chatbox-right label span#chat-close-icon {
+#chatbox-right label span#chat-close-icon {
     opacity: 0 !important;
 }
 
