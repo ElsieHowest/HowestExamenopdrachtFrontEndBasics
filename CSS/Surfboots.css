@@ -25,7 +25,9 @@ body {
 
 .banner {
     background-color: rgb(47, 67, 83);
-     width           : 100%;
+    width           : 100%;
+    padding-top     : 60px;
+    /*Voorkomt dat contect verdwijnt achter 'Discover more'*/
 }
 
 /*Style logo*/

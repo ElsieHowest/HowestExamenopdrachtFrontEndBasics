@@ -27,6 +27,8 @@ body {
 .banner {
     background-color: rgb(47, 67, 83);
     width           : 100%;
+    padding-top     : 60px;
+    /*Voorkomt dat contect verdwijnt achter 'Discover more'*/
 }
 
 /*Style logo*/
@@ -483,9 +485,9 @@ form {
 
 /*Wanneer checkbox is aangevinkt: toon chatbox*/
 #click:checked~.chat {
-    opacity: 1;
+    opacity   : 1;
     visibility: visible;
-    bottom : 85px;
+    bottom    : 85px;
 }
 
 /*Chatbox head*/
@@ -639,7 +641,7 @@ form .textarea textarea:focus::placeholder {
     border-radius   : 50px;
     font-size       : 30px;
     cursor          : pointer;
-    z-index: 999;
+    z-index         : 999;
 }
 
 /*Stijl voor icoon chatbox*/
@@ -652,17 +654,17 @@ form .textarea textarea:focus::placeholder {
 }
 
 /* Extra check: als de checkbox NIET is aangevinkt, dwing de juiste opacity af */
-#click:not(:checked) ~ label span#chat-icon {
+#click:not(:checked)~label span#chat-icon {
     opacity: 1;
 }
 
-#click:not(:checked) ~ label span#chat-close-icon {
+#click:not(:checked)~label span#chat-close-icon {
     opacity: 0;
 }
 
 /*Start state of chat button*/
 .chatbox-right label span#chat-icon {
-    opacity: 1 !important; 
+    opacity: 1 !important;
 }
 
 .chatbox-right label span#chat-close-icon {
@@ -884,13 +886,13 @@ form .textarea textarea:focus::placeholder {
         margin: 0;
     }
 
-      /*Stijl voor .mainnav als scherm kleiner is dan 768px*/
+    /*Stijl voor .mainnav als scherm kleiner is dan 768px*/
     /*Op een klein scherm is "Discover more" enkel een link*/
-        .mainnavbar .mainnav .mega-menu,
-        .nav-item.dropdown:hover .mega-menu {
+    .mainnavbar .mainnav .mega-menu,
+    .nav-item.dropdown:hover .mega-menu {
         display: none;
     }
-  
+
     /*style of header als scherm kleiner is dan 768px*/
     /* Toon de hamburger */
     .nav-links {

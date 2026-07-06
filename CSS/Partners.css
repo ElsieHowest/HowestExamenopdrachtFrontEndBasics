@@ -21,6 +21,8 @@ body {
 .banner {
     background-color: rgb(47, 67, 83);
     width           : 100%;
+    padding-top     : 60px;
+    /*Voorkomt dat contect verdwijnt achter 'Discover more'*/
 }
 
 /*Style logo*/
@@ -300,47 +302,49 @@ form {
 
 /*Style of mainnavbar*/
 .mainnavbar {
-    top: 0;
-    left: 0;
-    background-color:  rgb(47, 67, 83);
-    width: 100%;
-    position: sticky; /* Zorgt ervoor dat de navbar bovenaan blijft staan */
-    z-index: 1000; /* Zorgt ervoor dat de navbar boven andere elementen blijft */
-    font-family    : "Open Sans", sans-serif;
+    top             : 0;
+    left            : 0;
+    background-color: rgb(47, 67, 83);
+    width           : 100%;
+    position        : sticky;
+    /* Zorgt ervoor dat de navbar bovenaan blijft staan */
+    z-index         : 1000;
+    /* Zorgt ervoor dat de navbar boven andere elementen blijft */
+    font-family     : "Open Sans", sans-serif;
 }
 
 .mainnav {
-    display: flex;
-    list-style: none;
+    display        : flex;
+    list-style     : none;
     justify-content: center;
-    gap: 30px;
-    padding: 0;
-    margin: 0;
+    gap            : 30px;
+    padding        : 0;
+    margin         : 0;
 }
 
 .mainnavbar .mainnav .mega-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    width: 700px;
-    background: white;
-    padding: 20px;
-    gap: 30px;
+    display      : none;
+    position     : absolute;
+    top          : 100%;
+    left         : 50%;
+    width        : 700px;
+    background   : white;
+    padding      : 20px;
+    gap          : 30px;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow   : 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 /*Style of nav-item dropdown*/
-.mainnavbar > .mainnav >.nav-item > a{
-    display: flex;
+.mainnavbar>.mainnav>.nav-item>a {
+    display        : flex;
     justify-content: space-between;
-    color:  #fff;
+    color          : #fff;
     text-decoration: none;
-    margin: 12px;
-    padding: 10px 15px;
-    font-size: 16px;
-    font-weight: 600;
+    margin         : 12px;
+    padding        : 10px 15px;
+    font-size      : 16px;
+    font-weight    : 600;
 }
 
 .mainnavbar .mainnav .nav-item a:hover {
@@ -349,17 +353,19 @@ form {
 
 /*Style of mega-menu*/
 .mainnavbar .mainnav .mega-menu {
-    display: none; /* Standaard verborgen */
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%); /* Centreert het menu netjes */
-    width: 700px;
-    background: white;
-    padding: 25px;
-    gap: 30px;
+    display      : none;
+    /* Standaard verborgen */
+    position     : absolute;
+    top          : 100%;
+    left         : 50%;
+    transform    : translateX(-50%);
+    /* Centreert het menu netjes */
+    width        : 700px;
+    background   : white;
+    padding      : 25px;
+    gap          : 30px;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow   : 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 /*Active state of mega-menu*/
@@ -369,45 +375,46 @@ form {
 }
 
 .mainnavbar .mainnav .mega-menu .mega-column {
-    color:  rgb(47, 67, 83);
-    flex: 1;
+    color: rgb(47, 67, 83);
+    flex : 1;
 }
 
 .mega-menu .mega-column h4 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 14px;
-    border-bottom: 1px solid  rgb(47, 67, 83); /* Subtiel lijntje onder de categorie */
+    margin-top    : 0;
+    margin-bottom : 15px;
+    font-size     : 14px;
+    border-bottom : 1px solid rgb(47, 67, 83);
+    /* Subtiel lijntje onder de categorie */
     padding-bottom: 5px;
 }
 
 .mega-menu .mega-column ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding   : 0;
+    margin    : 0;
 }
 
 /* Stijl voor de links in de mega-menu kolommen */
 .mainnavbar .mainnav .mega-menu .mega-column ul li a {
-    color: rgb(47, 67, 83);
+    color          : rgb(47, 67, 83);
     text-decoration: none;
-    display: block;
-    padding: 5px 0;
-    font-size: 14px;
+    display        : block;
+    padding        : 5px 0;
+    font-size      : 14px;
 }
 
 .mainnavbar .mainnav .mega-menu .mega-column ul li a:hover {
-     transform: translateX(8px);
+    transform: translateX(8px);
     /* Schuift 8 pixels naar rechts */
 }
 
 /* Styling voor het Featured blokje */
 .mega-menu .mega-feature {
-    background: #f4efe6;
-    padding: 20px;
+    background   : #f4efe6;
+    padding      : 20px;
     border-radius: 10px;
-    width: 200px;
-    color: rgb(47, 67, 83);
+    width        : 200px;
+    color        : rgb(47, 67, 83);
 }
 
 .mega-menu .mega-feature h4 {
@@ -415,23 +422,23 @@ form {
 }
 
 .mega-menu .mega-feature p {
-    font-size: 14px;
+    font-size  : 14px;
     line-height: 1.4;
 }
 
-.mega-menu .mega-feature .cta{
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 12px;
-    background: rgb(47, 67, 83);
-    color: #fff;
+.mega-menu .mega-feature .cta {
+    display        : inline-block;
+    margin-top     : 10px;
+    padding        : 8px 12px;
+    background     : rgb(47, 67, 83);
+    color          : #fff;
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 14px;
+    border-radius  : 5px;
+    font-size      : 14px;
 }
 
-.mega-menu .mega-feature .cta:hover{
-    background: rgb(208, 129, 75);
+.mega-menu .mega-feature .cta:hover {
+    background : rgb(208, 129, 75);
     font-weight: 700;
 }
 
@@ -556,9 +563,9 @@ form {
 
 /*Wanneer checkbox is aangevinkt: toon chatbox*/
 #click:checked~.chat {
-    opacity: 1;
+    opacity   : 1;
     visibility: visible;
-    bottom : 85px;
+    bottom    : 85px;
 }
 
 /*Chatbox head*/
@@ -712,7 +719,7 @@ form .textarea textarea:focus::placeholder {
     border-radius   : 50px;
     font-size       : 30px;
     cursor          : pointer;
-    z-index: 999;
+    z-index         : 999;
 }
 
 /*Stijl voor icoon chatbox*/
@@ -725,17 +732,17 @@ form .textarea textarea:focus::placeholder {
 }
 
 /* Extra check: als de checkbox NIET is aangevinkt, dwing de juiste opacity af */
-#click:not(:checked) ~ label span#chat-icon {
+#click:not(:checked)~label span#chat-icon {
     opacity: 1;
 }
 
-#click:not(:checked) ~ label span#chat-close-icon {
+#click:not(:checked)~label span#chat-close-icon {
     opacity: 0;
 }
 
 /*Start state of chat button*/
 .chatbox-right label span#chat-icon {
-    opacity: 1 !important; 
+    opacity: 1 !important;
 }
 
 .chatbox-right label span#chat-close-icon {
@@ -959,13 +966,13 @@ form .textarea textarea:focus::placeholder {
         margin: 0;
     }
 
-      /*Stijl voor .mainnav als scherm kleiner is dan 768px*/
+    /*Stijl voor .mainnav als scherm kleiner is dan 768px*/
     /*Op een klein scherm is "Discover more" enkel een link*/
-        .mainnavbar .mainnav .mega-menu,
-        .nav-item.dropdown:hover .mega-menu {
+    .mainnavbar .mainnav .mega-menu,
+    .nav-item.dropdown:hover .mega-menu {
         display: none;
     }
-  
+
     /*style of header als scherm kleiner is dan 768px*/
     /* Toon de hamburger */
     .nav-links {
@@ -1133,7 +1140,7 @@ form .textarea textarea:focus::placeholder {
     }
 
     aside h3 {
-        font-size: 1.5em;
+        font-size  : 1.5em;
         line-height: normal;
     }
 
