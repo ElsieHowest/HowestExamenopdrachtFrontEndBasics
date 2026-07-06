@@ -255,7 +255,7 @@ form {
     width           : 100%;
     position        : fixed;
     /* Zorgt ervoor dat de navbar bovenaan blijft staan */
-    z-index         : 1000;
+    z-index         : 2100;
     /* Zorgt ervoor dat de navbar boven andere elementen blijft */
     font-family     : "Open Sans", sans-serif;
 }

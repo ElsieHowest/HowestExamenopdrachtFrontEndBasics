@@ -208,7 +208,7 @@ main {
     background-color:  rgb(47, 67, 83);
     width: 100%;
     position: fixed; /* Zorgt ervoor dat de navbar bovenaan blijft staan */
-    z-index: 1000; /* Zorgt ervoor dat de navbar boven andere elementen blijft */
+    z-index: 2100; /* Zorgt ervoor dat de navbar boven andere elementen blijft */
     font-family    : "Open Sans", sans-serif;
 }
 

@@ -21,7 +21,8 @@ body {
 .banner {
     background-color: rgb(47, 67, 83);
     width           : 100%;
-    padding-top: 60px; /*Voorkomt dat contect verdwijnt achter 'Discover more'*/
+    padding-top     : 60px;
+    /*Voorkomt dat contect verdwijnt achter 'Discover more'*/
 }
 
 
@@ -70,7 +71,7 @@ p {
 
 .banner {
     background-color: rgb(47, 67, 83);
-     width           : 100%;
+    width           : 100%;
 }
 
 /*Style logo*/
@@ -117,9 +118,9 @@ p {
 .navbar ul li a {
     text-decoration: none;
     color          : #fff;
-     display: block;
-    padding: 10px 0;
-    transition: font-weight 0.2s;
+    display        : block;
+    padding        : 10px 0;
+    transition     : font-weight 0.2s;
 }
 
 .navbar ul li a:hover {
@@ -160,7 +161,7 @@ p {
 }
 
 /* Submenu wordt zichtbaar als je op de 'dropdown' li hoovert */
-.navbar ul li.dropdown:hover > .submenu {
+.navbar ul li.dropdown:hover>.submenu {
     display         : block;
     top             : 100%;
     left            : 5px;
@@ -224,49 +225,51 @@ main {
     gap           : 5px;
 }
 
-       /*Style of mainnavbar*/
+/*Style of mainnavbar*/
 .mainnavbar {
-    top: 0;
-    left: 0;
-    background-color:  rgb(47, 67, 83);
-    width: 100%;
-    position: fixed; /* Zorgt ervoor dat de navbar bovenaan blijft staan */
-    z-index: 1000; /* Zorgt ervoor dat de navbar boven andere elementen blijft */
-    font-family    : "Open Sans", sans-serif;
+    top             : 0;
+    left            : 0;
+    background-color: rgb(47, 67, 83);
+    width           : 100%;
+    position        : fixed;
+    /* Zorgt ervoor dat de navbar bovenaan blijft staan */
+    z-index         : 2100;
+    /* Zorgt ervoor dat de navbar boven andere elementen blijft */
+    font-family     : "Open Sans", sans-serif;
 }
 
 .mainnav {
-    display: flex;
-    list-style: none;
+    display        : flex;
+    list-style     : none;
     justify-content: center;
-    gap: 30px;
-    padding: 0;
-    margin: 0;
+    gap            : 30px;
+    padding        : 0;
+    margin         : 0;
 }
 
 .mainnavbar .mainnav .mega-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    width: 700px;
-    background: white;
-    padding: 20px;
-    gap: 30px;
+    display      : none;
+    position     : absolute;
+    top          : 100%;
+    left         : 50%;
+    width        : 700px;
+    background   : white;
+    padding      : 20px;
+    gap          : 30px;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow   : 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 /*Style of nav-item dropdown*/
-.mainnavbar > .mainnav >.nav-item > a{
-    display: flex;
+.mainnavbar>.mainnav>.nav-item>a {
+    display        : flex;
     justify-content: space-between;
-    color:  #fff;
+    color          : #fff;
     text-decoration: none;
-    margin: 12px;
-    padding: 10px 15px;
-    font-size: 16px;
-    font-weight: 600;
+    margin         : 12px;
+    padding        : 10px 15px;
+    font-size      : 16px;
+    font-weight    : 600;
 }
 
 .mainnavbar .mainnav .nav-item a:hover {
@@ -275,17 +278,19 @@ main {
 
 /*Style of mega-menu*/
 .mainnavbar .mainnav .mega-menu {
-    display: none; /* Standaard verborgen */
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%); /* Centreert het menu netjes */
-    width: 700px;
-    background: white;
-    padding: 25px;
-    gap: 30px;
+    display      : none;
+    /* Standaard verborgen */
+    position     : absolute;
+    top          : 100%;
+    left         : 50%;
+    transform    : translateX(-50%);
+    /* Centreert het menu netjes */
+    width        : 700px;
+    background   : white;
+    padding      : 25px;
+    gap          : 30px;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow   : 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 /*Active state of mega-menu*/
@@ -295,45 +300,46 @@ main {
 }
 
 .mainnavbar .mainnav .mega-menu .mega-column {
-    color:  rgb(47, 67, 83);
-    flex: 1;
+    color: rgb(47, 67, 83);
+    flex : 1;
 }
 
 .mega-menu .mega-column h4 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 14px;
-    border-bottom: 1px solid  rgb(47, 67, 83); /* Subtiel lijntje onder de categorie */
+    margin-top    : 0;
+    margin-bottom : 15px;
+    font-size     : 14px;
+    border-bottom : 1px solid rgb(47, 67, 83);
+    /* Subtiel lijntje onder de categorie */
     padding-bottom: 5px;
 }
 
 .mega-menu .mega-column ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding   : 0;
+    margin    : 0;
 }
 
 /* Stijl voor de links in de mega-menu kolommen */
 .mainnavbar .mainnav .mega-menu .mega-column ul li a {
-    color: rgb(47, 67, 83);
+    color          : rgb(47, 67, 83);
     text-decoration: none;
-    display: block;
-    padding: 5px 0;
-    font-size: 14px;
+    display        : block;
+    padding        : 5px 0;
+    font-size      : 14px;
 }
 
 .mainnavbar .mainnav .mega-menu .mega-column ul li a:hover {
-     transform: translateX(8px);
+    transform: translateX(8px);
     /* Schuift 8 pixels naar rechts */
 }
 
 /* Styling voor het Featured blokje */
 .mega-menu .mega-feature {
-    background: #f4efe6;
-    padding: 20px;
+    background   : #f4efe6;
+    padding      : 20px;
     border-radius: 10px;
-    width: 200px;
-    color: rgb(47, 67, 83);
+    width        : 200px;
+    color        : rgb(47, 67, 83);
 }
 
 .mega-menu .mega-feature h4 {
@@ -341,23 +347,23 @@ main {
 }
 
 .mega-menu .mega-feature p {
-    font-size: 14px;
+    font-size  : 14px;
     line-height: 1.4;
 }
 
-.mega-menu .mega-feature .cta{
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 12px;
-    background: rgb(47, 67, 83);
-    color: #fff;
+.mega-menu .mega-feature .cta {
+    display        : inline-block;
+    margin-top     : 10px;
+    padding        : 8px 12px;
+    background     : rgb(47, 67, 83);
+    color          : #fff;
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 14px;
+    border-radius  : 5px;
+    font-size      : 14px;
 }
 
-.mega-menu .mega-feature .cta:hover{
-    background: rgb(208, 129, 75);
+.mega-menu .mega-feature .cta:hover {
+    background : rgb(208, 129, 75);
     font-weight: 700;
 }
 
@@ -367,10 +373,10 @@ form {
 }
 
 .bar {
-    display: flex;
-    align-items: center;
+    display        : flex;
+    align-items    : center;
     justify-content: flex-end;
-    gap: 15px;
+    gap            : 15px;
 }
 
 .search {
@@ -380,12 +386,12 @@ form {
     padding      : 14px;
     border-radius: 28px;
     background   : #f4efe6;
-    transition: box-shadow 0.25s;
+    transition   : box-shadow 0.25s;
 }
 
 /*The user gives focus*/
-.search:focus-within{
-box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
+.search:focus-within {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 }
 
 .search-input {
@@ -407,47 +413,47 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 }
 
 /*Style of icons*/
-.icons .material-symbols-outlined{
-    display: inline-block;
-    margin: 25px;
+.icons .material-symbols-outlined {
+    display    : inline-block;
+    margin     : 25px;
     align-items: center;
-    gap: 16px;
-    cursor: pointer;
-    color: rgb(47, 67, 83);
+    gap        : 16px;
+    cursor     : pointer;
+    color      : rgb(47, 67, 83);
 }
 
 /*Style of inputbox*/
 .inputBox select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 12px;
-    font-family: "Open Sans", sans-serif;
-    outline: none;
+    width           : 100%;
+    padding         : 10px;
+    border          : 1px solid #ccc;
+    border-radius   : 8px;
+    font-size       : 12px;
+    font-family     : "Open Sans", sans-serif;
+    outline         : none;
     background-color: white;
 }
 
 /*Style for radio buttons*/
 .radioBox {
-    grid-column: 1 / span 2;
-    display: flex;
+    grid-column   : 1 / span 2;
+    display       : flex;
     flex-direction: column;
-    margin-top: 10px;
+    margin-top    : 10px;
 }
 
 .radioBox span {
-    color: rgb(47, 67, 83);
-    font-family: "Open Sans", sans-serif;
-    font-size: 13px;
-    font-weight: 500;
+    color        : rgb(47, 67, 83);
+    font-family  : "Open Sans", sans-serif;
+    font-size    : 13px;
+    font-weight  : 500;
     margin-bottom: 8px;
 }
 
 .radioBox label {
-    font-family: "Open Sans", sans-serif;
-    font-size: 13px;
-    color: rgb(47, 67, 83);
+    font-family  : "Open Sans", sans-serif;
+    font-size    : 13px;
+    color        : rgb(47, 67, 83);
     margin-bottom: 6px;
 }
 
@@ -764,11 +770,11 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
     gap           : 5px;
 }
 
-.footer-nav ul li{
+.footer-nav ul li {
     text-decoration: none;
-    list-style: none;
+    list-style     : none;
     font-family    : "Open Sans", sans-serif;
-    text-align: left;
+    text-align     : left;
 }
 
 .footer-nav ul li a {
@@ -878,15 +884,15 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
     }
 
     /*Stijl voor zoekbalk als scherm kleiner is dan 768px*/
-      .bar {
-        flex-direction: column;
-        align-items: center;
+    .bar {
+        flex-direction : column;
+        align-items    : center;
         justify-content: center;
-        gap: 15px;
+        gap            : 15px;
     }
 
     .search {
-        width: 100%;
+        width    : 100%;
         max-width: 450px;
     }
 
@@ -895,22 +901,22 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
     }
 
     .icons {
-        display: flex;
+        display        : flex;
         justify-content: center;
-        gap: 20px;
+        gap            : 20px;
     }
 
     .icons .material-symbols-outlined {
         margin: 0;
     }
 
-      /*Stijl voor .mainnav als scherm kleiner is dan 768px*/
+    /*Stijl voor .mainnav als scherm kleiner is dan 768px*/
     /*Op een klein scherm is "Discover more" enkel een link*/
-        .mainnavbar .mainnav .mega-menu,
-        .nav-item.dropdown:hover .mega-menu {
+    .mainnavbar .mainnav .mega-menu,
+    .nav-item.dropdown:hover .mega-menu {
         display: none;
     }
-  
+
     /*style of header als scherm kleiner is dan 768px*/
     /* Toon de hamburger */
     .nav-links {
@@ -997,12 +1003,12 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
         opacity: 1;
     }
 
-    
+
     /*Stijl voor .contactUs als scherm kleiner is dan 768px*/
     /* Contactpagina onder elkaar */
     .box {
         grid-template-columns: 1fr;
-        grid-template-areas:
+        grid-template-areas  :
             "form"
             "info"
             "map";
@@ -1026,12 +1032,12 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
 
     /* Knop onder de velden */
     .formBox .inputRow50 .submit {
-        grid-column: auto;
+        grid-column    : auto;
         justify-content: center;
     }
 
-     .submit input {
-        width: 100%;
+    .submit input {
+        width : 100%;
         margin: 10px 0;
     }
 
