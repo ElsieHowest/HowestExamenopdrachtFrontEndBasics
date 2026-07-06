@@ -304,9 +304,9 @@
         <!--Chatbox-->
         <section id="chatbox-right">
             <input type="checkbox" id="click">
-            <label for="click">
+            <label for="click" class="chat-toggle-label">
                 <span id="chat-icon" class="material-symbols-outlined">chat</span>
-                <span id="close-icon" class="material-symbols-outlined">close</span>
+                <span id="chat-close-icon" class="material-symbols-outlined">close</span>
             </label>
             <div class="chat">
                 <!--Header of chatbox-->
@@ -321,7 +321,7 @@
                             Please fill out the form below to start chatting.
                         </p>
                         <!--Form in chatbox-->
-                        <form action="https://jkorpela.fi/cgi-bin/echo.cgi">
+                        <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="get">
                             <!--Field one: name-->
                             <div class="field">
                                 <input id="chat-name" name="name" type="text" placeholder="Your name"
@@ -343,7 +343,6 @@
                 </div>
             </div>
         </section>
-
     </main>
 
     <!--Footer-->

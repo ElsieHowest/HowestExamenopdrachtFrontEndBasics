@@ -359,5 +359,133 @@ p {
     color              : #ffff;
 }
 
+/*Mediaquery*/
+@media (max-width: 768px) {
 
+    /*Stijl vooor logo als scherm kleiner is dan 768px*/
+    .logo {
+        width: 60px;
+    }
 
+    /*style of header als scherm kleiner is dan 768px*/
+    /* Toon de hamburger */
+    .nav-links {
+        display       : none;
+        position      : absolute;
+        top           : 100%;
+        left          : 0;
+        width         : 100%;
+        flex-direction: column;
+        background    : transparent;
+        border-radius : 12px;
+    }
+
+    .nav-links li {
+        margin    : 0;
+        /*Horizontale marge van desktop overschrijven*/
+        width     : 100%;
+        text-align: left;
+    }
+
+    .nav-links li a {
+        display      : block;
+        padding      : 15px 0;
+        /*Groter tapgebied + verticale ruimte tussen items*/
+    }
+
+    /* Submenu geforceerd verbergen op mobiel */
+    .nav-links .submenu,
+    .nav-links .dropdown:hover .submenu,
+    .nav-links .dropdown .submenu {
+        display: none !important;
+    }
+
+    /* De parent container heeft een absolute positionering */
+    .navbar {
+        position       : relative;
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        padding        : 10px 20px;
+    }
+
+       /*Hover-lijn volledig uitschakelen op mobiel*/
+    .navbar ul li::after {
+        display: none;
+    }
+
+    /*Content lager plaatsen en centreren op mobiel*/
+    .content {
+        top        : 50%; /*Verplaatst de tekst lager op het scherm*/
+        margin-left: 0;   /*Verwijdert de vaste linkermarge van desktop*/
+        padding    : 20px 15px;
+    }
+
+    .content h1 {
+        font-size: 2rem; /*Kleinere titel op smal scherm*/
+    }
+
+    .content p {
+        font-size: 0.9rem;
+    }
+
+    .content .tagline {
+        font-size: 1rem;
+    }
+
+    .menu-button,
+    .menu-toggle-label {
+        display   : flex;
+        position  : absolute;
+        right     : 20px;
+        /* Schuift de knop naar de rechterkant */
+        top       : 50%;
+        /* Zet de knop verticaal in het midden van de bar */
+        transform : translateY(-50%);
+        /* Zorgt voor perfecte verticale uitlijning */
+        background: transparent;
+        width     : 30px;
+        /* Geef de knop een vaste breedte */
+        height    : 30px;
+        /* Geef de knop een vaste hoogte */
+        color     : #ffff;
+        cursor    : pointer;
+        z-index   : 10;
+        /* Zorgt dat het icoon altijd bovenop het menu ligt */
+    }
+
+    /*Stijl voor icoon header*/
+    .menu-toggle-label span {
+        position  : absolute;
+        top       : 50%;
+        left      : 50%;
+        transform : translate(-50%, -50%);
+        transition: all 0.5s ease;
+    }
+
+    /*Start state of chat button*/
+    .menu-toggle-label span#menu-icon {
+        opacity: 1;
+    }
+
+    .menu-toggle-label span#menu-close-icon {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked~.menu-toggle-label span#menu-icon {
+        opacity  : 0;
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    #menu-toggle:checked~.menu-toggle-label span#menu-close-icon {
+        opacity  : 1;
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    /*Wanneer checkbox is aangevinkt, wordt menu getoond*/
+    #menu-toggle:checked~.nav-links {
+        display: flex;
+        /*Het menu verschijnt*/
+        opacity: 1;
+    }
+}

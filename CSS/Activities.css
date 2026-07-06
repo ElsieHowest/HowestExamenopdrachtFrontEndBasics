@@ -457,10 +457,30 @@ form {
 }
 
 /*Chatbox*/
+/*Titelstijlen chatbox*/
+.chat .head-text-chat h2 {
+    color : white;
+    height: 100px;
+}
+
+.chat .head-text-chat h3 {
+    color : white;
+    height: 100px;
+}
+
+/*Wanneer checkbox is aangevinkt: toon chatbox*/
+#click:checked~.chat {
+    opacity: 1;
+    visibility: visible;
+    bottom : 85px;
+}
+
+/*Chatbox head*/
 .chat {
     padding         : 1.5rem;
     margin          : 1.5em;
     position        : fixed;
+    /*Blijft altijd op een vaste plaats staan*/
     right           : 15px;
     height          : 550px;
     bottom          : 85px;
@@ -472,19 +492,6 @@ form {
     box-shadow      : 0px 15px 20px rgb(0, 0, 0, 0.1);
     opacity         : 0;
     transition      : all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.chat .head-text-chat h2 {
-    color : white;
-    height: 100px;
-}
-
-.chat .head-text-chat h3 {
-    color      : white;
-    font-size  : 15px;
-    font-weight: 600;
-    margin     : 0 auto;
-    line-height: 1.3;
 }
 
 .chat .head-text-chat {
@@ -515,6 +522,7 @@ form {
     height     : 20px;
 }
 
+/*4) Chatbox form*/
 .chat-box form {
     padding: 10px 12px;
     margin : 20px 0;
@@ -593,10 +601,8 @@ form .textarea textarea:focus::placeholder {
 }
 
 .chat-box form button:hover {
-    background : rgb(208, 129, 75);
-    font-weight: bold;
+    font-weight: 700;
 }
-
 
 .chat-box form button:active {
     transform: scale(0.97);
@@ -607,7 +613,7 @@ form .textarea textarea:focus::placeholder {
     display: none;
 }
 
-label {
+#chatbox-right label {
     position        : fixed;
     right           : 30px;
     bottom          : 20px;
@@ -620,10 +626,11 @@ label {
     border-radius   : 50px;
     font-size       : 30px;
     cursor          : pointer;
+    z-index: 999;
 }
 
 /*Stijl voor icoon chatbox*/
-label span {
+#chatbox-right label span {
     position  : absolute;
     top       : 50%;
     left      : 50%;
@@ -631,28 +638,33 @@ label span {
     transition: all 0.5s ease;
 }
 
-/*Start state of chat button*/
-label span#chat-icon {
+/* Extra check: als de checkbox NIET is aangevinkt, dwing de juiste opacity af */
+#click:not(:checked) ~ label span#chat-icon {
     opacity: 1;
 }
 
-label span#close-icon {
+#click:not(:checked) ~ label span#chat-close-icon {
     opacity: 0;
 }
 
+/*Start state of chat button*/
+.chatbox-right label span#chat-icon {
+    opacity: 1 !important; 
+}
+
+.chatbox-right label span#chat-close-icon {
+    opacity: 0 !important;
+}
+
+/*Klik-animaties voor iconen*/
 #click:checked~label span#chat-icon {
     opacity  : 0;
     transform: translate(-50%, -50%) rotate(180deg);
 }
 
-#click:checked~label span#close-icon {
+#click:checked~label span#chat-close-icon {
     opacity  : 1;
     transform: translate(-50%, -50%) rotate(180deg);
-}
-
-#click:checked~.chat {
-    opacity: 1;
-    bottom : 85px;
 }
 
 /*Stijl voor footer*/
@@ -828,21 +840,26 @@ label span#close-icon {
 /*Mediaquery*/
 @media (max-width: 768px) {
 
+    /* Zorg dat de checkbox zelf onzichtbaar blijft */
+    #menu-toggle {
+        display: none;
+    }
+
     /*Stijl vooor logo als scherm kleiner is dan 768px*/
     .logo {
         width: 60px;
     }
 
     /*Stijl voor zoekbalk als scherm kleiner is dan 768px*/
-      .bar {
-        flex-direction: column;
-        align-items: center;
+    .bar {
+        flex-direction : column;
+        align-items    : center;
         justify-content: center;
-        gap: 15px;
+        gap            : 15px;
     }
 
     .search {
-        width: 100%;
+        width    : 100%;
         max-width: 450px;
     }
 
@@ -851,15 +868,113 @@ label span#close-icon {
     }
 
     .icons {
-        display: flex;
+        display        : flex;
         justify-content: center;
-        gap: 20px;
+        gap            : 20px;
     }
 
     .icons .material-symbols-outlined {
         margin: 0;
     }
-    
+
+    /*Stijl voor .mainnav als scherm kleiner is dan 768px*/
+    /*Op een klein scherm is "Discover more" enkel een link*/
+        .mainnavbar .mainnav .mega-menu,
+        .nav-item.dropdown:hover .mega-menu {
+        display: none;
+    }
+  
+    /*style of header als scherm kleiner is dan 768px*/
+    /* Toon de hamburger */
+    .nav-links {
+        display       : none;
+        position      : absolute;
+        top           : 100%;
+        left          : 0;
+        width         : 100%;
+        flex-direction: column;
+        background    : rgb(47, 67, 83);
+        padding       : 20px 0;
+        border-radius : 12px;
+    }
+
+    /* Submenu geforceerd verbergen op mobiel */
+    .nav-links .submenu,
+    .nav-links .dropdown:hover .submenu,
+    .nav-links .dropdown .submenu {
+        display: none !important;
+    }
+
+    /* De parent container heeft een absolute positionering */
+    .navbar {
+        position       : relative;
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        padding        : 10px 20px;
+    }
+
+    .menu-button,
+    .menu-toggle-label {
+        display   : flex;
+        position  : absolute;
+        right     : 20px;
+        /* Schuift de knop naar de rechterkant */
+        top       : 50%;
+        /* Zet de knop verticaal in het midden van de bar */
+        transform : translateY(-50%);
+        /* Zorgt voor perfecte verticale uitlijning */
+        background: transparent;
+        width     : 30px;
+        /* Geef de knop een vaste breedte */
+        height    : 30px;
+        /* Geef de knop een vaste hoogte */
+        color     : #ffff;
+        cursor    : pointer;
+        z-index   : 10;
+        /* Zorgt dat het icoon altijd bovenop het menu ligt */
+    }
+
+    /*Stijl voor icoon header*/
+    .menu-toggle-label span {
+        position  : absolute;
+        top       : 50%;
+        left      : 50%;
+        transform : translate(-50%, -50%);
+        transition: all 0.5s ease;
+    }
+
+    /*Start state of chat button*/
+    .menu-toggle-label span#menu-icon {
+        opacity: 1;
+    }
+
+    .menu-toggle-label span#menu-close-icon {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked~.menu-toggle-label span#menu-icon {
+        opacity  : 0;
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    #menu-toggle:checked~.menu-toggle-label span#menu-close-icon {
+        opacity  : 1;
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    /*Wanneer checkbox is aangevinkt, wordt menu getoond*/
+    #menu-toggle:checked~.nav-links {
+        display: flex;
+        /*Het menu verschijnt*/
+        opacity: 1;
+    }
+
+    /*stijl voor card-ietms als scherm kleiner is dan 768px*/
+    .card-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     /*Stijl voor footer als scherm kleiner is dan 768px*/
     .footer-distributed {
         display         : flex;

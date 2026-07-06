@@ -502,9 +502,8 @@ form {
     opacity: 1;
 }
 
-
 /*Chatbox*/
-/*1) Titelstijlen chatbox*/
+/*Titelstijlen chatbox*/
 .chat .head-text-chat h2 {
     color : white;
     height: 100px;
@@ -515,14 +514,22 @@ form {
     height: 100px;
 }
 
-/*2) Chatbox head*/
+/*Wanneer checkbox is aangevinkt: toon chatbox*/
+#click:checked~.chat {
+    opacity: 1;
+    visibility: visible;
+    bottom : 85px;
+}
+
+/*Chatbox head*/
 .chat {
     padding         : 1.5rem;
     margin          : 1.5em;
     position        : fixed;
+    /*Blijft altijd op een vaste plaats staan*/
     right           : 15px;
     height          : 550px;
-    bottom          : 60px;
+    bottom          : 85px;
     width           : 450px;
     max-width       : calc(100% - 30px);
     background-color: #ffffff;
@@ -619,11 +626,11 @@ form .textarea textarea:focus::placeholder {
     font-size    : 16px;
 }
 
-.chat-box form .field textarea:focus {
-    border: rgb(208, 129, 75);
+.chat-box form .field textarea:focus::placeholder {
+    border-color: rgb(208, 129, 75);
 }
 
-/*5) Style button chatbox*/
+/*Style button chatbox*/
 .chat-box form button {
     font-family  : "Open Sans", sans-serif;
     border       : none;
@@ -640,21 +647,19 @@ form .textarea textarea:focus::placeholder {
 }
 
 .chat-box form button:hover {
-    background : rgb(208, 129, 75);
-    font-weight: bold;
+    font-weight: 700;
 }
-
 
 .chat-box form button:active {
     transform: scale(0.97);
 }
 
-/*6) Icon chatbox*/
+/*Icon chatbox*/
 #click {
     display: none;
 }
 
-label {
+#chatbox-right label {
     position        : fixed;
     right           : 30px;
     bottom          : 20px;
@@ -667,10 +672,11 @@ label {
     border-radius   : 50px;
     font-size       : 30px;
     cursor          : pointer;
+    z-index: 999;
 }
 
-/*7) Stijl voor icons chatbox*/
-label span {
+/*Stijl voor icoon chatbox*/
+#chatbox-right label span {
     position  : absolute;
     top       : 50%;
     left      : 50%;
@@ -678,30 +684,33 @@ label span {
     transition: all 0.5s ease;
 }
 
-/*Start state of chat button*/
-label span#chat-icon {
+/* Extra check: als de checkbox NIET is aangevinkt, dwing de juiste opacity af */
+#click:not(:checked) ~ label span#chat-icon {
     opacity: 1;
-
 }
 
-label span#close-icon {
+#click:not(:checked) ~ label span#chat-close-icon {
     opacity: 0;
 }
 
+/*Start state of chat button*/
+.chatbox-right label span#chat-icon {
+    opacity: 1 !important; 
+}
+
+.chatbox-right label span#chat-close-icon {
+    opacity: 0 !important;
+}
+
+/*Klik-animaties voor iconen*/
 #click:checked~label span#chat-icon {
     opacity  : 0;
     transform: translate(-50%, -50%) rotate(180deg);
 }
 
-#click:checked~label span#close-icon {
+#click:checked~label span#chat-close-icon {
     opacity  : 1;
     transform: translate(-50%, -50%) rotate(180deg);
-}
-
-
-#click:checked~.chat {
-    opacity: 1;
-    bottom : 85px;
 }
 
 /*Stijl voor footer*/
