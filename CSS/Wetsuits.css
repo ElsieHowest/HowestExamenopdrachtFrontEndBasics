@@ -260,7 +260,7 @@ form {
     left: 0;
     background-color:  rgb(47, 67, 83);
     width: 100%;
-    position: sticky; /* Zorgt ervoor dat de navbar bovenaan blijft staan */
+    position: fixed; /* Zorgt ervoor dat de navbar bovenaan blijft staan */
     z-index: 1000; /* Zorgt ervoor dat de navbar boven andere elementen blijft */
     font-family    : "Open Sans", sans-serif;
 }
