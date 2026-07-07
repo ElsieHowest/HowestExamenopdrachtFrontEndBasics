@@ -748,11 +748,11 @@ form .textarea textarea:focus::placeholder {
 
 /*Start state of chat button*/
 #chatbox-right label span#chat-icon {
-    opacity: 1 !important;
+    opacity: 1;
 }
 
 #chatbox-right label span#chat-close-icon {
-    opacity: 0 !important;
+    opacity: 0;
 }
 
 /*Klik-animaties voor iconen*/
@@ -955,7 +955,7 @@ form .textarea textarea:focus::placeholder {
     .logo {
         width: 80px;
     }
-    
+
     /*Stijl voor zoekbalk als scherm kleiner is dan 768px*/
     .bar {
         flex-direction : column;

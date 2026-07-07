@@ -746,11 +746,11 @@ form .textarea textarea:focus::placeholder {
 
 /*Start state of chat button*/
 #chatbox-right label span#chat-icon {
-    opacity: 1 !important;
+    opacity: 1;
 }
 
 #chatbox-right label span#chat-close-icon {
-    opacity: 0 !important;
+    opacity: 0;
 }
 
 /*Klik-animaties voor iconen*/
@@ -811,7 +811,6 @@ form .textarea textarea:focus::placeholder {
     color         : #fff;
     vertical-align: middle;
 }
-
 
 /*3) Logo seahorse footer*/
 .logo-footer #seahorse {
