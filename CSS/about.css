@@ -27,7 +27,8 @@ body {
 .banner {
     background-color: rgb(47, 67, 83);
     width           : 100%;
-    padding-top: 60px; /*Voorkomt dat contect verdwijnt achter 'Discover more'*/
+    padding-top     : 60px;
+    /*Voorkomt dat contect verdwijnt achter 'Discover more'*/
 }
 
 /*Style logo*/
@@ -290,7 +291,8 @@ main {
     width           : 100%;
     position        : fixed;
     /* Zorgt ervoor dat de navbar bovenaan blijft staan */
-    z-index         : 2100; /*Z-index moet hoger zijn dan .navbar*/
+    z-index         : 2100;
+    /*Z-index moet hoger zijn dan .navbar*/
     /* Zorgt ervoor dat de navbar boven andere elementen blijft */
     font-family     : "Open Sans", sans-serif;
 }
@@ -720,13 +722,6 @@ aside a:hover {
     height: 100px;
 }
 
-/*Wanneer checkbox is aangevinkt: toon chatbox*/
-#click:checked~.chat {
-    opacity: 1;
-    visibility: visible;
-    bottom : 85px;
-}
-
 /*Chatbox head*/
 .chat {
     padding         : 1.5rem;
@@ -743,7 +738,19 @@ aside a:hover {
     border-radius   : 15px;
     box-shadow      : 0px 15px 20px rgb(0, 0, 0, 0.1);
     opacity         : 0;
+    visibility      : hidden;
+    pointer-events  : none;
+    /*blokkeert klikken/hover als hij dicht is */
     transition      : all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/*Wanneer checkbox is aangevinkt: toon chatbox*/
+#click:checked~.chat {
+    opacity       : 1;
+    visibility    : visible;
+    pointer-events: auto;
+    /* Klikbaar als hij open is */
+    bottom        : 85px;
 }
 
 .chat .head-text-chat {
@@ -878,7 +885,7 @@ form .textarea textarea:focus::placeholder {
     border-radius   : 50px;
     font-size       : 30px;
     cursor          : pointer;
-    z-index: 999;
+    z-index         : 999;
 }
 
 /*Stijl voor icoon chatbox*/
@@ -891,11 +898,11 @@ form .textarea textarea:focus::placeholder {
 }
 
 /* Extra check: als de checkbox NIET is aangevinkt, dwing de juiste opacity af */
-#click:not(:checked) ~ label span#chat-icon {
+#click:not(:checked)~label span#chat-icon {
     opacity: 1;
 }
 
-#click:not(:checked) ~ label span#chat-close-icon {
+#click:not(:checked)~label span#chat-close-icon {
     opacity: 0;
 }
 
@@ -1135,11 +1142,11 @@ form .textarea textarea:focus::placeholder {
 
     /*Stijl voor .mainnav als scherm kleiner is dan 768px*/
     /*Op een klein scherm is "Discover more" enkel een link*/
-        .mainnavbar .mainnav .mega-menu,
-        .nav-item.dropdown:hover .mega-menu {
+    .mainnavbar .mainnav .mega-menu,
+    .nav-item.dropdown:hover .mega-menu {
         display: none;
     }
-  
+
     /*style of header als scherm kleiner is dan 768px*/
     /* Toon de hamburger */
     .nav-links {
