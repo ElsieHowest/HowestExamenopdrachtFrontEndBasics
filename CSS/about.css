@@ -766,7 +766,7 @@ aside a:hover {
     width  : 100%;
 }
 
-.chat-box .describe-text {
+.chat .chat-box .describe-text {
     color      : #555;
     text-align : center;
     font-size  : 14px;
