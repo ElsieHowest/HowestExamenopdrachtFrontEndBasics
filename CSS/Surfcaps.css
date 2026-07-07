@@ -937,9 +937,14 @@ form .textarea textarea:focus::placeholder {
 /*Mediaquery*/
 @media (max-width: 768px) {
 
+      /* Zorg dat de checkbox zelf onzichtbaar blijft */
+    #menu-toggle {
+        display: none;
+    }
+
     /*Stijl vooor logo als scherm kleiner is dan 768px*/
     .logo {
-        width: 60px;
+        width: 80px;
     }
 
     /*Stijl voor zoekbalk als scherm kleiner is dan 768px*/
