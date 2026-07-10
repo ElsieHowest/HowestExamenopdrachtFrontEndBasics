@@ -624,14 +624,8 @@ form {
     box-shadow: none;
 }
 
-
 /*Chatbox*/
 /*Titelstijlen chatbox*/
-.chat .head-text-chat h2 {
-    color : white;
-    height: 100px;
-}
-
 .chat .head-text-chat h3 {
     color : white;
     height: 100px;
@@ -1229,6 +1223,9 @@ form .textarea textarea:focus::placeholder {
     .icons .material-symbols-outlined {
         margin: 0;
     }
+
+    /*Stijl for category-cards als het scherm kleiner is dan 768px*/
+    
 
     /*Stijl voor .shop als scherm kleiner is dan 768px*/
     /*Cards onder elkaar*/

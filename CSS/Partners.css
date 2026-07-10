@@ -487,9 +487,7 @@ form {
     object-fit: contain;
 }
 
-/*
-1) style of card items
-*/
+/*1) style of card items*/
 .card-list {
     display              : grid;
     grid-template-columns: repeat(3, 1fr);
@@ -520,7 +518,6 @@ form {
 }
 
 .card-list .card-item:hover {
-    border-color: 2px solid rgb(47, 67, 83);
     box-shadow  : 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
@@ -591,7 +588,6 @@ form {
     /* Klikbaar als hij open is */
     bottom        : 85px;
 }
-
 
 .chat .head-text-chat {
     font-family    : "Open Sans", sans-serif;

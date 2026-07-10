@@ -534,14 +534,8 @@ form {
     box-shadow: none;
 }
 
-
 /*Chatbox*/
 /*Titelstijlen chatbox*/
-.chat .head-text-chat h2 {
-    color : white;
-    height: 100px;
-}
-
 .chat .head-text-chat h3 {
     color : white;
     height: 100px;
