@@ -456,9 +456,9 @@ form {
     width     : 100%;
     height    : 300px;
     /*Alle afbeeldingen dezelfde hoogte*/
-    object-fit: contain;
-    /*Past de afbeelding telkens aan*/
+    object-fit: cover;
     display   : block;
+    transition: opacity 0.4s ease;
 }
 
 /*Hover effect images*/
@@ -466,12 +466,6 @@ form {
     position: relative;
     width   : 100%;
     overflow: hidden;
-}
-
-.card-item img {
-    width     : 100%;
-    display   : block;
-    transition: opacity 0.4s ease;
 }
 
 /* tweede image bovenop eerste */
