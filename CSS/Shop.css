@@ -421,7 +421,7 @@ form {
 }
 
 .card-list>* {
-    flex: 1 1 300px;
+    flex: 1 1 200px;
 }
 
 .card-list .card-item {
@@ -855,7 +855,7 @@ form .textarea textarea:focus::placeholder {
 /*Mediaquery*/
 @media (max-width: 768px) {
 
-     /* Zorg dat de checkbox zelf onzichtbaar blijft */
+    /* Zorg dat de checkbox zelf onzichtbaar blijft */
     #menu-toggle {
         display: none;
     }
@@ -922,6 +922,7 @@ form .textarea textarea:focus::placeholder {
 
     /* De parent container heeft een absolute positionering */
     .navbar {
+        width          : 85%;
         position       : relative;
         display        : flex;
         justify-content: space-between;
@@ -984,7 +985,6 @@ form .textarea textarea:focus::placeholder {
         /*Het menu verschijnt*/
         opacity: 1;
     }
-
 
     /*Stijl voor .shop als scherm kleiner is dan 768px*/
     /*Cards onder elkaar*/

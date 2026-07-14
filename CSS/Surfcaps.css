@@ -937,7 +937,7 @@ form .textarea textarea:focus::placeholder {
 /*Mediaquery*/
 @media (max-width: 768px) {
 
-      /* Zorg dat de checkbox zelf onzichtbaar blijft */
+    /* Zorg dat de checkbox zelf onzichtbaar blijft */
     #menu-toggle {
         display: none;
     }
@@ -1004,6 +1004,7 @@ form .textarea textarea:focus::placeholder {
 
     /* De parent container heeft een absolute positionering */
     .navbar {
+        width          : 85%;
         position       : relative;
         display        : flex;
         justify-content: space-between;

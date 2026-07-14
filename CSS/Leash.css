@@ -590,7 +590,6 @@ form {
     bottom        : 85px;
 }
 
-
 .chat .head-text-chat {
     font-family    : "Open Sans", sans-serif;
     background     : #2f3e46;
@@ -1003,6 +1002,7 @@ form .textarea textarea:focus::placeholder {
 
     /* De parent container heeft een absolute positionering */
     .navbar {
+        width          : 85px;
         position       : relative;
         display        : flex;
         justify-content: space-between;

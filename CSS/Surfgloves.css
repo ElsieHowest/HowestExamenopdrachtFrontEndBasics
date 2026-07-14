@@ -450,6 +450,7 @@ form {
     object-fit: contain;
     /*Past de afbeelding telkens aan*/
     display   : block;
+     transition: opacity 0.4s ease;
 }
 
 /*Hover effect images*/
@@ -457,12 +458,6 @@ form {
     position: relative;
     width   : 100%;
     overflow: hidden;
-}
-
-.card-item img {
-    width     : 100%;
-    display   : block;
-    transition: opacity 0.4s ease;
 }
 
 .card-item a {
@@ -479,13 +474,6 @@ form {
     font-size : 1rem;
     padding   : 0;
     text-align: center;
-}
-
-.card-list .card-item p:last-child {
-    font-size  : 12px;
-    color      : rgba(35, 50, 64, 0.95);
-    font-weight: bold;
-    margin-top : 5px;
 }
 
 /*Style of buttons*/
@@ -986,6 +974,7 @@ form .textarea textarea:focus::placeholder {
 
     /* De parent container heeft een absolute positionering */
     .navbar {
+        width          : 85%;
         position       : relative;
         display        : flex;
         justify-content: space-between;

@@ -388,8 +388,8 @@ p {
     }
 
     .nav-links li a {
-        display      : block;
-        padding      : 15px 0;
+        display: block;
+        padding: 15px 0;
         /*Groter tapgebied + verticale ruimte tussen items*/
     }
 
@@ -402,6 +402,7 @@ p {
 
     /* De parent container heeft een absolute positionering */
     .navbar {
+        width          : 85px;
         position       : relative;
         display        : flex;
         justify-content: space-between;
@@ -409,20 +410,23 @@ p {
         padding        : 10px 20px;
     }
 
-       /*Hover-lijn volledig uitschakelen op mobiel*/
+    /*Hover-lijn volledig uitschakelen op mobiel*/
     .navbar ul li::after {
         display: none;
     }
 
     /*Content lager plaatsen en centreren op mobiel*/
     .content {
-        top        : 50%; /*Verplaatst de tekst lager op het scherm*/
-        margin-left: 0;   /*Verwijdert de vaste linkermarge van desktop*/
+        top        : 50%;
+        /*Verplaatst de tekst lager op het scherm*/
+        margin-left: 0;
+        /*Verwijdert de vaste linkermarge van desktop*/
         padding    : 20px 15px;
     }
 
     .content h1 {
-        font-size: 2rem; /*Kleinere titel op smal scherm*/
+        font-size: 2rem;
+        /*Kleinere titel op smal scherm*/
     }
 
     .content p {

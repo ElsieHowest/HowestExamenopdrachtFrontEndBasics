@@ -459,9 +459,9 @@ main .shop {
     width     : 100%;
     height    : 300px;
     /*Alle afbeeldingen dezelfde hoogte*/
-    object-fit: contain;
-    /*Past de afbeelding telkens aan*/
+    object-fit: cover;
     display   : block;
+      transition: opacity 0.4s ease;
 }
 
 /*Hover effect images*/
@@ -469,12 +469,6 @@ main .shop {
     position: relative;
     width   : 100%;
     overflow: hidden;
-}
-
-.card-item img {
-    width     : 100%;
-    display   : block;
-    transition: opacity 0.4s ease;
 }
 
 /* tweede image bovenop eerste */
@@ -500,13 +494,6 @@ main .shop {
     font-size : 1rem;
     padding   : 0;
     text-align: center;
-}
-
-.card-list .card-item p:last-child {
-    font-size  : 12px;
-    color      : rgba(35, 50, 64, 0.95);
-    font-weight: bold;
-    margin-top : 5px;
 }
 
 /*Style of buttons*/
@@ -592,7 +579,6 @@ main .shop {
     /* Klikbaar als hij open is */
     bottom        : 85px;
 }
-
 
 .chat .head-text-chat {
     font-family    : "Open Sans", sans-serif;
@@ -947,7 +933,7 @@ form .textarea textarea:focus::placeholder {
 /*Mediaquery*/
 @media (max-width: 768px) {
 
-   /* Zorg dat de checkbox zelf onzichtbaar blijft */
+    /* Zorg dat de checkbox zelf onzichtbaar blijft */
     #menu-toggle {
         display: none;
     }
@@ -1014,6 +1000,7 @@ form .textarea textarea:focus::placeholder {
 
     /* De parent container heeft een absolute positionering */
     .navbar {
+        width          : 85px;
         position       : relative;
         display        : flex;
         justify-content: space-between;

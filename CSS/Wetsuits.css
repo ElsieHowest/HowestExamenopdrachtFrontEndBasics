@@ -1018,6 +1018,7 @@ form .textarea textarea:focus::placeholder {
 
     /* De parent container heeft een absolute positionering */
     .navbar {
+        width          : 85%;
         position       : relative;
         display        : flex;
         justify-content: space-between;
@@ -1081,6 +1082,10 @@ form .textarea textarea:focus::placeholder {
         opacity: 1;
     }
 
+    /*Stijl for category-cards als het scherm kleiner is dan 768px*/
+    .category-container {
+        grid-template-columns: 1fr;
+    }
 
     /*Stijl voor .shop als scherm kleiner is dan 768px*/
     /*Cards onder elkaar*/

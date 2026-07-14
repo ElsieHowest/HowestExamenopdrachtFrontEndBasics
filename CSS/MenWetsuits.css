@@ -508,6 +508,7 @@ form {
     object-fit: contain;
     /*Past de afbeelding telkens aan*/
     display   : block;
+     transition: opacity 0.4s ease;
 }
 
 /*Hover effect images*/
@@ -515,12 +516,6 @@ form {
     position: relative;
     width   : 100%;
     overflow: hidden;
-}
-
-.card-item img {
-    width     : 100%;
-    display   : block;
-    transition: opacity 0.4s ease;
 }
 
 /* tweede image bovenop eerste */
@@ -546,13 +541,6 @@ form {
     font-size : 1rem;
     padding   : 0;
     text-align: center;
-}
-
-.card-list .card-item p:last-child {
-    font-size  : 12px;
-    color      : rgba(35, 50, 64, 0.95);
-    font-weight: bold;
-    margin-top : 5px;
 }
 
 /*Style of buttons*/
@@ -990,64 +978,6 @@ form .textarea textarea:focus::placeholder {
         width: 60px;
     }
 
-    /*stijl voor card-itms als scherm kleiner is dan 768px*/
-    .card-item img {
-        height: 220px;
-    }
-
-    /*Stijl voor footer als scherm kleiner is dan 768px*/
-    .footer-distributed {
-        display         : flex;
-        flex-direction  : column;
-        flex-wrap       : nowrap;
-        justify-content : center;
-        /* Zorgt dat de kolommen als geheel gecentreerd worden */
-        align-items     : center;
-        /* Centreert de kolommen verticaal indien nodig */
-        background-color: rgb(47, 67, 83);
-        width           : 100%;
-        margin-top      : 10px;
-        padding         : 50px 50px 60px 50px;
-        bottom          : 0;
-        box-sizing      : border-box;
-        height          : auto;
-        /*De footer past zich automatisch aan*/
-        gap             : 30px;
-    }
-
-    .footer-distributed .footer-left,
-    .footer-distributed .footer-center,
-    .footer-distributed .footer-right {
-        width     : 100%;
-        text-align: center;
-    }
-
-    .footer-distributed .footer-left .footer-nav {
-        display       : flex;
-        flex-direction: column;
-        text-align    : center;
-        align-items   : center;
-    }
-
-    .footer-distributed .footer-left .footer-nav ul {
-        padding   : 0;
-        margin    : 0;
-        list-style: none;
-    }
-
-    .footer-distributed .footer-left .footer-nav ul li {
-        text-align: center;
-    }
-}
-
-/*Mediaquery*/
-@media (max-width: 768px) {
-
-    /*Stijl vooor logo als scherm kleiner is dan 768px*/
-    .logo {
-        width: 60px;
-    }
-
     /*Stijl voor zoekbalk als scherm kleiner is dan 768px*/
     .bar {
         flex-direction : column;
@@ -1105,6 +1035,7 @@ form .textarea textarea:focus::placeholder {
 
     /* De parent container heeft een absolute positionering */
     .navbar {
+        width          : 85%;
         position       : relative;
         display        : flex;
         justify-content: space-between;
@@ -1168,6 +1099,10 @@ form .textarea textarea:focus::placeholder {
         opacity: 1;
     }
 
+    /*Stijl for category-cards als het scherm kleiner is dan 768px*/
+    .category-container {
+        grid-template-columns: 1fr;
+    }
 
     /*Stijl voor .shop als scherm kleiner is dan 768px*/
     /*Cards onder elkaar*/

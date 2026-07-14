@@ -456,6 +456,7 @@ form {
     object-fit: contain;
     /*Past de afbeelding telkens aan*/
     display   : block;
+    transition: opacity 0.4s ease;
 }
 
 /*Hover effect images*/
@@ -465,25 +466,12 @@ form {
     overflow: hidden;
 }
 
-.card-item img {
-    width     : 100%;
-    display   : block;
-    transition: opacity 0.4s ease;
-}
-
 .card-list .card-item h3,
 .card-list .card-item p {
     color     : rgb(47, 67, 83);
     font-size : 1rem;
     padding   : 0;
     text-align: center;
-}
-
-.card-list .card-item p:last-child {
-    font-size  : 12px;
-    color      : rgba(35, 50, 64, 0.95);
-    font-weight: bold;
-    margin-top : 5px;
 }
 
 /*Style of buttons*/
@@ -569,7 +557,6 @@ form {
     /* Klikbaar als hij open is */
     bottom        : 85px;
 }
-
 
 .chat .head-text-chat {
     font-family    : "Open Sans", sans-serif;
@@ -792,7 +779,6 @@ form .textarea textarea:focus::placeholder {
     vertical-align: middle;
 }
 
-
 /*3) Logo seahorse footer*/
 .logo-footer #seahorse {
     height     : 135px;
@@ -917,7 +903,7 @@ form .textarea textarea:focus::placeholder {
 /*Mediaquery*/
 @media (max-width: 768px) {
 
-     /* Zorg dat de checkbox zelf onzichtbaar blijft */
+    /* Zorg dat de checkbox zelf onzichtbaar blijft */
     #menu-toggle {
         display: none;
     }
@@ -984,6 +970,7 @@ form .textarea textarea:focus::placeholder {
 
     /* De parent container heeft een absolute positionering */
     .navbar {
+        width          : 85%;
         position       : relative;
         display        : flex;
         justify-content: space-between;
