@@ -63,6 +63,54 @@ p {
     display: none;
 }
 
+/* Location breadcrumb */
+.location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    max-width: 800px;
+    margin: 10px auto;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+}
+
+/* Breadcrumb links */
+.location a {
+    color: rgb(47, 67, 83);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+.location a:hover {
+    color: rgb(47, 67, 83);
+    font-weight: 700;
+}
+
+/* Home icoon */
+.location .home-icon {
+    font-size: 25px;
+    color: rgb(47, 67, 83);
+    transition: 0.3s ease;
+}
+
+.location .home-icon:hover {
+    color: rgb(47, 67, 83);
+    font-weight: 700;
+}
+
+/* Pijltjes */
+.location .arrow-forward {
+    font-size: 18px;
+    color: rgb(47, 67, 83);
+}
+
+/* Laatste item = huidige pagina */
+.location a:last-child {
+    color: rgb(208, 129, 75);
+    font-weight: 700;
+}
 
 /*Navigation*/
 /*Style of navbar*/
@@ -457,8 +505,8 @@ form {
     height    : 300px;
     /*Alle afbeeldingen dezelfde hoogte*/
     object-fit: contain;
-    /*Past de afbeelding telkens aan*/
     display   : block;
+     transition: opacity 0.4s ease;
 }
 
 /*Hover effect images*/
@@ -466,12 +514,6 @@ form {
     position: relative;
     width   : 100%;
     overflow: hidden;
-}
-
-.card-item img {
-    width     : 100%;
-    display   : block;
-    transition: opacity 0.4s ease;
 }
 
 /* tweede image bovenop eerste */
@@ -497,13 +539,6 @@ form {
     font-size : 1rem;
     padding   : 0;
     text-align: center;
-}
-
-.card-list .card-item p:last-child {
-    font-size  : 12px;
-    color      : rgba(35, 50, 64, 0.95);
-    font-weight: bold;
-    margin-top : 5px;
 }
 
 /*Style of buttons*/

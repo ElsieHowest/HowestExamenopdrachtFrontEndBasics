@@ -360,7 +360,7 @@ p {
 }
 
 /*Mediaquery*/
-@media (max-width: 768px) {
+@media (max-width:768px) {
 
     /*Stijl vooor logo als scherm kleiner is dan 768px*/
     .logo {
