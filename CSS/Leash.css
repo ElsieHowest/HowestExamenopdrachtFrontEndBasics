@@ -1112,7 +1112,6 @@ form .textarea textarea:focus::placeholder {
         opacity: 1;
     }
 
-
     /*Stijl voor .shop als scherm kleiner is dan 767px*/
     /*Cards onder elkaar*/
     .card-list {
