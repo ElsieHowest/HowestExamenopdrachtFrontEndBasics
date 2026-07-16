@@ -1,6 +1,8 @@
 /*General style*/
+/*Elk html element op de pagina*/
 * {
     box-sizing: border-box;
+    /*De opgegeven breedte blijft altijd de totale grote van het element*/
 }
 
 body {
@@ -108,7 +110,6 @@ section::after {
     display: none;
 }
 
-
 /*Navigation*/
 /*Style of navbar*/
 .navbar {
@@ -119,11 +120,15 @@ section::after {
     display        : flex;
     align-items    : center;
     justify-content: space-between;
+    /*Ruimte verdeelt tussen elementen*/
+    position       : relative;
     z-index        : 100;
+    /*Bepaalt welke elementen boven de andere elementen liggen*/
 }
 
 .navbar li {
-    width : auto;
+    width : fit-content;
+    /*De breedte wordt precies zo groot als de inhoud*/
     height: auto;
 }
 
@@ -149,7 +154,9 @@ section::after {
 
 /*Style of submenu*/
 .submenu {
-    display   : none;
+    opacity   : 0;
+    visibility: hidden;
+    transition: 0.3s;
     position  : absolute;
     min-width : 160px;
     list-style: none;
@@ -181,6 +188,7 @@ section::after {
 }
 
 /* Submenu wordt zichtbaar als je op de 'dropdown' li hoovert */
+/* Met > selecteer je het directe kind .submenu */
 .navbar ul li.dropdown:hover>.submenu {
     display         : block;
     top             : 100%;
@@ -213,11 +221,7 @@ section::after {
     position: relative;
 }
 
-.navbar ul .submenu li.dropdown-sub {
-    position: relative;
-}
-
-/* 2. Dwing het diepere submenu naar rechts met een specifiekere selector */
+/* Het diepere submenu naar rechts met een specifiekere selector */
 .navbar ul .submenu li.dropdown-sub .submenu {
     display         : none;
     position        : absolute;
@@ -231,7 +235,9 @@ section::after {
 
 /*Hover */
 .navbar ul .submenu li.dropdown-sub:hover>.submenu {
-    display: block;
+    display   : block;
+    opacity   : 1;
+    visibility: visible;
 }
 
 /*Style main*/
@@ -253,12 +259,12 @@ form {
 .bar {
     display        : flex;
     align-items    : center;
-    justify-content: flex-end;
+    justify-content: flex-end; /*De items worden op het einde geplaatst*/
     gap            : 15px;
 }
 
 .search {
-    width        : max-content;
+    width        : max-content; /*Maak de breedte zo groot als de inhoud nodig heeft*/
     display      : flex;
     align-items  : center;
     padding      : 14px;
@@ -284,7 +290,7 @@ form {
     width        : 300px;
 }
 
-/*Style of placeholder text*/
+/*Style of placeholder text and icon*/
 .search-input::placeholder,
 .search-icon {
     color: rgb(47, 67, 83);
@@ -294,7 +300,6 @@ form {
 .icons .material-symbols-outlined {
     display    : inline-block;
     margin     : 25px;
-    align-items: center;
     gap        : 16px;
     cursor     : pointer;
     color      : rgb(47, 67, 83);
@@ -487,7 +492,7 @@ form {
     object-fit: contain;
 }
 
-/*1) style of card items*/
+/*Style of card items*/
 .card-list {
     display              : grid;
     grid-template-columns: repeat(3, 1fr);
@@ -518,7 +523,7 @@ form {
 }
 
 .card-list .card-item:hover {
-    box-shadow  : 0 10px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
 /*2) Image of cards*/
@@ -612,7 +617,7 @@ form {
     height     : 20px;
 }
 
-/*4) Chatbox form*/
+/*Chatbox form*/
 .chat-box form {
     padding: 10px 12px;
     margin : 20px 0;
@@ -668,10 +673,6 @@ form .textarea textarea:focus::placeholder {
     resize       : none;
     padding      : 15px 20px;
     font-size    : 16px;
-}
-
-.chat-box form .field textarea:focus::placeholder {
-    border-color: rgb(208, 129, 75);
 }
 
 /*Style button chatbox*/
@@ -758,7 +759,7 @@ form .textarea textarea:focus::placeholder {
 }
 
 /*Stijl voor footer*/
-/*1) General*/
+/*General*/
 .footer-distributed {
     display         : flex;
     flex-wrap       : nowrap;
@@ -772,8 +773,7 @@ form .textarea textarea:focus::placeholder {
     height          : 450px;
 }
 
-/*2) Titelstijlen footer*/
-
+/*Titelstijlen footer*/
 .footer-distributed .footer-center h2,
 .footer-distributed .footer-right h2 {
     font-family: "Playfair display", sans-serif;
@@ -806,8 +806,7 @@ form .textarea textarea:focus::placeholder {
     vertical-align: middle;
 }
 
-
-/*3) Logo seahorse footer*/
+/*Logo seahorse footer*/
 .logo-footer #seahorse {
     height     : 135px;
     width      : auto;
@@ -815,7 +814,7 @@ form .textarea textarea:focus::placeholder {
     margin     : 5px auto;
 }
 
-/*4) Stjl voor navigatie in footer*/
+/*Stijl voor navigatie in footer*/
 .footer-nav {
     display       : flex;
     flex-direction: column;
@@ -846,8 +845,8 @@ form .textarea textarea:focus::placeholder {
     font-weight: 700;
 }
 
-/*5) Onderdelen footer*/
-/*5.1) Style footer left*/
+/*Onderdelen footer*/
+/*Style footer left*/
 .footer-distributed .footer-left {
     width : 20%;
     margin: 20px 0 12px 0;
@@ -860,7 +859,7 @@ form .textarea textarea:focus::placeholder {
     color          : #fff;
 }
 
-/*5.2) Style footer center*/
+/*Style footer center*/
 .footer-distributed .footer-center {
     width      : 45%;
     font-size  : 12px;
@@ -869,14 +868,14 @@ form .textarea textarea:focus::placeholder {
     box-sizing : border-box;
 }
 
-/*5.3) footer right*/
+/*Style footer right*/
 .footer-distributed .footer-right {
     width     : 35%;
     padding   : 0 10px;
     box-sizing: border-box;
 }
 
-/*5.4) e-mailform footer right*/
+/*E-mailform footer right*/
 .footer-distributed .footer-right form {
     display       : flex;
     flex-direction: column;
@@ -915,7 +914,7 @@ form .textarea textarea:focus::placeholder {
     border          : 1px solid #fff;
 }
 
-/*6) Stijl copyright*/
+/*Stijl copyright*/
 .end .copy {
     font-size       : 0.5em;
     text-align      : left;
@@ -1000,7 +999,7 @@ form .textarea textarea:focus::placeholder {
 
     /* De parent container heeft een absolute positionering */
     .navbar {
-        width: 90%;
+        width          : 90%;
         position       : relative;
         display        : flex;
         justify-content: space-between;

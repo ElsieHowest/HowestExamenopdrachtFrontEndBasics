@@ -1,11 +1,13 @@
 /*General style*/
+/*Elk html element op de pagina*/
 * {
     box-sizing: border-box;
+    /*De opgegeven breedte blijft altijd de totale grote van het element*/
 }
 
 html {
     width     : 100%;
-    overflow-x: hidden;
+    overflow-x: hidden; /*Voorkomt horizontaal scrollen*/
 }
 
 body {
@@ -40,7 +42,6 @@ p {
     color      : #333;
 }
 
-/*Style of header*/
 /*Style of banner*/
 .banner {
     width   : 100%;

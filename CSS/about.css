@@ -1,12 +1,14 @@
 /*General style*/
+/*Elk html-element op de pagina*/
 * {
     box-sizing: border-box;
+    /*De opgegeven breedte blijft altijd de totale grote van het element*/
 }
-
 
 html {
     width     : 100%;
     overflow-x: hidden;
+    /*Verberg alles wat buiten het element valt*/
 }
 
 body {
@@ -18,10 +20,12 @@ body {
 
 /*Stijl voor header*/
 .header {
-    margin          : 0 auto;
-    align-items     : center;
-    background-color: rgb(47, 67, 83);
-    padding         : 10px 0;
+    margin                        : 0 auto;
+    display                       : flex;
+    align-items                   : center;
+    /*Werkt enkel maar met display: flex*/
+    background-color              : rgb(47, 67, 83);
+    padding                       : 10px 0;
 }
 
 .banner {
@@ -37,6 +41,7 @@ body {
     width           : 90px;
     height          : auto;
     background-color: transparent;
+    /*geen achtergrond kleur*/
     padding         : 10px;
 }
 
@@ -47,6 +52,7 @@ h2 {
     font-family: "Open Sans", sans-serif;
     color      : rgb(208, 129, 75);
     font-size  : 2rem;
+    /*1 rem = 16px*/
 }
 
 h1 {
@@ -83,11 +89,15 @@ p {
     display        : flex;
     align-items    : center;
     justify-content: space-between;
+    /*Ruimte verdeelt tussen elementen*/
+    position       : relative;
     z-index        : 100;
+    /*Bepaalt welke elementen boven de andere elementen liggen*/
 }
 
 .navbar li {
     width : fit-content;
+    /*De breedte wordt precies zo groot als de inhoud*/
     height: auto;
 }
 
@@ -113,7 +123,9 @@ p {
 
 /*Style of submenu*/
 .submenu {
-    display   : none;
+    opacity   : 0;
+    visibility: hidden;
+    transition: 0.3s;
     position  : absolute;
     min-width : 160px;
     list-style: none;
@@ -145,6 +157,7 @@ p {
 }
 
 /* Submenu wordt zichtbaar als je op de 'dropdown' li hoovert */
+/* Met > selecteer je het directe kind .submenu */
 .navbar ul li.dropdown:hover>.submenu {
     display         : block;
     top             : 100%;
@@ -177,10 +190,6 @@ p {
     position: relative;
 }
 
-.navbar ul .submenu li.dropdown-sub {
-    position: relative;
-}
-
 /* 2. Dwing het diepere submenu naar rechts met een specifiekere selector */
 .navbar ul .submenu li.dropdown-sub .submenu {
     display         : none;
@@ -195,7 +204,9 @@ p {
 
 /*Hover */
 .navbar ul .submenu li.dropdown-sub:hover>.submenu {
-    display: block;
+    display   : block;
+    opacity   : 1;
+    visibility: visible;
 }
 
 /*Style of main*/
@@ -221,9 +232,8 @@ main {
     color      : rgb(47, 67, 83);
 }
 
-
 /*Style of searchbar*/
-.search form {
+form {
     flex-shrink: 0;
 }
 
@@ -231,11 +241,13 @@ main {
     display        : flex;
     align-items    : center;
     justify-content: flex-end;
+    /*De items worden op het einde geplaatst*/
     gap            : 15px;
 }
 
 .search {
     width        : max-content;
+    /*Maak de breedte zo groot als de inhoud nodig heeft*/
     display      : flex;
     align-items  : center;
     padding      : 14px;
@@ -261,24 +273,19 @@ main {
     width        : 300px;
 }
 
-/*Style of placeholder text*/
+/*Style of placeholder text and icon*/
 .search-input::placeholder,
 .search-icon {
     color: rgb(47, 67, 83);
 }
 
 /*Style of icons*/
-.icons a {
-    text-decoration: none;
-}
-
 .icons .material-symbols-outlined {
-    display    : inline-block;
-    margin     : 25px;
-    align-items: center;
-    gap        : 16px;
-    cursor     : pointer;
-    color      : rgb(47, 67, 83);
+    display: inline-block;
+    margin : 25px;
+    gap    : 16px;
+    cursor : pointer;
+    color  : rgb(47, 67, 83);
 }
 
 /*Style of mainnavbar*/
@@ -424,7 +431,6 @@ main {
     font-weight: 700;
 }
 
-
 /*Aside*/
 aside {
     text-align      : center;
@@ -468,9 +474,7 @@ aside a:hover {
     width      : 100%;
 }
 
-/*
-1) style of card items
-*/
+/*Style of card items*/
 .card-list {
     display              : grid;
     grid-template-columns: repeat(3, 1fr);
@@ -504,9 +508,7 @@ aside a:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
-/*
-2) Image of cards
-*/
+/*Image of cards*/
 .card-list .card-item img {
     width       : 100%;
     max-height  : 300px;
@@ -570,7 +572,7 @@ aside a:hover {
     width      : 100%;
 }
 
-/*1) style of card items*/
+/*Style of card items*/
 .card-list-essentials {
     display  : flex;
     flex-wrap: wrap;
@@ -651,13 +653,11 @@ aside a:hover {
 }
 
 /*Vergelijkingstabel*/
-.yes {
+/*Style of icons in vergelijkingstabel*/
+.yes,
+.no {
     color      : rgb(47, 67, 83);
     font-weight: bold;
-}
-
-.no {
-    color: rgb(208, 129, 75);
 }
 
 /*Style of wetstuit table*/
@@ -726,12 +726,13 @@ aside a:hover {
     bottom          : 85px;
     width           : 450px;
     max-width       : calc(100% - 30px);
+    /*De maximale breedte van dit element mag de volledige beschikbare breedte zijn, maar er moet 30px ruimte afgetrokken worden.*/
     background-color: #ffffff;
     color           : rgb(47, 67, 83);
     border-radius   : 15px;
     box-shadow      : 0px 15px 20px rgb(0, 0, 0, 0.1);
     opacity         : 0;
-    visibility      : hidden;
+    visibility      : hidden; /*nog niet interactief*/
     pointer-events  : none;
     /*blokkeert klikken/hover als hij dicht is */
     transition      : all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -740,7 +741,7 @@ aside a:hover {
 /*Wanneer checkbox is aangevinkt: toon chatbox*/
 #click:checked~.chat {
     opacity       : 1;
-    visibility    : visible;
+    visibility    : visible; /*Is interactief van zodra de gebruiker op chatbox klikt*/
     pointer-events: auto;
     /* Klikbaar als hij open is */
     bottom        : 85px;
@@ -813,7 +814,7 @@ form .field input:focus {
 }
 
 form .field input:focus::placeholder,
-form .textarea textarea:focus::placeholder {
+form .field textarea:focus::placeholder {
     color: rgba(255, 255, 255, 0.6);
 }
 
@@ -830,10 +831,6 @@ form .textarea textarea:focus::placeholder {
     resize       : none;
     padding      : 15px 20px;
     font-size    : 16px;
-}
-
-.chat-box form .field textarea:focus::placeholder {
-    border-color: rgb(208, 129, 75);
 }
 
 /*Style button chatbox*/
@@ -920,7 +917,7 @@ form .textarea textarea:focus::placeholder {
 }
 
 /*Stijl voor footer*/
-/*1) General*/
+/*General*/
 .footer-distributed {
     display         : flex;
     flex-wrap       : nowrap;
@@ -939,7 +936,7 @@ form .textarea textarea:focus::placeholder {
     font-family: "Playfair display", sans-serif;
 }
 
-/*2) Titelstijlen footer*/
+/*Titelstijlen footer*/
 .footer-distributed h2,
 /*Opmerking: komma niet vergeten*/
 .footer-distributed h3 {
@@ -968,7 +965,7 @@ form .textarea textarea:focus::placeholder {
 }
 
 
-/*3) Logo seahorse footer*/
+/*Logo seahorse footer*/
 .logo-footer #seahorse {
     height     : 135px;
     width      : auto;
@@ -976,7 +973,7 @@ form .textarea textarea:focus::placeholder {
     margin     : 5px auto;
 }
 
-/*4) Stjl voor navigatie in footer*/
+/*Stijl voor navigatie in footer*/
 .footer-nav {
     display       : flex;
     flex-direction: column;
@@ -1007,8 +1004,8 @@ form .textarea textarea:focus::placeholder {
     font-weight: 700;
 }
 
-/*5) Onderdelen footer*/
-/*5.1) Style footer left*/
+/*Onderdelen footer*/
+/*Style footer left*/
 .footer-distributed .footer-left {
     width : 20%;
     margin: 20px 0 12px 0;
@@ -1021,7 +1018,7 @@ form .textarea textarea:focus::placeholder {
     color          : #fff;
 }
 
-/*5.2) Style footer center*/
+/*Style footer center*/
 .footer-distributed .footer-center {
     width      : 45%;
     font-size  : 12px;
@@ -1030,14 +1027,14 @@ form .textarea textarea:focus::placeholder {
     box-sizing : border-box;
 }
 
-/*5.3) footer right*/
+/*Style of footer right*/
 .footer-distributed .footer-right {
     width     : 35%;
     padding   : 0 10px;
     box-sizing: border-box;
 }
 
-/*5.4) e-mailform footer right*/
+/*E-mailform footer right*/
 .footer-distributed .footer-right form {
     display       : flex;
     flex-direction: column;
@@ -1080,7 +1077,7 @@ form .textarea textarea:focus::placeholder {
     border          : 1px solid #fff;
 }
 
-/*6) Stijl copyright*/
+/*Stijl copyright*/
 .end .copy {
     font-size       : 0.5em;
     text-align      : left;

@@ -1,6 +1,8 @@
 /*General style*/
+/*Elk html-element op de pagina*/
 * {
     box-sizing: border-box;
+    /*De opgegeven breedte blijft altijd de totale grote van het element*/
 }
 
 body {
@@ -12,10 +14,12 @@ body {
 
 /*Stijl voor header*/
 .header {
-    margin          : 0 auto;
-    align-items     : center;
-    background-color: rgb(47, 67, 83);
-    padding         : 10px 0;
+    margin                        : 0 auto;
+    display                       : flex;
+    /*Werkt enkel maar met display: flex*/
+    align-items                   : center;
+    background-color              : rgb(47, 67, 83);
+    padding                       : 10px 0;
 }
 
 .banner {
@@ -76,11 +80,15 @@ p {
     display        : flex;
     align-items    : center;
     justify-content: space-between;
+    /*Ruimte verdeelt tussen elementen*/
+    position       : relative;
     z-index        : 100;
+    /*Bepaalt welke elementen boven de andere elementen liggen*/
 }
 
 .navbar li {
-    width : auto;
+    width : fit-content;
+    /*De breedte wordt precies zo groot als de inhoud*/
     height: auto;
 }
 
@@ -106,7 +114,9 @@ p {
 
 /*Style of submenu*/
 .submenu {
-    display   : none;
+    opacity   : 0;
+    visibility: hidden;
+    transition: 0.3s;
     position  : absolute;
     min-width : 160px;
     list-style: none;
@@ -138,6 +148,7 @@ p {
 }
 
 /* Submenu wordt zichtbaar als je op de 'dropdown' li hoovert */
+/* Met > selecteer je het directe kind .submenu */
 .navbar ul li.dropdown:hover>.submenu {
     display         : block;
     top             : 100%;
@@ -170,10 +181,6 @@ p {
     position: relative;
 }
 
-.navbar ul .submenu li.dropdown-sub {
-    position: relative;
-}
-
 /* 2. Dwing het diepere submenu naar rechts met een specifiekere selector */
 .navbar ul .submenu li.dropdown-sub .submenu {
     display         : none;
@@ -188,7 +195,9 @@ p {
 
 /*Hover */
 .navbar ul .submenu li.dropdown-sub:hover>.submenu {
-    display: block;
+    display   : block;
+    opacity   : 1;
+    visibility: visible;
 }
 
 /*Style main*/
@@ -415,12 +424,12 @@ form {
 .bar {
     display        : flex;
     align-items    : center;
-    justify-content: flex-end;
+    justify-content: flex-end; /*De items worden op het einde geplaatst*/
     gap            : 15px;
 }
 
 .search {
-    width        : max-content;
+    width        : max-content; /*Maak de breedte zo groot als de inhoud nodig heeft*/
     display      : flex;
     align-items  : center;
     padding      : 14px;
@@ -446,7 +455,7 @@ form {
     width        : 300px;
 }
 
-/*Style of placeholder text*/
+/*Style of placeholder text and icon*/
 .search-input::placeholder,
 .search-icon {
     color: rgb(47, 67, 83);
@@ -456,7 +465,6 @@ form {
 .icons .material-symbols-outlined {
     display    : inline-block;
     margin     : 25px;
-    align-items: center;
     gap        : 16px;
     cursor     : pointer;
     color      : rgb(47, 67, 83);
@@ -502,8 +510,6 @@ form {
     /* Klikbaar als hij open is */
     bottom        : 85px;
 }
-
-
 
 .chat .head-text-chat {
     font-family    : "Open Sans", sans-serif;
@@ -593,10 +599,6 @@ form .textarea textarea:focus::placeholder {
     resize       : none;
     padding      : 15px 20px;
     font-size    : 16px;
-}
-
-.chat-box form .field textarea:focus::placeholder {
-    border-color: rgb(208, 129, 75);
 }
 
 /*Style button chatbox*/

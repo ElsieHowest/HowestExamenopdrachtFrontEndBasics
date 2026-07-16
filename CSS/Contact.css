@@ -1,6 +1,8 @@
 /*General style*/
+/*Elk html element op de pagina*/
 * {
     box-sizing: border-box;
+    /*De opgegeven breedte blijft altijd de totale grote van het element*/
 }
 
 body {
@@ -99,11 +101,15 @@ p {
     display        : flex;
     align-items    : center;
     justify-content: space-between;
+    /*Ruimte verdeelt tussen elementen*/
+    position       : relative;
     z-index        : 100;
+    /*Bepaalt welke elementen boven de andere elementen liggen*/
 }
 
 .navbar li {
-    width : auto;
+    width : fit-content;
+    /*De breedte wordt precies zo groot als de inhoud*/
     height: auto;
 }
 
@@ -129,7 +135,9 @@ p {
 
 /*Style of submenu*/
 .submenu {
-    display   : none;
+    opacity   : 0;
+    visibility: hidden;
+    transition: 0.3s;
     position  : absolute;
     min-width : 160px;
     list-style: none;
@@ -161,6 +169,7 @@ p {
 }
 
 /* Submenu wordt zichtbaar als je op de 'dropdown' li hoovert */
+/* Met > selecteer je het directe kind .submenu */
 .navbar ul li.dropdown:hover>.submenu {
     display         : block;
     top             : 100%;
@@ -193,10 +202,6 @@ p {
     position: relative;
 }
 
-.navbar ul .submenu li.dropdown-sub {
-    position: relative;
-}
-
 /* 2. Dwing het diepere submenu naar rechts met een specifiekere selector */
 .navbar ul .submenu li.dropdown-sub .submenu {
     display         : none;
@@ -211,9 +216,10 @@ p {
 
 /*Hover */
 .navbar ul .submenu li.dropdown-sub:hover>.submenu {
-    display: block;
+    display   : block;
+    opacity   : 1;
+    visibility: visible;
 }
-
 
 /*Style main*/
 main {
@@ -416,7 +422,6 @@ form {
 .icons .material-symbols-outlined {
     display    : inline-block;
     margin     : 25px;
-    align-items: center;
     gap        : 16px;
     cursor     : pointer;
     color      : rgb(47, 67, 83);
@@ -705,7 +710,7 @@ form {
 }
 
 /*Stijl voor footer*/
-/*1) General*/
+/*General*/
 .footer-distributed {
     display         : flex;
     flex-wrap       : nowrap;
@@ -719,7 +724,7 @@ form {
     height          : 450px;
 }
 
-/*2) Titelstijlen footer*/
+/*Titelstijlen footer*/
 .footer-distributed h2,
 /*Opmerking: komma niet vergeten*/
 .footer-distributed h3 {
@@ -753,7 +758,7 @@ form {
 }
 
 
-/*3) Logo seahorse footer*/
+/*Logo seahorse footer*/
 .logo-footer #seahorse {
     height     : 135px;
     width      : auto;
@@ -761,7 +766,7 @@ form {
     margin     : 5px auto;
 }
 
-/*4) Stjl voor navigatie in footer*/
+/*Stijl voor navigatie in footer*/
 .footer-nav {
     display       : flex;
     flex-direction: column;
@@ -793,8 +798,8 @@ form {
 
 }
 
-/*5) Onderdelen footer*/
-/*5.1) Style footer left*/
+/*Onderdelen footer*/
+/*Style footer left*/
 .footer-distributed .footer-left {
     width : 20%;
     margin: 20px 0 12px 0;
@@ -807,7 +812,7 @@ form {
     color          : #fff;
 }
 
-/*5.2) Style footer center*/
+/*Style footer center*/
 .footer-distributed .footer-center {
     width      : 45%;
     font-size  : 12px;
@@ -816,14 +821,14 @@ form {
     box-sizing : border-box;
 }
 
-/*5.3) footer right*/
+/*Style for footer right*/
 .footer-distributed .footer-right {
     width     : 35%;
     padding   : 0 10px;
     box-sizing: border-box;
 }
 
-/*5.4) e-mailform footer right*/
+/*E-mailform footer right*/
 .footer-distributed .footer-right form {
     display       : flex;
     flex-direction: column;
@@ -862,7 +867,7 @@ form {
     border          : 1px solid #fff;
 }
 
-/*6) Stijl copyright*/
+/*Stijl copyright*/
 .end .copy {
     font-size       : 0.5em;
     text-align      : left;
