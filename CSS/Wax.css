@@ -65,50 +65,51 @@ p {
 
 /* Location breadcrumb */
 .location {
-    display: flex;
+    display    : flex;
     align-items: center;
-    gap: 8px;
-    padding: 12px 20px;
-    max-width: 800px;
-    margin: 10px auto;
+    gap        : 8px;
+    padding    : 12px 20px;
+    max-width  : 800px;
+    margin     : 10px auto;
     font-family: "Open Sans", sans-serif;
-    font-size: 16px;
+    font-size  : 16px;
 }
 
 /* Breadcrumb links */
 .location a {
-    color: rgb(47, 67, 83);
+    color          : rgb(47, 67, 83);
     text-decoration: none;
-    transition: 0.3s ease;
+    transition     : 0.3s ease;
 }
 
 /* Hover effect */
 .location a:hover {
-    color: rgb(47, 67, 83);
+    color      : rgb(47, 67, 83);
     font-weight: 700;
 }
 
 /* Home icoon */
 .location .home-icon {
-    font-size: 25px;
-    color: rgb(47, 67, 83);
+    font-size : 25px;
+    color     : rgb(47, 67, 83);
     transition: 0.3s ease;
 }
 
 .location .home-icon:hover {
-    color: rgb(47, 67, 83);
+    color      : rgb(47, 67, 83);
     font-weight: 700;
 }
 
 /* Pijltjes */
 .location .arrow-forward {
-    font-size: 18px;
-    color: rgb(47, 67, 83);
+    font-size  : 18px;
+    color      : rgb(47, 67, 83);
+    font-weight: normal;
 }
 
 /* Laatste item = huidige pagina */
 .location a:last-child {
-    color: rgb(208, 129, 75);
+    color      : rgb(208, 129, 75);
     font-weight: 700;
 }
 
@@ -505,7 +506,7 @@ form {
     object-fit: contain;
     /*Past de afbeelding telkens aan*/
     display   : block;
-      transition: opacity 0.4s ease;
+    transition: opacity 0.4s ease;
 }
 
 /*Hover effect images*/
@@ -830,7 +831,6 @@ form .textarea textarea:focus::placeholder {
     vertical-align: middle;
 }
 
-
 /*3) Logo seahorse footer*/
 .logo-footer #seahorse {
     height     : 135px;
@@ -954,7 +954,7 @@ form .textarea textarea:focus::placeholder {
 }
 
 /*Mediaquery*/
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
     /* Zorg dat de checkbox zelf onzichtbaar blijft */
     #menu-toggle {
@@ -975,8 +975,9 @@ form .textarea textarea:focus::placeholder {
     }
 
     .search {
-        width    : 100%;
-        max-width: 450px;
+        width     : 100%;
+        max-width : 550px;
+        box-sizing: border-box;
     }
 
     .search-input {
@@ -1012,6 +1013,8 @@ form .textarea textarea:focus::placeholder {
         background    : rgb(47, 67, 83);
         padding       : 20px 0;
         border-radius : 12px;
+        opacity       : 0;
+        transition    : opacity .3s ease;
     }
 
     /* Submenu geforceerd verbergen op mobiel */

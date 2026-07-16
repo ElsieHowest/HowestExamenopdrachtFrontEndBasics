@@ -77,6 +77,56 @@ p {
     display: none;
 }
 
+/* Location breadcrumb */
+.location {
+    display    : flex;
+    align-items: center;
+    gap        : 8px;
+    padding    : 12px 20px;
+    max-width  : 800px;
+    margin     : 10px auto;
+    font-family: "Open Sans", sans-serif;
+    font-size  : 16px;
+}
+
+/* Breadcrumb links */
+.location a {
+    color          : rgb(47, 67, 83);
+    text-decoration: none;
+    transition     : 0.3s ease;
+}
+
+/* Hover effect */
+.location a:hover {
+    color      : rgb(47, 67, 83);
+    font-weight: 700;
+}
+
+/* Home icoon */
+.location .home-icon {
+    font-size : 25px;
+    color     : rgb(47, 67, 83);
+    transition: 0.3s ease;
+}
+
+.location .home-icon:hover {
+    color      : rgb(47, 67, 83);
+    font-weight: 700;
+}
+
+/* Pijltjes */
+.location .arrow-forward {
+    font-size  : 18px;
+    color      : rgb(47, 67, 83);
+    font-weight: normal;
+}
+
+/* Laatste item = huidige pagina */
+.location a:last-child {
+    color      : rgb(208, 129, 75);
+    font-weight: 700;
+}
+
 /*Navigation*/
 /*Style of navbar*/
 .navbar {
@@ -995,7 +1045,7 @@ form .textarea textarea:focus::placeholder {
 /*Mediaquery*/
 @media (max-width: 768px) {
 
-  /* Zorg dat de checkbox zelf onzichtbaar blijft */
+    /* Zorg dat de checkbox zelf onzichtbaar blijft */
     #menu-toggle {
         display: none;
     }
@@ -1211,7 +1261,7 @@ form .textarea textarea:focus::placeholder {
         margin: 0;
     }
 
-     /*Stijl voor .mainnav als scherm kleiner is dan 768px*/
+    /*Stijl voor .mainnav als scherm kleiner is dan 768px*/
     /*Op een klein scherm is "Discover more" enkel een link*/
     .mainnavbar .mainnav .mega-menu,
     .nav-item.dropdown:hover .mega-menu {
@@ -1241,7 +1291,7 @@ form .textarea textarea:focus::placeholder {
 
     /* De parent container heeft een absolute positionering */
     .navbar {
-        width: 85%;
+        width          : 85%;
         position       : relative;
         display        : flex;
         justify-content: space-between;
@@ -1306,10 +1356,10 @@ form .textarea textarea:focus::placeholder {
     }
 
     /*Stijl for category-cards als het scherm kleiner is dan 768px*/
-    .category-container{
+    .category-container {
         grid-template-columns: 1fr;
     }
-    
+
 
     /*Stijl voor .shop als scherm kleiner is dan 768px*/
     /*Cards onder elkaar*/

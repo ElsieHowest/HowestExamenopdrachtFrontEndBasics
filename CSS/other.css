@@ -64,50 +64,51 @@ p {
 
 /* Location breadcrumb */
 .location {
-    display: flex;
+    display    : flex;
     align-items: center;
-    gap: 8px;
-    padding: 12px 20px;
-    max-width: 800px;
-    margin: 10px auto;
+    gap        : 8px;
+    padding    : 12px 20px;
+    max-width  : 800px;
+    margin     : 10px auto;
     font-family: "Open Sans", sans-serif;
-    font-size: 16px;
+    font-size  : 16px;
 }
 
 /* Breadcrumb links */
 .location a {
-    color: rgb(47, 67, 83);
+    color          : rgb(47, 67, 83);
     text-decoration: none;
-    transition: 0.3s ease;
+    transition     : 0.3s ease;
 }
 
 /* Hover effect */
 .location a:hover {
-    color: rgb(47, 67, 83);
+    color      : rgb(47, 67, 83);
     font-weight: 700;
 }
 
 /* Home icoon */
 .location .home-icon {
-    font-size: 25px;
-    color: rgb(47, 67, 83);
+    font-size : 25px;
+    color     : rgb(47, 67, 83);
     transition: 0.3s ease;
 }
 
 .location .home-icon:hover {
-    color: rgb(47, 67, 83);
+    color      : rgb(47, 67, 83);
     font-weight: 700;
 }
 
 /* Pijltjes */
 .location .arrow-forward {
-    font-size: 18px;
-    color: rgb(47, 67, 83);
+    font-size  : 18px;
+    color      : rgb(47, 67, 83);
+    font-weight: normal;
 }
 
 /* Laatste item = huidige pagina */
 .location a:last-child {
-    color: rgb(208, 129, 75);
+    color      : rgb(208, 129, 75);
     font-weight: 700;
 }
 
@@ -513,6 +514,7 @@ form {
     width   : 100%;
     overflow: hidden;
 }
+
 /* tweede image bovenop eerste */
 .card-item .image-back {
     position: absolute;
@@ -968,7 +970,7 @@ form .textarea textarea:focus::placeholder {
 /*Mediaquery*/
 @media (max-width: 768px) {
 
-      /* Zorg dat de checkbox zelf onzichtbaar blijft */
+    /* Zorg dat de checkbox zelf onzichtbaar blijft */
     #menu-toggle {
         display: none;
     }
@@ -976,6 +978,28 @@ form .textarea textarea:focus::placeholder {
     /*Stijl vooor logo als scherm kleiner is dan 768px*/
     .logo {
         width: 80px;
+    }
+
+    /* Zorg dat de breadcrumb op mobiel netjes scrollt in plaats van afbreekt */
+    .location {
+        flex-wrap                 : nowrap;
+        overflow-x                : auto;
+        white-space               : nowrap;
+        -webkit-overflow-scrolling: touch;
+        /* Zorgt voor soepel scrollen op iOS */
+    }
+
+    /* De woorden mogen niet onder elkaar staan */
+    .location a {
+        white-space: nowrap;
+        flex-shrink: 0;
+        /* Zorgt dat de tekst niet in elkaar gedrukt wordt */
+    }
+
+    /* De pijltjes behouden hun vorm */
+    .location .arrow-forward,
+    .location .material-symbols-outlined {
+        flex-shrink: 0;
     }
 
     /*Stijl voor zoekbalk als scherm kleiner is dan 768px*/
@@ -988,7 +1012,7 @@ form .textarea textarea:focus::placeholder {
 
     .search {
         width    : 100%;
-        max-width: 450px;
+        max-width: 650px;
     }
 
     .search-input {
@@ -1035,7 +1059,7 @@ form .textarea textarea:focus::placeholder {
 
     /* De parent container heeft een absolute positionering */
     .navbar {
-        width: 85%;
+        width          : 85%;
         position       : relative;
         display        : flex;
         justify-content: space-between;

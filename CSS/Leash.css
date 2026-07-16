@@ -976,19 +976,19 @@ form .textarea textarea:focus::placeholder {
 }
 
 /*Mediaquery*/
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
     /* Zorg dat de checkbox zelf onzichtbaar blijft */
     #menu-toggle {
         display: none;
     }
 
-    /*Stijl vooor logo als scherm kleiner is dan 768px*/
+    /*Stijl vooor logo als scherm kleiner is dan 767px*/
     .logo {
         width: 80px;
     }
 
-    /*Stijl voor zoekbalk als scherm kleiner is dan 768px*/
+    /*Stijl voor zoekbalk als scherm kleiner is dan 767px*/
     .bar {
         flex-direction : column;
         align-items    : center;
@@ -997,8 +997,9 @@ form .textarea textarea:focus::placeholder {
     }
 
     .search {
-        width    : 100%;
-        max-width: 450px;
+        width     : 100%;
+        max-width : 550px;
+        box-sizing: border-box;
     }
 
     .search-input {
@@ -1015,14 +1016,14 @@ form .textarea textarea:focus::placeholder {
         margin: 0;
     }
 
-    /*Stijl voor .mainnav als scherm kleiner is dan 768px*/
+    /*Stijl voor .mainnav als scherm kleiner is dan 767px*/
     /*Op een klein scherm is "Discover more" enkel een link*/
     .mainnavbar .mainnav .mega-menu,
     .nav-item.dropdown:hover .mega-menu {
         display: none;
     }
 
-    /*style of header als scherm kleiner is dan 768px*/
+    /*style of header als scherm kleiner is dan 767px*/
     /* Toon de hamburger */
     .nav-links {
         display       : none;
@@ -1034,6 +1035,8 @@ form .textarea textarea:focus::placeholder {
         background    : rgb(47, 67, 83);
         padding       : 20px 0;
         border-radius : 12px;
+        opacity       : 0;
+        transition    : opacity .3s ease;
     }
 
     /* Submenu geforceerd verbergen op mobiel */
@@ -1045,7 +1048,7 @@ form .textarea textarea:focus::placeholder {
 
     /* De parent container heeft een absolute positionering */
     .navbar {
-        width          : 85px;
+        width          : 90%;
         position       : relative;
         display        : flex;
         justify-content: space-between;
@@ -1110,7 +1113,7 @@ form .textarea textarea:focus::placeholder {
     }
 
 
-    /*Stijl voor .shop als scherm kleiner is dan 768px*/
+    /*Stijl voor .shop als scherm kleiner is dan 767px*/
     /*Cards onder elkaar*/
     .card-list {
         display              : grid;
@@ -1128,6 +1131,7 @@ form .textarea textarea:focus::placeholder {
         flex-direction: column;
         align-items   : center;
         text-align    : center;
+        width         : 100%;
     }
 
     .brand-image {
@@ -1141,7 +1145,7 @@ form .textarea textarea:focus::placeholder {
         padding: 10px 0;
     }
 
-    /*Stijl voor footer als scherm kleiner is dan 768px*/
+    /*Stijl voor footer als scherm kleiner is dan 767px*/
     .footer-distributed {
         display         : flex;
         flex-direction  : column;
