@@ -911,6 +911,8 @@ form .textarea textarea:focus::placeholder {
         background    : rgb(47, 67, 83);
         padding       : 20px 0;
         border-radius : 12px;
+        opacity       : 0;
+        transition    : opacity .3s ease;
     }
 
     /* Submenu geforceerd verbergen op mobiel */
@@ -922,7 +924,7 @@ form .textarea textarea:focus::placeholder {
 
     /* De parent container heeft een absolute positionering */
     .navbar {
-        width          : 85%;
+        width          : 90%;
         position       : relative;
         display        : flex;
         justify-content: space-between;
