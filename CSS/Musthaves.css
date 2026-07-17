@@ -189,6 +189,8 @@ p {
 /* Met > selecteer je het directe kind .submenu */
 .navbar ul li.dropdown:hover>.submenu {
     display         : block;
+    opacity         : 1; /*Maak ondoorzichtig*/
+    visibility      : visible; /*Maak interactief*/
     top             : 100%;
     left            : 5px;
     margin          : 0px;
@@ -196,6 +198,7 @@ p {
     border-radius   : 12px;
     background-color: rgba(35, 50, 64, 0.95);
 }
+
 
 /* De items in het submenu staan onder elkaar */
 .submenu li {

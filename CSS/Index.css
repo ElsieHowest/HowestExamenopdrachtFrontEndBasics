@@ -7,7 +7,8 @@
 
 html {
     width     : 100%;
-    overflow-x: hidden; /*Voorkomt horizontaal scrollen*/
+    overflow-x: hidden;
+    /*Voorkomt horizontaal scrollen*/
 }
 
 body {
@@ -41,6 +42,15 @@ p {
     line-height: 1.5;
     color      : #333;
 }
+
+/*Stijl voor header*/
+.header {
+    margin                        : 0 auto;
+    display                       : flex;
+    align-items                   : center;
+    /*Werkt enkel maar met display: flex*/
+}
+
 
 /*Style of banner*/
 .banner {
@@ -218,7 +228,6 @@ p {
     display: block;
 }
 
-
 /*Style of catch*/
 .catch {
     font-size      : 20px;
@@ -392,9 +401,14 @@ p {
 
     .nav-links li a {
         display: block;
-        padding: 15px 0;
+        padding: 15px 35px;
         /*Groter tapgebied + verticale ruimte tussen items*/
     }
+
+      .nav-links li a:hover {
+        font-weight: 700;
+    }
+
 
     /* Submenu geforceerd verbergen op mobiel */
     .nav-links .submenu,
@@ -405,12 +419,12 @@ p {
 
     /* De parent container heeft een absolute positionering */
     .navbar {
-        width          : 90px;
+        width          : 100%;
         position       : relative;
         display        : flex;
         justify-content: space-between;
         align-items    : center;
-        padding        : 10px 20px;
+        padding        : 20px 45px;
     }
 
     /*Hover-lijn volledig uitschakelen op mobiel*/
@@ -442,6 +456,7 @@ p {
 
     .menu-button,
     .menu-toggle-label {
+        padding   : 20px 45px;
         display   : flex;
         position  : absolute;
         right     : 20px;

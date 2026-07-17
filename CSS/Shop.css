@@ -20,6 +20,7 @@ body {
 /*Stijl voor header*/
 .header {
     margin          : 0 auto;
+    display: flex;
     align-items     : center;
     background-color: rgb(47, 67, 83);
     padding         : 10px 0;
@@ -146,6 +147,8 @@ p {
 /* Met > selecteer je het directe kind .submenu */
 .navbar ul li.dropdown:hover>.submenu {
     display         : block;
+    opacity         : 1; /*Maak ondoorzichtig*/
+    visibility      : visible; /*Maak interactief*/
     top             : 100%;
     left            : 5px;
     margin          : 0px;

@@ -195,6 +195,8 @@ p {
 /* Met > selecteer je het directe kind .submenu */
 .navbar ul li.dropdown:hover>.submenu {
     display         : block;
+    opacity         : 1; /*Maak ondoorzichtig*/
+    visibility      : visible; /*Maak interactief*/
     top             : 100%;
     left            : 5px;
     margin          : 0px;
