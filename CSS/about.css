@@ -643,14 +643,7 @@ aside a:hover {
 .card-list-essentials .card-item-essentials h3 {
     color     : rgb(47, 67, 83);
     font-size : 1rem;
-    padding   : 0;
-    text-align: center;
-}
-
-.card-list-essentials .card-item-essentials p {
-    color     : rgb(47, 67, 83);
-    font-size : 0.9rem;
-    padding   : 5px;
+    padding   : 8px;
     text-align: center;
 }
 
@@ -967,7 +960,6 @@ form .field textarea:focus::placeholder {
     color         : #fff;
     vertical-align: middle;
 }
-
 
 /*Logo seahorse footer*/
 .logo-footer #seahorse {
