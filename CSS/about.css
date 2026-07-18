@@ -537,37 +537,6 @@ aside a:hover {
     text-align: center;
 }
 
-/*Style of summer essentials*/
-/*Style of buttons*/
-.card-list .card-item button {
-    display         : block;
-    align-items     : center;
-    text-align      : center;
-    margin          : 5px;
-    color           : #ffffff;
-    background-color: rgb(47, 67, 83);
-    border          : none;
-    border-radius   : 20px;
-    height          : 35px;
-    width           : 100px;
-    cursor          : pointer;
-    transition      :
-        background-color 0.3s ease,
-        transform 0.2s ease,
-        box-shadow 0.3s ease;
-}
-
-.card-list .card-item button:hover {
-    font-weight: bold;
-    transform  : translateY(-2px);
-    box-shadow : 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.card-list .card-item button:active {
-    transform : translateY(0);
-    box-shadow: none;
-}
-
 /*Style for your essentials for summer*/
 .spotlight {
     display    : inline-block;
@@ -580,6 +549,7 @@ aside a:hover {
 .card-list-essentials {
     display  : flex;
     flex-wrap: wrap;
+    /*De kaarten gaan naar de volgende rij*/
     max-width: 1250px;
     margin   : 10px auto;
     padding  : 20px;
@@ -588,7 +558,12 @@ aside a:hover {
 }
 
 .card-list-essentials>* {
-    flex: 1 1 300px;
+    flex                : 1 1 250px;
+    /*Opmerking, uitleg : 
+    * Flex-grow - 1     : De kaartjes mogen groter worden dan 250px om de resterende leegte op te vullen
+    * Flex-shrink - 1   : De kaartjes mogen krimpen als het scherm heel smal wordt.
+    * Flex-basis - 250px: De ideale richtbreedte
+    */
 }
 
 .card-list-essentials .card-item-essentials {
@@ -643,10 +618,12 @@ aside a:hover {
 
 /*titelstijlen*/
 .card-list-essentials .card-item-essentials h3 {
-    color     : rgb(47, 67, 83);
-    font-size : 1rem;
-    padding   : 8px;
-    text-align: center;
+    color                      : rgb(47, 67, 83);
+    font-size                  : 1rem;
+    padding                    : 8px;
+    display                    : flex;
+    text-align                 : center;
+    /*werkt niet zonder display: flex*/
 }
 
 /*Vergelijkingstabel*/
@@ -1235,31 +1212,29 @@ form .field textarea:focus::placeholder {
         opacity: 1;
     }
 
-    /*Stijl voor card-item*/
-    /* De cards staan naast elkaar (2 kolommen)*/
+    /*Style of card items*/
     .card-list {
         display              : grid;
         grid-template-columns: repeat(2, 1fr);
-        gap                  : 20px;
-        /*Ruimte tussen de cards*/
+        /*Opmerking          : altijd twee kolommen op een tablet*/
+        max-width            : 1150px;
+        margin               : 10px auto;
+        padding              : 15px;
+        gap                  : 25px;
+        justify-content      : center;
+        /*Opmerking          : de kolommen worden gecentreerd binnen de container*/
     }
 
-    /*Stijl voor afbeeldingen voor schermen tussen 769px en 1024px*/
-    .card-item {
-        display                  : flex;
-        align-items              : center;
-        /*Kan niet zonder display: flex*/
-        text-align               : center;
-        flex-direction           : column;
-        height                   : 100%;
+    /*Stijl voor spotlight*/
+    .card-list-essentials {
+        padding: 15px;
+        gap    : 15px;
     }
 
-    /*Stijl voor afbeelding van card-item*/
-    .brand-image {
-        width    : 100%;
-        max-width: 200px;
-        /*Vermijden dat de afbeelding te groot wordt*/
-        height   : auto;
+    .card-list-essentials>* {
+        /*Twee kolommen afdwingen*/
+        flex   : 1 1 calc(50% - 15px);
+        padding: 15px;
     }
 }
 
@@ -1399,13 +1374,39 @@ form .field textarea:focus::placeholder {
         opacity: 1;
     }
 
-    /*stijl voor card-ietms als scherm kleiner is dan 768px*/
+    /*Stijl voor categories op een smartphone*/
+    /*Style of card items*/
     .card-list {
-        grid-template-columns: repeat(2, 1fr);
+        display              : grid;
+        grid-template-columns: repeat(1, 1fr);
+        /*Opmerking          : altijd een kolom op een smartphone*/
+        max-width            : 1150px;
+        margin               : 10px auto;
+        padding              : 25px;
+        gap                  : 30px;
+        justify-content      : center;
+        /*Opmerking          : de kolommen worden gecentreerd binnen de container*/
     }
 
-    .card-item img {
-        height: 220px;
+
+    /*Stijl voor spotlight op een smartphone*/
+    .card-list-essentials {
+        padding: 10px;
+        gap    : 12px;
+    }
+
+    .card-list-essentials>* {
+        flex         : 1 1 100%;
+        /*Kaartje moet de volledige breedte nemen*/
+        border-radius: 12px;
+    }
+
+    .card-list-essentials h3 {
+        font-size    : 0.8rem;
+        margin-bottom: 10px;
+        display      : flex;
+        align-items  : center;
+        text-align   : center;
     }
 
     /*Stijl voor footer als scherm kleiner is dan 768px*/
