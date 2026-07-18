@@ -5,6 +5,11 @@
     /*De opgegeven breedte blijft altijd de totale grote van het element*/
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* Verbied horizontaal scrollen */
+}
+
 body {
     background-color: #fcf7ea;
     margin          : 0;

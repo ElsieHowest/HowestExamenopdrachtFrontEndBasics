@@ -5,11 +5,9 @@
     /*De opgegeven breedte blijft altijd de totale grote van het element*/
 }
 
-
-html {
-    width     : 100%;
-    overflow-x: hidden;
-    /*Voorkomt horizontaal scrollen*/
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* Verbied horizontaal scrollen */
 }
 
 body {
