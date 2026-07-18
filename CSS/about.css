@@ -914,7 +914,7 @@ form .field textarea:focus::placeholder {
 }
 
 /*Stijl voor footer*/
-/*General*/
+/*Algemene stijl*/
 .footer-distributed {
     display         : flex;
     flex-wrap       : nowrap;
@@ -925,12 +925,7 @@ form .field textarea:focus::placeholder {
     padding         : 50px 50px 60px 50px;
     bottom          : 0;
     box-sizing      : border-box;
-    height          : 450px;
-}
-
-.footer-distributed .footer-center h2,
-.footer-distributed .footer-right h2 {
-    font-family: "Playfair display", sans-serif;
+    min-height      : 450px;
 }
 
 /*Titelstijlen footer*/
@@ -944,6 +939,11 @@ form .field textarea:focus::placeholder {
 .footer-distributed h2 {
     margin : 5px;
     padding: 5px;
+}
+
+.footer-distributed .footer-center h2,
+.footer-distributed .footer-right h2 {
+    font-family: "Playfair display", sans-serif;
 }
 
 .footer-distributed h3,
@@ -961,34 +961,45 @@ form .field textarea:focus::placeholder {
     vertical-align: middle;
 }
 
-/*Logo seahorse footer*/
+/*stijl voor logo seahorse footer*/
 .logo-footer #seahorse {
     height     : 135px;
     width      : auto;
     align-items: center;
+    display: block;
     margin     : 5px auto;
+    padding: 10px 0px;
 }
 
-/*Stijl voor navigatie in footer*/
+/*stijl voor navigatie in footer*/
 .footer-nav {
     display       : flex;
+    align-items: center;
     flex-direction: column;
     margin        : 5px;
     padding       : 5px;
     gap           : 5px;
 }
 
-.footer-nav ul li {
-    text-decoration: none;
-    list-style     : none;
+/*Stijl van ul*/
+.footer-nav ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+     text-decoration: none;
     font-family    : "Open Sans", sans-serif;
-    text-align     : left;
+    display: inline-block;
+}
+
+.footer-nav ul li {
+    text-align: left; /*De tekstregels zijn links uitgelijnd*/
 }
 
 .footer-nav ul li a {
     display        : block;
     min-width      : 80px;
-    padding        : 5px 10px;
+    padding        : 10px 0px; /*10px onder/boven 0px links/rechts*/
+    margin: 5px auto;
     font-size      : 12px;
     color          : #fff;
     text-decoration: none;
@@ -1000,8 +1011,8 @@ form .field textarea:focus::placeholder {
     font-weight: 700;
 }
 
-/*Onderdelen footer*/
-/*Style footer left*/
+/*Stijl voor verschillende onderdelen van de footer*/
+/*Stijl voor footer left*/
 .footer-distributed .footer-left {
     width : 20%;
     margin: 20px 0 12px 0;
@@ -1012,9 +1023,10 @@ form .field textarea:focus::placeholder {
     line-height    : 1.8;
     text-decoration: none;
     color          : #fff;
+    padding: 0;
 }
 
-/*Style footer center*/
+/*Stijl voor footer center*/
 .footer-distributed .footer-center {
     width      : 45%;
     font-size  : 12px;
@@ -1023,14 +1035,14 @@ form .field textarea:focus::placeholder {
     box-sizing : border-box;
 }
 
-/*Style of footer right*/
+/*Stijl voor footer right*/
 .footer-distributed .footer-right {
     width     : 35%;
     padding   : 0 10px;
     box-sizing: border-box;
 }
 
-/*E-mailform footer right*/
+/*Stijl voor e-mailform footer right*/
 .footer-distributed .footer-right form {
     display       : flex;
     flex-direction: column;
@@ -1044,20 +1056,18 @@ form .field textarea:focus::placeholder {
     height       : 35px;
     width        : 100%;
     padding      : 0 12px;
-    font-size    : 12px;
+    font-size    : 10px;
     border       : none;
     box-sizing   : border-box;
 }
 
-.footer-distributed .footer-right form .button-footer {
+.footer-distributed .footer-right form #button {
     border-radius   : 20px;
     height          : 35px;
     width           : 100%;
     cursor          : pointer;
     border          : none;
     background-color: #fff;
-    background-image: none;
-    /* verwijdert de gradient van de algemene button-stijl */
     color           : rgb(47, 67, 83);
     font-size       : 12px;
     font-weight     : bold;
@@ -1065,15 +1075,13 @@ form .field textarea:focus::placeholder {
     /* subtiel hover-effect */
 }
 
-.footer-distributed .footer-right form .button-footer:hover {
+.footer-distributed .footer-right form #button:hover {
     background-color: rgb(47, 67, 83);
-    background-image: none;
-    /* verwijdert de gradient van de algemene button-stijl */
     color           : #fff;
     border          : 1px solid #fff;
 }
 
-/*Stijl copyright*/
+/*Stijl voor copyright*/
 .end .copy {
     font-size       : 0.5em;
     text-align      : left;
@@ -1083,7 +1091,7 @@ form .field textarea:focus::placeholder {
     background-color: rgb(47, 67, 83);
     color           : white;
     width           : 100%;
-    /*Volledige footer heeft dezelfde stijl*/
+    /*Volledige footer heeft dezelfde background color*/
 }
 
 /*Mediaquery*/

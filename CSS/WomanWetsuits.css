@@ -892,7 +892,7 @@ form .textarea textarea:focus::placeholder {
 }
 
 /*Stijl voor footer*/
-/*1) General*/
+/*Algemene stijl*/
 .footer-distributed {
     display         : flex;
     flex-wrap       : nowrap;
@@ -906,7 +906,7 @@ form .textarea textarea:focus::placeholder {
     min-height      : 450px;
 }
 
-/*2) Titelstijlen footer*/
+/*Titelstijlen footer*/
 .footer-distributed h2,
 /*Opmerking: komma niet vergeten*/
 .footer-distributed h3 {
@@ -939,34 +939,45 @@ form .textarea textarea:focus::placeholder {
     vertical-align: middle;
 }
 
-/*3) Logo seahorse footer*/
+/*stijl voor logo seahorse footer*/
 .logo-footer #seahorse {
     height     : 135px;
     width      : auto;
     align-items: center;
+    display: block;
     margin     : 5px auto;
+    padding: 10px 0px;
 }
 
-/*4) Stjl voor navigatie in footer*/
+/*stijl voor navigatie in footer*/
 .footer-nav {
     display       : flex;
+    align-items: center;
     flex-direction: column;
     margin        : 5px;
     padding       : 5px;
     gap           : 5px;
 }
 
-.footer-nav ul li {
-    text-decoration: none;
-    list-style     : none;
+/*Stijl van ul*/
+.footer-nav ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+     text-decoration: none;
     font-family    : "Open Sans", sans-serif;
-    text-align     : left;
+    display: inline-block;
+}
+
+.footer-nav ul li {
+    text-align: left; /*De tekstregels zijn links uitgelijnd*/
 }
 
 .footer-nav ul li a {
     display        : block;
     min-width      : 80px;
-    padding        : 5px 10px;
+    padding        : 10px 0px; /*10px onder/boven 0px links/rechts*/
+    margin: 5px auto;
     font-size      : 12px;
     color          : #fff;
     text-decoration: none;
@@ -978,8 +989,8 @@ form .textarea textarea:focus::placeholder {
     font-weight: 700;
 }
 
-/*5) Onderdelen footer*/
-/*5.1) Style footer left*/
+/*Stijl voor verschillende onderdelen van de footer*/
+/*Stijl voor footer left*/
 .footer-distributed .footer-left {
     width : 20%;
     margin: 20px 0 12px 0;
@@ -990,9 +1001,10 @@ form .textarea textarea:focus::placeholder {
     line-height    : 1.8;
     text-decoration: none;
     color          : #fff;
+    padding: 0;
 }
 
-/*5.2) Style footer center*/
+/*Stijl voor footer center*/
 .footer-distributed .footer-center {
     width      : 45%;
     font-size  : 12px;
@@ -1001,14 +1013,14 @@ form .textarea textarea:focus::placeholder {
     box-sizing : border-box;
 }
 
-/*5.3) footer right*/
+/*Stijl voor footer right*/
 .footer-distributed .footer-right {
     width     : 35%;
     padding   : 0 10px;
     box-sizing: border-box;
 }
 
-/*5.4) e-mailform footer right*/
+/*Stijl voor e-mailform footer right*/
 .footer-distributed .footer-right form {
     display       : flex;
     flex-direction: column;
@@ -1047,7 +1059,7 @@ form .textarea textarea:focus::placeholder {
     border          : 1px solid #fff;
 }
 
-/*6) Stijl copyright*/
+/*Stijl voor copyright*/
 .end .copy {
     font-size       : 0.5em;
     text-align      : left;
@@ -1061,191 +1073,33 @@ form .textarea textarea:focus::placeholder {
 }
 
 /*Mediaquery*/
-@media (max-width: 768px) {
+/*Tablet*/
+@media (min-width: 769px) and (max-width: 1024px){
+ /* De cards staan naast elkaar (2 kolommen)*/
+    .card-list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px; /*Ruimte tussen de cards*/
+    } 
 
-    /* Zorg dat de checkbox zelf onzichtbaar blijft */
-    #menu-toggle {
-        display: none;
-    }
-
-    /*Stijl vooor logo als scherm kleiner is dan 768px*/
-    .logo {
-        width: 80px;
-    }
-
-    /*Stijl voor zoekbalk als scherm kleiner is dan 768px*/
-    .bar {
-        flex-direction : column;
-        align-items    : center;
-        justify-content: center;
-        gap            : 15px;
-    }
-
-
-    .search {
-        width    : 100%;
-        max-width: 450px;
-    }
-
-    .search-input {
-        width: 100%;
-    }
-
-    .icons {
-        display        : flex;
-        justify-content: center;
-        gap            : 20px;
-    }
-
-    .icons .material-symbols-outlined {
-        margin: 0;
-    }
-
-    /*stijl voor card-itms als scherm kleiner is dan 768px*/
-    .card-item img {
-        height: 220px;
-    }
-
-    /*Stijl voor .mainnav als scherm kleiner is dan 768px*/
-    /*Op een klein scherm is "Discover more" enkel een link*/
-    .mainnavbar .mainnav .mega-menu,
-    .nav-item.dropdown:hover .mega-menu {
-        display: none;
-    }
-
-    /*style of header als scherm kleiner is dan 768px*/
-    /* Toon de hamburger */
-    .nav-links {
-        display       : none;
-        position      : absolute;
-        top           : 100%;
-        left          : 0;
-        width         : 100%;
-        flex-direction: column;
-        background    : rgb(47, 67, 83);
-        padding       : 20px 0;
-        border-radius : 12px;
-    }
-
-    /* Submenu geforceerd verbergen op mobiel */
-    .nav-links .submenu,
-    .nav-links .dropdown:hover .submenu,
-    .nav-links .dropdown .submenu {
-        display: none !important;
-    }
-
-    /* De parent container heeft een absolute positionering */
-    .navbar {
-        position       : relative;
-        display        : flex;
-        justify-content: space-between;
-        align-items    : center;
-        padding        : 10px 20px;
-    }
-
-    .menu-button,
-    .menu-toggle-label {
-        display   : flex;
-        position  : absolute;
-        right     : 20px;
-        /* Schuift de knop naar de rechterkant */
-        top       : 50%;
-        /* Zet de knop verticaal in het midden van de bar */
-        transform : translateY(-50%);
-        /* Zorgt voor perfecte verticale uitlijning */
-        background: transparent;
-        width     : 30px;
-        /* Geef de knop een vaste breedte */
-        height    : 30px;
-        /* Geef de knop een vaste hoogte */
-        color     : #ffff;
-        cursor    : pointer;
-        z-index   : 10;
-        /* Zorgt dat het icoon altijd bovenop het menu ligt */
-    }
-
-    /*Stijl voor icoon header*/
-    .menu-toggle-label span {
-        position  : absolute;
-        top       : 50%;
-        left      : 50%;
-        transform : translate(-50%, -50%);
-        transition: all 0.5s ease;
-    }
-
-    /*Start state of chat button*/
-    .menu-toggle-label span#menu-icon {
-        opacity: 1;
-    }
-
-    .menu-toggle-label span#menu-close-icon {
-        opacity: 0;
-    }
-
-    #menu-toggle:checked~.menu-toggle-label span#menu-icon {
-        opacity  : 0;
-        transform: translate(-50%, -50%) rotate(180deg);
-    }
-
-    #menu-toggle:checked~.menu-toggle-label span#menu-close-icon {
-        opacity  : 1;
-        transform: translate(-50%, -50%) rotate(180deg);
-    }
-
-    /*Wanneer checkbox is aangevinkt, wordt menu getoond*/
-    #menu-toggle:checked~.nav-links {
+    /*Stijl voor afbeeldingen voor schermen tussen 769px en 1024px*/
+    .card-item{
         display: flex;
-        /*Het menu verschijnt*/
-        opacity: 1;
-    }
-
-
-    /*Stijl voor footer als scherm kleiner is dan 768px*/
-    .footer-distributed {
-        display         : flex;
-        flex-direction  : column;
-        flex-wrap       : nowrap;
-        justify-content : center;
-        /* Zorgt dat de kolommen als geheel gecentreerd worden */
-        align-items     : center;
-        /* Centreert de kolommen verticaal indien nodig */
-        background-color: rgb(47, 67, 83);
-        width           : 100%;
-        margin-top      : 10px;
-        padding         : 50px 50px 60px 50px;
-        bottom          : 0;
-        box-sizing      : border-box;
-        height          : auto;
-        /*De footer past zich automatisch aan*/
-        gap             : 30px;
-    }
-
-    .footer-distributed .footer-left,
-    .footer-distributed .footer-center,
-    .footer-distributed .footer-right {
-        width     : 100%;
+        align-items: center; /*Kan niet zonder display: flex*/
         text-align: center;
-    }
-
-    .footer-distributed .footer-left .footer-nav {
-        display       : flex;
         flex-direction: column;
-        text-align    : center;
-        align-items   : center;
+        height: 100%;
     }
 
-    .footer-distributed .footer-left .footer-nav ul {
-        padding   : 0;
-        margin    : 0;
-        list-style: none;
-    }
-
-    .footer-distributed .footer-left .footer-nav ul li {
-        text-align: center;
+    /*Stijl voor afbeelding van card-item*/
+    .brand-image {
+        width: 100%;
+        max-width: 200px; /*Vermijden dat de afbeelding te groot wordt*/
+        height: auto;
     }
 }
 
-/*Mediaquery*/
+/*Mobiele telefoon*/
 @media (max-width: 768px) {
 
     /*Stijl vooor logo als scherm kleiner is dan 768px*/
@@ -1454,6 +1308,8 @@ form .textarea textarea:focus::placeholder {
     }
 
     .footer-distributed .footer-left .footer-nav ul li {
+        display: flex;
+        align-items: center;
         text-align: center;
     }
 }
