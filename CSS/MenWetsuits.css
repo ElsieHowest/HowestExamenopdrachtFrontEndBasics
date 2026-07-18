@@ -189,8 +189,10 @@ p {
 /* Met > selecteer je het directe kind .submenu */
 .navbar ul li.dropdown:hover>.submenu {
     display         : block;
-    opacity         : 1; /*Maak ondoorzichtig*/
-    visibility      : visible; /*Maak interactief*/
+    opacity         : 1;
+    /*Maak ondoorzichtig*/
+    visibility      : visible;
+    /*Maak interactief*/
     top             : 100%;
     left            : 5px;
     margin          : 0px;
@@ -259,12 +261,14 @@ form {
 .bar {
     display        : flex;
     align-items    : center;
-    justify-content: flex-end; /*De items worden op het einde geplaatst*/
+    justify-content: flex-end;
+    /*De items worden op het einde geplaatst*/
     gap            : 15px;
 }
 
 .search {
-    width        : max-content; /*Maak de breedte zo groot als de inhoud nodig heeft*/
+    width        : max-content;
+    /*Maak de breedte zo groot als de inhoud nodig heeft*/
     display      : flex;
     align-items  : center;
     padding      : 14px;
@@ -298,11 +302,11 @@ form {
 
 /*Style of icons*/
 .icons .material-symbols-outlined {
-    display    : inline-block;
-    margin     : 25px;
-    gap        : 16px;
-    cursor     : pointer;
-    color      : rgb(47, 67, 83);
+    display: inline-block;
+    margin : 25px;
+    gap    : 16px;
+    cursor : pointer;
+    color  : rgb(47, 67, 83);
 }
 
 /*Style of mainnavbar*/
@@ -909,15 +913,15 @@ form .textarea textarea:focus::placeholder {
     height     : 135px;
     width      : auto;
     align-items: center;
-    display: block;
+    display    : block;
     margin     : 5px auto;
-    padding: 10px 0px;
+    padding    : 10px 0px;
 }
 
 /*stijl voor navigatie in footer*/
 .footer-nav {
     display       : flex;
-    align-items: center;
+    align-items   : center;
     flex-direction: column;
     margin        : 5px;
     padding       : 5px;
@@ -925,24 +929,26 @@ form .textarea textarea:focus::placeholder {
 }
 
 /*Stijl van ul*/
-.footer-nav ul{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-     text-decoration: none;
+.footer-nav ul {
+    padding        : 0;
+    margin         : 0;
+    list-style     : none;
+    text-decoration: none;
     font-family    : "Open Sans", sans-serif;
-    display: inline-block;
+    display        : inline-block;
 }
 
 .footer-nav ul li {
-    text-align: left; /*De tekstregels zijn links uitgelijnd*/
+    text-align: left;
+    /*De tekstregels zijn links uitgelijnd*/
 }
 
 .footer-nav ul li a {
     display        : block;
     min-width      : 80px;
-    padding        : 10px 0px; /*10px onder/boven 0px links/rechts*/
-    margin: 5px auto;
+    padding        : 10px 0px;
+    /*10px onder/boven 0px links/rechts*/
+    margin         : 5px auto;
     font-size      : 12px;
     color          : #fff;
     text-decoration: none;
@@ -966,7 +972,7 @@ form .textarea textarea:focus::placeholder {
     line-height    : 1.8;
     text-decoration: none;
     color          : #fff;
-    padding: 0;
+    padding        : 0;
 }
 
 /*Stijl voor footer center*/
@@ -1038,6 +1044,37 @@ form .textarea textarea:focus::placeholder {
 }
 
 /*Mediaquery*/
+/*Tablet*/
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /*Stijl voor card-item*/
+    /* De cards staan naast elkaar (2 kolommen)*/
+    .card-list {
+        display              : grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap                  : 20px;
+        /*Ruimte tussen de cards*/
+    }
+
+    /*Stijl voor afbeeldingen voor schermen tussen 769px en 1024px*/
+    .card-item {
+        display                  : flex;
+        align-items              : center;
+        /*Kan niet zonder display: flex*/
+        text-align               : center;
+        flex-direction           : column;
+        height                   : 100%;
+    }
+
+    /*Stijl voor afbeelding van card-item*/
+    .brand-image {
+        width    : 100%;
+        max-width: 200px;
+        /*Vermijden dat de afbeelding te groot wordt*/
+        height   : auto;
+    }
+}
+
 @media (max-width: 768px) {
 
     /*Stijl vooor logo als scherm kleiner is dan 768px*/

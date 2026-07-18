@@ -1017,6 +1017,143 @@ form .textarea textarea:focus::placeholder {
 }
 
 /*Mediaquery*/
+/*Tablet*/
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* Zorg dat de checkbox zelf onzichtbaar blijft */
+    #menu-toggle {
+        display: none;
+    }
+
+    /*Stijl vooor logo als scherm kleiner is dan 768px*/
+    .logo {
+        width: 80px;
+    }
+
+    /*Stijl voor zoekbalk als scherm kleiner is dan 768px*/
+    .bar {
+        flex-direction : column;
+        align-items    : center;
+        justify-content: center;
+        gap            : 15px;
+    }
+
+    .search {
+        width    : 100%;
+        max-width: 450px;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .icons {
+        display        : flex;
+        justify-content: center;
+        gap            : 20px;
+    }
+
+    .icons .material-symbols-outlined {
+        margin: 0;
+    }
+
+    /*Stijl voor .mainnav als scherm kleiner is dan 768px*/
+    /*Op een klein scherm is "Discover more" enkel een link*/
+    .mainnavbar .mainnav .mega-menu,
+    .nav-item.dropdown:hover .mega-menu {
+        display: none;
+    }
+
+    /*style of header als scherm kleiner is dan 768px*/
+    /* Toon de hamburger */
+    .nav-links {
+        display       : none;
+        position      : absolute;
+        top           : 100%;
+        left          : 0;
+        width         : 100%;
+        flex-direction: column;
+        background    : rgb(47, 67, 83);
+        padding       : 20px 0;
+        border-radius : 12px;
+        opacity       : 0;
+        transition    : opacity .3s ease;
+    }
+
+    /* Submenu geforceerd verbergen op mobiel */
+    .nav-links .submenu,
+    .nav-links .dropdown:hover .submenu,
+    .nav-links .dropdown .submenu {
+        display: none !important;
+    }
+
+    /* De parent container heeft een absolute positionering */
+    .navbar {
+        width          : 90%;
+        position       : relative;
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        padding        : 10px 20px;
+    }
+
+    .menu-button,
+    .menu-toggle-label {
+        display   : flex;
+        position  : absolute;
+        right     : 20px;
+        /* Schuift de knop naar de rechterkant */
+        top       : 50%;
+        /* Zet de knop verticaal in het midden van de bar */
+        transform : translateY(-50%);
+        /* Zorgt voor perfecte verticale uitlijning */
+        background: transparent;
+        width     : 30px;
+        /* Geef de knop een vaste breedte */
+        height    : 30px;
+        /* Geef de knop een vaste hoogte */
+        color     : #ffff;
+        cursor    : pointer;
+        z-index   : 10;
+        /* Zorgt dat het icoon altijd bovenop het menu ligt */
+    }
+
+    /*Stijl voor icoon header*/
+    .menu-toggle-label span {
+        position  : absolute;
+        top       : 50%;
+        left      : 50%;
+        transform : translate(-50%, -50%);
+        transition: all 0.5s ease;
+    }
+
+    /*Start state of chat button*/
+    .menu-toggle-label span#menu-icon {
+        opacity: 1;
+    }
+
+    .menu-toggle-label span#menu-close-icon {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked~.menu-toggle-label span#menu-icon {
+        opacity  : 0;
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    #menu-toggle:checked~.menu-toggle-label span#menu-close-icon {
+        opacity  : 1;
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    /*Wanneer checkbox is aangevinkt, wordt menu getoond*/
+    #menu-toggle:checked~.nav-links {
+        display: flex;
+        /*Het menu verschijnt*/
+        opacity: 1;
+    }
+} 
+
 @media (max-width: 768px) {
 
     /* Zorg dat de checkbox zelf onzichtbaar blijft */
@@ -1155,37 +1292,6 @@ form .textarea textarea:focus::placeholder {
     /*Stijl for category-cards als het scherm kleiner is dan 768px*/
     .category-container {
         grid-template-columns: 1fr;
-    }
-
-    /*Stijl voor .shop als scherm kleiner is dan 768px*/
-    /*Cards onder elkaar*/
-    .card-list {
-        display              : grid;
-        grid-template-columns: 1fr;
-        gap                  : 15px;
-    }
-
-    .card-list .card-item img.brand-image {
-        width: 100%;
-    }
-
-    /*De cards nemen de volledige breedte van de container in*/
-    .card-item {
-        display       : flex;
-        flex-direction: column;
-        align-items   : center;
-        text-align    : center;
-    }
-
-    .brand-image {
-        width    : 80%;
-        max-width: 220px;
-        height   : auto;
-        margin   : 0 auto;
-    }
-
-    .brand-content {
-        padding: 10px 0;
     }
 
     /*Stijl voor footer als scherm kleiner is dan 768px*/
